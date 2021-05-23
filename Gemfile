@@ -4,9 +4,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.1'
 
 gem 'bootsnap', '>= 1.4.4', require: false
+gem 'bootstrap'
 gem 'devise'
 gem 'httparty'
 gem 'jbuilder', '~> 2.7'
+gem 'omniauth'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
@@ -27,6 +29,7 @@ group :development do
 end
 
 group :development, :test do
+  gem 'dotenv-rails', require: 'dotenv/rails-now'
   gem 'factory_bot_rails'
   gem 'rspec-rails'
   gem 'rubocop'
