@@ -6,6 +6,7 @@ ruby '3.0.1'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'bootstrap'
 gem 'devise'
+gem 'haml'
 gem 'httparty'
 gem 'jbuilder', '~> 2.7'
 gem 'omniauth'

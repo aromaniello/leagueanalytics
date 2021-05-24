@@ -1,0 +1,2 @@
+class RunePagesController < ApplicationController
+end
