@@ -33,6 +33,16 @@ ActiveRecord::Schema.define(version: 2021_05_24_142002) do
 
   create_table "rune_pages", force: :cascade do |t|
     t.bigint "user_id"
+    t.string "name"
+    t.string "keystone"
+    t.string "primary_1"
+    t.string "primary_2"
+    t.string "primary_3"
+    t.string "secondary_1"
+    t.string "secondary_2"
+    t.string "stat_1"
+    t.string "stat_2"
+    t.string "stat_3"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_rune_pages_on_user_id"
