@@ -17,6 +17,13 @@ ActiveRecord::Schema.define(version: 2021_05_24_142002) do
 
   create_table "builds", force: :cascade do |t|
     t.bigint "user_id"
+    t.string "name"
+    t.string "champion"
+    t.integer "level"
+    t.integer "q_level"
+    t.integer "w_level"
+    t.integer "e_level"
+    t.integer "r_level"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_builds_on_user_id"
