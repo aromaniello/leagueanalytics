@@ -18,34 +18,26 @@ RSpec.describe RunePage, type: :model do
   end
 
   it "creates a valid rune page" do
-    expect { user.rune_pages.create(params) }.to change { RunePage.count }.from(0).to(1)
+    expect { user.rune_pages.create(params) }.to change { user.rune_pages.count }.from(0).to(1)
   end
 
   it "is invalid if a rune does not exist" do
     params[:primary_1] = "invalid"
-    rune_page = user.rune_pages.create(params)
-
-    expect(rune_page).to_not be_valid
+    expect(user.rune_pages.build(params)).to_not be_valid
   end
 
   it "is invalid if a primary rune belongs to another path" do
     params[:primary_2] = "celerity"
-    rune_page = user.rune_pages.create(params)
-
-    expect(rune_page).to_not be_valid
+    expect(user.rune_pages.build(params)).to_not be_valid
   end
 
   it "is invalid if a secondary rune belongs to another path" do
     params[:primary_2] = "second_wind"
-    rune_page = user.rune_pages.create(params)
-
-    expect(rune_page).to_not be_valid
+    expect(user.rune_pages.build(params)).to_not be_valid
   end
 
   it "is invalid if both secondary runes belong to the same row" do
     params[:secondary_2] = "perfect_timing"
-    rune_page = user.rune_pages.create(params)
-
-    expect(rune_page).to_not be_valid
+    expect(user.rune_pages.build(params)).to_not be_valid
   end
 end
