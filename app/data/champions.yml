@@ -1,0 +1,7 @@
+Lee Sin:
+  base_health: 575
+  base_health_regen: 7.5
+  base_armor: 36
+  base_mr: 32
+  base_move_speed: 345
+  base_attack_speed: 0.651

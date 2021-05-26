@@ -5,15 +5,15 @@ RSpec.describe RunePage, type: :model do
   let(:params) do
     {
       name: "Test",
-      keystone: "conqueror",
-      primary_1: "triumph",
-      primary_2: "legend_alacrity",
-      primary_3: "coup_de_grace",
-      secondary_1: "magical_footwear",
-      secondary_2: "cosmic_insight",
-      stat_1: "attack_speed",
-      stat_2: "adaptive_force",
-      stat_3: "armor"
+      keystone: "Conqueror",
+      primary_1: "Triumph",
+      primary_2: "Legend: Alacrity",
+      primary_3: "Coup de Grace",
+      secondary_1: "Magical Footwear",
+      secondary_2: "Cosmic Insight",
+      stat_1: "Attack Speed",
+      stat_2: "Adaptive Force",
+      stat_3: "Armor"
     }
   end
 
@@ -22,22 +22,22 @@ RSpec.describe RunePage, type: :model do
   end
 
   it "is invalid if a rune does not exist" do
-    params[:primary_1] = "invalid"
+    params[:primary_1] = "Invalid"
     expect(user.rune_pages.build(params)).to_not be_valid
   end
 
   it "is invalid if a primary rune belongs to another path" do
-    params[:primary_2] = "celerity"
+    params[:primary_2] = "Celerity"
     expect(user.rune_pages.build(params)).to_not be_valid
   end
 
   it "is invalid if a secondary rune belongs to another path" do
-    params[:primary_2] = "second_wind"
+    params[:primary_2] = "Second Wind"
     expect(user.rune_pages.build(params)).to_not be_valid
   end
 
   it "is invalid if both secondary runes belong to the same row" do
-    params[:secondary_2] = "perfect_timing"
+    params[:secondary_2] = "Perfect Timing"
     expect(user.rune_pages.build(params)).to_not be_valid
   end
 end

@@ -1,0 +1,112 @@
+Paths:
+  - Precision
+  - Domination
+  - Sorcery
+  - Resolve
+  - Inspiration
+
+Keystones:
+  Precision:
+    - Press the Attack
+    - Lethal Tempo
+    - Fleet Footwork
+    - Conqueror
+  Domination:
+    - Electrocute
+    - Predator
+    - Dark Harvest
+    - Hail of Blades
+  Sorcery:
+    - Summon Aery
+    - Arcane Comet
+    - Phase Rush
+  Resolve:
+    - Grasp of the Undying
+    - Aftershock
+    - Guardian
+  Inspiration:
+    - Glacial Augment
+    - Unsealed Spellbook
+    - Prototype Omnistone
+
+Runes:
+  Precision:
+    first_row:
+      - Overheal
+      - Triumph
+      - Presence of Mind
+    second_row:
+      - "Legend: Alacrity"
+      - "Legend: Tenacity"
+      - "Legend: Bloodline"
+    third_row:
+      - Coup de Grace
+      - Cut Down
+      - Last Stand
+  Domination:
+    first_row:
+      - Cheap Shot
+      - Taste of Blood
+      - Sudden Impact
+    second_row:
+      - Zombie Ward
+      - Ghost Poro
+      - Eyeball Collection
+    third_row:
+      - Ravenous Hunter
+      - Ingenious Hunter
+      - Relentless Hunter
+      - Ultimate Hunter
+  Sorcery:
+    first_row:
+      - Nullifying Orb
+      - Manaflow Band
+      - Nimbus Cloak
+    second_row:
+      - Transcendence
+      - Celerity
+      - Absolute Focus
+    third_row:
+      - Scorch
+      - Waterwalking
+      - Gathering Storm
+  Resolve:
+    first_row:
+      - Demolish
+      - Font of Life
+      - Shield Bash
+    second_row:
+      - Conditioning
+      - Second Wind
+      - Bone Plating
+    third_row:
+      - Overgrowth
+      - Revitalize
+      - Unflinching
+  Inspiration:
+    first_row:
+      - Hextech Flashtraption
+      - Magical Footwear
+      - Perfect Timing
+    second_row:
+      - Future's Market
+      - Minion Dematerializer
+      - Biscuit Delivery
+    third_row:
+      - Cosmic Insight
+      - Approach Velocity
+      - Timewarp Tonic
+
+Stats:
+  first_row:
+    - Adaptive Force
+    - Attack Speed
+    - Ability Haste
+  second_row:
+    - Adaptive Force
+    - Armor
+    - Magic Resist
+  third_row:
+    - Health
+    - Armor
+    - Magic Resist
