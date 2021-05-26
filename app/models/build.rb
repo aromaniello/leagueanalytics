@@ -2,6 +2,7 @@ class Build < ApplicationRecord
   belongs_to :user
 
   has_one :rune_page, through: :builds_rune_pages
+  has_one :item_set
 
   validates :champion,
             inclusion: { in: Champions.values, message: "invalid champion name" },
