@@ -15,18 +15,25 @@ class BuildEditor extends React.Component {
     };
   }
 
+  renderChampionOptions = () => {
+    return _.keys(this.props.champions).map((champion) => {
+      return <option value={champion} key={`champion-option-${_.kebabCase(champion)}`}>{champion}</option>;
+    })
+  }
+
   renderChampionSelect = () => {
     return (
-      <select className="" name={'name'} id={'id'}
+      <select className="champion-select" name={'name'} id={'id'}
               onChange={e => console.log(e.target.value)}>
         <option value=""></option>
+        {this.renderChampionOptions()}
       </select>
     )
   }
 
   renderLevelSelect = () => {
     return (
-      <select className="" name={'name'} id={'id'}
+      <select className="level-select" name={'name'} id={'id'}
               onChange={e => console.log(e.target.value)}>
         {this.renderNumericOptions(1, 19)}
       </select>
@@ -35,7 +42,7 @@ class BuildEditor extends React.Component {
 
   renderBasicAbilitySelect = () => {
     return (
-      <select className="" name={'name'} id={'id'}
+      <select className="ability-select" name={'name'} id={'id'}
               onChange={e => console.log(e.target.value)}>
         {this.renderNumericOptions(0, 6)}
       </select>
@@ -44,7 +51,7 @@ class BuildEditor extends React.Component {
 
   renderUltimateAbilitySelect = () => {
     return (
-      <select className="" name={'name'} id={'id'}
+      <select className="ability-select" name={'name'} id={'id'}
               onChange={e => console.log(e.target.value)}>
         {this.renderNumericOptions(0, 4)}
       </select>
@@ -62,7 +69,7 @@ class BuildEditor extends React.Component {
       <div className="build-editor">
         <div className="row">
           <div className="col-3">
-            <h1>Build 1</h1>
+            <h2>Build 1</h2>
           </div>
         </div>
 
@@ -117,11 +124,11 @@ class BuildEditor extends React.Component {
 
         <hr/>
 
-        <ItemSetEditor/>
+        <ItemSetEditor items={this.props.items} />
 
         <hr/>
 
-        <RuneEditor/>
+        <RuneEditor rune_data={this.props.runes} />
 
         <hr/>
 

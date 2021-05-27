@@ -1,7 +1,18 @@
-Lee Sin:
-  base_health: 575
-  base_health_regen: 7.5
-  base_armor: 36
-  base_mr: 32
-  base_move_speed: 345
-  base_attack_speed: 0.651
+Aatrox:
+  health: 580
+  health_regen: 3
+  armor: 38
+  mr: 32
+  move_speed: 345
+  as: 0.651
+  ad: 60
+  crit_dmg: 1.75
+  attack_range: 175
+
+Ahri:
+
+Akali:
+
+Alistar:
+
+Amumu:

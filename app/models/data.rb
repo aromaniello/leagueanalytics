@@ -3,19 +3,27 @@ class Data
     @@champions ||= YAML.load_file('app/data/champions.yml')
   end
 
+  def self.items
+    @@items ||= YAML.load_file('app/data/items.yml')
+  end
+
+  def self.rune_data
+    @@rune_data ||= YAML.load_file('app/data/runes.yml')
+  end
+
   def self.rune_paths
-    @@rune_paths ||= YAML.load_file('app/data/runes.yml')["Paths"]
+    rune_data["Paths"]
   end
 
   def self.keystones
-    @@keystones ||= YAML.load_file('app/data/runes.yml')["Keystones"]
+    rune_data["Keystones"]
   end
 
   def self.runes
-    @@runes ||= YAML.load_file('app/data/runes.yml')["Runes"]
+    rune_data["Runes"]
   end
 
   def self.rune_stats
-    @@rune_stats ||= YAML.load_file('app/data/runes.yml')["Stats"]
+    rune_data["Stats"]
   end
 end

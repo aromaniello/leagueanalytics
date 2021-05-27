@@ -2,7 +2,13 @@ import React from "react"
 import PropTypes from "prop-types"
 import _ from "lodash"
 
-const ItemSetEditor = (props) => {
+const ItemSetEditor = ({ items }) => {
+
+  const renderItemOptions = (selectName) => {
+    return _.keys(items).map((item) => {
+      return <option value={item} key={`${selectName}-${_.kebabCase(item)}`}>{item}</option>
+    })
+  }
 
   const renderItemSelect = (n) => {
     const name = `item-${n}-select`;
@@ -12,6 +18,7 @@ const ItemSetEditor = (props) => {
         <select className="item-select" name={name} id={name} key={name}
                 onChange={e => console.log(e.target.value)}>
           <option value=""></option>
+          {renderItemOptions(`item-${n}`)}
         </select>
       </div>
     );
