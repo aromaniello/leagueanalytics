@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import _ from "lodash"
 
-const ItemSetEditor = ({ items }) => {
+const ItemSetEditor = ({ items, store }) => {
 
   const renderItemOptions = (selectName) => {
     return _.keys(items).map((item) => {
@@ -10,23 +10,21 @@ const ItemSetEditor = ({ items }) => {
     })
   }
 
-  const renderItemSelect = (n) => {
-    const name = `item-${n}-select`;
+  const renderItemSelect = (index) => {
+    const id = `item-${index}-select`;
 
     return (
-      <div>
-        <select className="item-select" name={name} id={name} key={name}
-                onChange={e => console.log(e.target.value)}>
-          <option value=""></option>
-          {renderItemOptions(`item-${n}`)}
-        </select>
-      </div>
+      <select className="item-select" name={id} id={id} key={id}
+              onChange={e => store.dispatch({ type: 'SET_ITEM', index: index, item: e.target.value })}>
+        <option value="" key={`item-${index}-empty`}></option>
+        {renderItemOptions(`item-${index}`)}
+      </select>
     );
   }
 
   const renderItemSet = () => {
-    return _.range(0, 6).map((n) => {
-      return renderItemSelect(n);
+    return _.range(0, 6).map((index) => {
+      return renderItemSelect(index);
     });
   }
 
