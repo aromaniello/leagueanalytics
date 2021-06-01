@@ -1,8 +1,36 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { useSelector, useDispatch } from 'react-redux'
+import { setPath, setRune } from '../actions/runes'
 import _ from "lodash"
 
 const RuneEditor = ({ rune_data }) => {
+  const dispatch = useDispatch();
+
+  // TODO: convert strings to constants
+  const rows = ['first_row', 'second_row', 'third_row'];
+  const runeRows = {
+    primaryRune1: 'first_row',
+    primaryRune2: 'second_row',
+    primaryRune3: 'third_row',
+    stat1: 'first_row',
+    stat2: 'second_row',
+    stat3: 'third_row'
+  }
+  const rowForRune = runeId => runeRows[runeId];
+
+  console.log(rune_data);
+
+  const renderPathSelect = (pathType, placeholder) => {
+    return (
+      <select className="rune-select" name={`${pathType}-path-select`} id={`${pathType}-path-select`}
+              value={useSelector(state => state.runes[`${pathType}Path`]) || ''}
+              onChange={e => dispatch(setPath(e.target.value, pathType))}>
+        <option value="">{placeholder}</option>
+        {renderPathOptions(`${pathType}-path`)}
+      </select>
+    );
+  }
 
   const renderPathOptions = (selectName) => {
     return rune_data['Paths'].map((path) => {
@@ -10,9 +38,110 @@ const RuneEditor = ({ rune_data }) => {
     })
   }
 
-  const renderStatOptions = (row, selectName) => {
-    return rune_data['Stats'][row].map((stat) => {
-      return <option value={stat} key={`${selectName}-option-${_.kebabCase(stat)}`}>{stat}</option>;
+  const renderKeystoneSelect = () => {
+    return (
+      <select className="rune-select" name="keystone-select" id="keystone-select"
+              value={useSelector(state => state.runes.keystone) || ''}
+              onChange={e => dispatch(setRune('keystone', e.target.value))}>
+        <option value="">Keystone</option>
+        {renderKeystoneOptions()}
+      </select>
+    );
+  }
+
+  const renderKeystoneOptions = () => {
+    const primaryPath = useSelector(state => state.runes.primaryPath);
+
+    if (rune_data['Paths'].includes(primaryPath)) {
+      return rune_data['Keystones'][primaryPath].map((keystone) => {
+        return <option value={keystone}>{keystone}</option>;
+      })
+    }
+  }
+
+  const renderPrimaryRuneSelect = (runeId, placeholder) => {
+    const id = `${_.kebabCase(runeId)}-select`;
+    return (
+      <select className="rune-select" name={id} id={id}
+              value={useSelector(state => state.runes[runeId]) || ''}
+              onChange={e => dispatch(setRune(runeId, e.target.value))}>
+        <option value="">{placeholder}</option>
+        {renderPrimaryRuneOptions(runeId)}
+      </select>
+    );
+  }
+
+  const renderPrimaryRuneOptions = (runeId) => {
+    const path = useSelector(state => state.runes.primaryPath);
+
+    if (rune_data['Paths'].includes(path)) {
+      const options = rune_data['Runes'][path][rowForRune(runeId)];
+
+      return options.map((option) => {
+        return <option value={option} key={`${runeId}-${option}`}>{option}</option>;
+      });
+    }
+  }
+
+  const renderSecondaryRuneSelect = (runeId, placeholder) => {
+    const id = `${_.kebabCase(runeId)}-select`;
+    return (
+      <select className="rune-select" name={id} id={id}
+              value={useSelector(state => state.runes[runeId]) || ''}
+              onChange={e => dispatch(setRune(runeId, e.target.value))}>
+        <option value="">{placeholder}</option>
+        {renderSecondaryRuneOptionGroups(runeId)}
+      </select>
+    );
+  }
+
+  const renderSecondaryRuneOptionGroups = (runeId) => {
+    const path = useSelector(state => state.runes.secondaryPath);
+    const otherRuneId = runeId === 'secondaryRune1' ? 'secondaryRune2' : 'secondaryRune1';
+    const otherRune = useSelector(state => state.runes[otherRuneId]);
+
+    if (rune_data['Paths'].includes(path)) {
+      const options = rune_data['Runes'][path];
+
+      return rows.map((row) => {
+        if (rowForSecondaryRune(otherRune, path) === row) return '';
+
+        const label = row.replace('_', ' ').replace(/\b\w/g, l => l.toUpperCase());
+        const key = `${_.kebabCase(runeId)}-optgroup-${_.kebabCase(row)}`;
+        return (
+          <optgroup label={label} key={key}>
+            {renderSecondaryRuneOptions(runeId, options[row])}
+          </optgroup>
+        );
+      });
+    }
+  }
+
+  const rowForSecondaryRune = (rune, path) => {
+    return rows.find((row) => rune_data['Runes'][path][row].includes(rune));
+  }
+
+  const renderSecondaryRuneOptions = (runeId, runes) => {
+    return runes.map((rune) => {
+      return <option value={rune} key={`${_.kebabCase(runeId)}-${_.kebabCase(rune)}`}>{rune}</option>;
+    })
+  }
+
+  const renderStatSelect = (statId, placeholder) => {
+    const id = `${_.kebabCase(statId)}-select`;
+    return (
+      <select className="rune-select" name={id} id={id}
+              value={useSelector(state => state.runes[statId]) || ''}
+              onChange={e => dispatch(setRune(statId, e.target.value))}>
+        <option value="">{placeholder}</option>
+        {renderStatOptions(statId)}
+      </select>
+    );
+  }
+
+  const renderStatOptions = (statId) => {
+    return rune_data['Stats'][rowForRune(statId)].map((stat) => {
+      return <option value={stat} key={`${_.kebabCase(statId)}-option-${_.kebabCase(stat)}`}>{stat}</option>;
     })
   }
 
@@ -26,90 +155,52 @@ const RuneEditor = ({ rune_data }) => {
 
       <div className="row">
         <div className="col-2">
-          <select className="rune-select" name={name} id={name}
-                  onChange={e => console.log(e.target.value)}>
-            <option value="">Primary Path</option>
-            {renderPathOptions('primary-path')}
-          </select>
+          {renderPathSelect('primary', 'Primary Path')}
         </div>
         <div className="col-2">
-          <select className="rune-select" name={name} id={name}
-                  onChange={e => console.log(e.target.value)}>
-            <option value="">Secondary Path</option>
-            {renderPathOptions('secondary-path')}
-          </select>
+          {renderPathSelect('secondary', 'Secondary Path')}
         </div>
       </div>
 
       <div className="row">
         <div className="col-2">
-          <select className="rune-select" name={name} id={name}
-                  onChange={e => console.log(e.target.value)}>
-            <option value="">Rune #1</option>
-          </select>
+          {renderKeystoneSelect()}
         </div>
         <div className="col-2">
-          <select className="rune-select" name={name} id={name}
-                  onChange={e => console.log(e.target.value)}>
-            <option value="">Rune #5</option>
-          </select>
+          {renderSecondaryRuneSelect('secondaryRune1', 'Rune #5')}
         </div>
       </div>
 
       <div className="row">
         <div className="col-2">
-          <select className="rune-select" name={name} id={name}
-                  onChange={e => console.log(e.target.value)}>
-            <option value="">Rune #2</option>
-          </select>
+          {renderPrimaryRuneSelect('primaryRune1', 'Rune #1')}
         </div>
         <div className="col-2">
-          <select className="rune-select" name={name} id={name}
-                  onChange={e => console.log(e.target.value)}>
-            <option value="">Rune #6</option>
-          </select>
+          {renderSecondaryRuneSelect('secondaryRune2', 'Rune #6')}
         </div>
       </div>
 
       <div className="row">
         <div className="col-2">
-          <select className="rune-select" name={name} id={name}
-                  onChange={e => console.log(e.target.value)}>
-            <option value="">Rune #3</option>
-          </select>
+          {renderPrimaryRuneSelect('primaryRune2', 'Rune #2')}
         </div>
         <div className="col-2">
-          <select className="rune-select" name={name} id={name}
-                  onChange={e => console.log(e.target.value)}>
-            <option value="">Stat #1</option>
-            {renderStatOptions('first_row', 'stat-1')}
-          </select>
+          {renderStatSelect('stat1', 'Stat #1')}
         </div>
       </div>
 
       <div className="row">
         <div className="col-2">
-          <select className="rune-select" name={name} id={name}
-                  onChange={e => console.log(e.target.value)}>
-            <option value="">Rune #4</option>
-          </select>
+          {renderPrimaryRuneSelect('primaryRune3', 'Rune #3')}
         </div>
         <div className="col-2">
-          <select className="rune-select" name={name} id={name}
-                  onChange={e => console.log(e.target.value)}>
-            <option value="">Stat #2</option>
-            {renderStatOptions('second_row', 'stat-2')}
-          </select>
+          {renderStatSelect('stat2', 'Stat #2')}
         </div>
       </div>
 
       <div className="row">
         <div className="col-2 offset-2">
-          <select className="rune-select" name={name} id={name}
-                  onChange={e => console.log(e.target.value)}>
-            <option value="">Stat #3</option>
-            {renderStatOptions('third_row', 'stat-3')}
-          </select>
+          {renderStatSelect('stat3', 'Stat #3')}
         </div>
       </div>
     </div>

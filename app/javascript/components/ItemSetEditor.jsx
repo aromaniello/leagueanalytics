@@ -1,8 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { useSelector, useDispatch } from 'react-redux'
+import { setItem } from '../actions/items'
 import _ from "lodash"
 
-const ItemSetEditor = ({ items, store }) => {
+const ItemSetEditor = ({ items }) => {
+  const dispatch = useDispatch();
 
   const renderItemOptions = (selectName) => {
     return _.keys(items).map((item) => {
@@ -12,17 +15,17 @@ const ItemSetEditor = ({ items, store }) => {
 
   const renderItemSelect = (index) => {
     const id = `item-${index}-select`;
-
     return (
       <select className="item-select" name={id} id={id} key={id}
-              onChange={e => store.dispatch({ type: 'SET_ITEM', index: index, item: e.target.value })}>
+              value={useSelector(state => state.items[index]) || ''}
+              onChange={e => dispatch(setItem(index, e.target.value))}>
         <option value="" key={`item-${index}-empty`}></option>
         {renderItemOptions(`item-${index}`)}
       </select>
     );
   }
 
-  const renderItemSet = () => {
+  const renderItems = () => {
     return _.range(0, 6).map((index) => {
       return renderItemSelect(index);
     });
@@ -38,7 +41,7 @@ const ItemSetEditor = ({ items, store }) => {
 
       <div className="row">
         <div className="col-2">
-          {renderItemSet()}
+          {renderItems()}
         </div>
       </div>
     </div>
