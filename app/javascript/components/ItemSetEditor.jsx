@@ -16,7 +16,7 @@ const ItemSetEditor = ({ items }) => {
   const renderItemSelect = (index) => {
     const id = `item-${index}-select`;
     return (
-      <select className="item-select" name={id} id={id} key={id}
+      <select className="build-select item-select" name={id} id={id} key={id}
               value={useSelector(state => state.items[index]) || ''}
               onChange={e => dispatch(setItem(index, e.target.value))}>
         <option value="" key={`item-${index}-empty`}></option>
