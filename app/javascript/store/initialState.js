@@ -24,5 +24,6 @@ export const initialRunes = {
 export const initialState = {
   build: initialBuild,
   items: initialItems,
-  runes: initialRunes
+  runes: initialRunes,
+  results: {}
 };

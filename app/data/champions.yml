@@ -16,3 +16,27 @@ Akali:
 Alistar:
 
 Amumu:
+
+Lux:
+  base:
+    health: 490
+    health_regen: 5.5
+    armor: 19
+    mr: 30
+    move_speed: 330
+    attack_speed: 0.669
+    mana: 480
+    mana_regen: 8
+    attack_damage: 54
+    crit_damage: 1.75
+    attack_range: 550
+  per_level:
+    health: 85
+    health_regen: 0.55
+    mana: 23.5
+    mana_regen: 0.8
+    armor: 4
+    mr: 0.5
+    attack_damage: 3.3
+    attack_speed: 1
+    crit: 0

@@ -7,83 +7,13 @@ import { useSelector, useDispatch, useStore } from 'react-redux'
 import configureStore from '../store/configureStore'
 import { initialState } from '../store/initialState'
 import { setChampion, setLevel, setAbility } from '../actions/build'
+import { getResults, setResults } from '../actions/results'
 import axios from 'axios'
 import _ from 'lodash'
 
 const BuildEditor = ({ data }) => {
   const dispatch = useDispatch();
   const store = useStore();
-
-  const performSim = () => {
-    const state = store.getState();
-    const post_data = {
-      build: state.build,
-      items: state.items,
-      runes: state.runes
-    }
-
-    axios.post('/api/sim', post_data)
-      .then ((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-  }
-
-  const mockResults = () => {
-    return {
-      stats: {
-        attackDamage: 75,
-        abilityPower: 120,
-        health: 1200,
-        mana: 700,
-        armor: 130,
-        magicRes: 60,
-        healthRegen: 5,
-        manaRegen: 20,
-        physicalVamp: 0,
-        omnivamp: 0.1,
-        attackSpeed: 0.63,
-        critChance: 0.35,
-        lethality: 20,
-        armorPenFlat: 16,
-        armorPenPerc: 0,
-        magicPenFlat: 0,
-        magicPenPerc: 0,
-        attackRange: 300,
-        tenacity: 0.3,
-        abilityHaste: 20,
-        lifeSteal: 0.05,
-        cooldownReduction: 0.2,
-        moveSpeed: 345
-      },
-      abilities: [{
-        name: 'Illumination',
-        short_name: 'P',
-        damage: 300,
-        damageToTarget: 250,
-        damageBreakdown: {
-          magic: 300,
-          physical: 0,
-          true: 0
-        }
-      },
-      {
-        name: 'Light Binding',
-        short_name: 'Q',
-        damage: 500,
-        damageToTarget: 350,
-        damageBreakdown: {
-          magic: 500,
-          physical: 0,
-          true: 0
-        },
-        cooldown: 7.5,
-        resourceCost: 50
-      }]
-    }
-  }
 
   const renderChampionOptions = () => {
     return _.keys(data.champions).map((champion) => {
@@ -138,11 +68,19 @@ const BuildEditor = ({ data }) => {
     });
   }
 
+  const renderResultsPanel = () => {
+    const results = useSelector(store => store.results);
+
+    if (Object.keys(results).length > 0) {
+      return <ResultsPanel results={results} />;
+    }
+  }
+
   return (
     <div className="build-editor">
       <div className="row">
         <div className="col-3">
-          <h2>Build 1</h2>
+          <h3>Champion</h3>
         </div>
       </div>
 
@@ -190,7 +128,7 @@ const BuildEditor = ({ data }) => {
           </div>
         </div>
         <div className="col-1 offset-5">
-          <button className="sim-button btn btn-primary" onClick={performSim}>Sim</button>
+          <button className="sim-button btn btn-primary" onClick={e => dispatch(getResults())}>Sim</button>
         </div>
       </div>
       <hr/>
@@ -198,7 +136,7 @@ const BuildEditor = ({ data }) => {
       <hr/>
       <RuneEditor rune_data={data.runes} />
       <hr/>
-      <ResultsPanel results={mockResults()} />
+      {renderResultsPanel()}
     </div>
   );
 }
