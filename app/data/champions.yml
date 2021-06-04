@@ -30,7 +30,7 @@ Lux:
     attack_damage: 54
     crit_damage: 1.75
     attack_range: 550
-  per_level:
+  growth:
     health: 85
     health_regen: 0.55
     mana: 23.5

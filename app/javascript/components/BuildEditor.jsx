@@ -37,7 +37,7 @@ const BuildEditor = ({ data }) => {
       <select className="build-select level-select" name="level-select" id="level-select"
               value={useSelector(state => state.build.level)}
               onChange={e => dispatch(setLevel(e.target.value))}>
-        {renderNumericOptions('level',1, 19)}
+        {renderNumericOptions('level', 1, 19)}
       </select>
     );
   }
