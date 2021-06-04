@@ -8,6 +8,10 @@ Aatrox:
     move_speed: 345
     mana: 0
     mana_regen: 0
+    attack_damage: 60
+    attack_speed: 0.651
+    crit: 0
+    attack_range: 175
   growth:
     health: 90
     health_regen: 1
@@ -15,6 +19,9 @@ Aatrox:
     mana_regen: 0
     armor: 3.25
     mr: 1.25
+    attack_damage: 5
+    attack_speed: 2.5
+    crit: 0
 Ahri:
   base:
     health: 526
@@ -24,6 +31,10 @@ Ahri:
     move_speed: 330
     mana: 418
     mana_regen: 8
+    attack_damage: 53
+    attack_speed: 0.668
+    crit: 0
+    attack_range: 550
   growth:
     health: 92
     health_regen: 0.6
@@ -31,6 +42,9 @@ Ahri:
     mana_regen: 0.8
     armor: 3.5
     mr: 0.5
+    attack_damage: 3
+    attack_speed: 2
+    crit: 0
 Akali:
   base:
     health: 500
@@ -40,6 +54,10 @@ Akali:
     move_speed: 345
     mana: 200
     mana_regen: 50
+    attack_damage: 62
+    attack_speed: 0.625
+    crit: 0
+    attack_range: 125
   growth:
     health: 105
     health_regen: 0.5
@@ -47,6 +65,9 @@ Akali:
     mana_regen: 0
     armor: 3.5
     mr: 1.25
+    attack_damage: 3.3
+    attack_speed: 3.2
+    crit: 0
 Alistar:
   base:
     health: 600
@@ -56,6 +77,10 @@ Alistar:
     move_speed: 330
     mana: 350
     mana_regen: 8.5
+    attack_damage: 62
+    attack_speed: 0.625
+    crit: 0
+    attack_range: 125
   growth:
     health: 106
     health_regen: 0.85
@@ -63,6 +88,9 @@ Alistar:
     mana_regen: 0.8
     armor: 3.5
     mr: 1.25
+    attack_damage: 3.75
+    attack_speed: 2.125
+    crit: 0
 Amumu:
   base:
     health: 615
@@ -72,6 +100,10 @@ Amumu:
     move_speed: 335
     mana: 285
     mana_regen: 7.38
+    attack_damage: 53
+    attack_speed: 0.736
+    crit: 0
+    attack_range: 125
   growth:
     health: 80
     health_regen: 0.85
@@ -79,6 +111,9 @@ Amumu:
     mana_regen: 0.53
     armor: 3.8
     mr: 1.25
+    attack_damage: 3.8
+    attack_speed: 2.18
+    crit: 0
 Anivia:
   base:
     health: 480
@@ -88,6 +123,10 @@ Anivia:
     move_speed: 325
     mana: 495
     mana_regen: 8
+    attack_damage: 51
+    attack_speed: 0.625
+    crit: 0
+    attack_range: 600
   growth:
     health: 82
     health_regen: 0.55
@@ -95,6 +134,9 @@ Anivia:
     mana_regen: 0.8
     armor: 4
     mr: 0.5
+    attack_damage: 3.2
+    attack_speed: 1.68
+    crit: 0
 Annie:
   base:
     health: 524
@@ -104,6 +146,10 @@ Annie:
     move_speed: 335
     mana: 418
     mana_regen: 8
+    attack_damage: 50
+    attack_speed: 0.579
+    crit: 0
+    attack_range: 625
   growth:
     health: 88
     health_regen: 0.55
@@ -111,6 +157,9 @@ Annie:
     mana_regen: 0.8
     armor: 4
     mr: 0.5
+    attack_damage: 2.63
+    attack_speed: 1.36
+    crit: 0
 Aphelios:
   base:
     health: 530
@@ -120,6 +169,10 @@ Aphelios:
     move_speed: 325
     mana: 348
     mana_regen: 6.5
+    attack_damage: 57
+    attack_speed: 0.64
+    crit: 0
+    attack_range: 550
   growth:
     health: 88
     health_regen: 0.55
@@ -127,6 +180,9 @@ Aphelios:
     mana_regen: 0.4
     armor: 3
     mr: 0.5
+    attack_damage: 2.4
+    attack_speed: 2.1
+    crit: 0
 Ashe:
   base:
     health: 570
@@ -136,6 +192,10 @@ Ashe:
     move_speed: 325
     mana: 280
     mana_regen: 6.97
+    attack_damage: 59
+    attack_speed: 0.658
+    crit: 0
+    attack_range: 600
   growth:
     health: 87
     health_regen: 0.55
@@ -143,6 +203,9 @@ Ashe:
     mana_regen: 0.4
     armor: 3.4
     mr: 0.5
+    attack_damage: 2.96
+    attack_speed: 3.33
+    crit: 0
 Lux:
   base:
     health: 490
@@ -154,8 +217,8 @@ Lux:
     mana: 480
     mana_regen: 8
     attack_damage: 54
-    crit_damage: 1.75
     attack_range: 550
+    crit: 0
   growth:
     health: 85
     health_regen: 0.55
