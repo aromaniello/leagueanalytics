@@ -1,4 +1,4 @@
-import { SET_PATH, SET_RUNE } from '../actions/runesTypes';
+import { SET_PATH, SET_RUNE } from '../actions/types/runes';
 import { initialRunes } from '../store/initialState';
 
 export default function runesReducer(state = initialRunes, action) {

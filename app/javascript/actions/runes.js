@@ -1,4 +1,4 @@
-import { SET_PATH, SET_RUNE } from './runesTypes';
+import { SET_PATH, SET_RUNE } from './types/runes';
 
 export function setPath(path, pathType) {
   return {

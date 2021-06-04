@@ -1,4 +1,4 @@
-import { SET_ITEM } from './itemsTypes';
+import { SET_ITEM } from './types/items';
 
 export function setItem(index, item) {
   return {

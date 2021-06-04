@@ -19,8 +19,6 @@ const RuneEditor = ({ rune_data }) => {
   }
   const rowForRune = runeId => runeRows[runeId];
 
-  console.log(rune_data);
-
   const renderPathSelect = (pathType, placeholder) => {
     return (
       <select className="build-select rune-select" name={`${pathType}-path-select`} id={`${pathType}-path-select`}

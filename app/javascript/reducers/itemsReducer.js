@@ -1,4 +1,4 @@
-import { SET_ITEM } from '../actions/itemsTypes';
+import { SET_ITEM } from '../actions/types/items';
 import { initialItems } from '../store/initialState';
 
 export default function itemsReducer(state = initialItems, action) {

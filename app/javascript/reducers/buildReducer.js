@@ -1,4 +1,4 @@
-import { SET_CHAMPION, SET_LEVEL, SET_ABILITY } from '../actions/buildTypes';
+import { SET_CHAMPION, SET_LEVEL, SET_ABILITY } from '../actions/types/build';
 import { initialBuild } from '../store/initialState';
 
 export default function buildReducer(state = initialBuild, action) {

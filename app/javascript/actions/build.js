@@ -1,4 +1,4 @@
-import { SET_CHAMPION, SET_LEVEL, SET_ABILITY } from './buildTypes';
+import { SET_CHAMPION, SET_LEVEL, SET_ABILITY } from './types/build';
 
 export function setChampion(champion) {
   return {

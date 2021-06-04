@@ -1,4 +1,4 @@
-import { SET_RESULTS } from '../actions/resultsTypes';
+import { SET_RESULTS } from '../actions/types/results';
 
 export default function resultsReducer(state = {}, action) {
   switch (action.type) {
