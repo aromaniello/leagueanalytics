@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { useSelector } from 'react-redux'
 
 const StatsPanel = ({ stats }) => {
-  const numberToPercentage = n => `${(n*100).toFixed(1)}%`;
+  const numberToPercentage = n => `${(n*100).toFixed(1)} %`;
 
   return (
     <React.Fragment>
@@ -12,7 +12,7 @@ const StatsPanel = ({ stats }) => {
           Attack Damage
         </div>
         <div className="col-1">
-          {stats.attackDamage}
+          {stats.attackDamage.toFixed(1)}
         </div>
 
         <div className="col-2">
@@ -26,7 +26,7 @@ const StatsPanel = ({ stats }) => {
           Health
         </div>
         <div className="col-1">
-          {stats.health}
+          {stats.health.toFixed(0)}
         </div>
       </div>
 
@@ -35,7 +35,7 @@ const StatsPanel = ({ stats }) => {
           Attack Speed
         </div>
         <div className="col-1">
-          {stats.attackSpeed}
+          {stats.attackSpeed.toFixed(2)}
         </div>
 
         <div className="col-2">
@@ -49,7 +49,7 @@ const StatsPanel = ({ stats }) => {
           Health Regen
         </div>
         <div className="col-1">
-          {stats.healthRegen}
+          {stats.healthRegen.toFixed(1)}
         </div>
       </div>
 
@@ -72,7 +72,7 @@ const StatsPanel = ({ stats }) => {
           Mana
         </div>
         <div className="col-1">
-          {stats.mana}
+          {stats.mana.toFixed(0)}
         </div>
       </div>
 
@@ -95,7 +95,7 @@ const StatsPanel = ({ stats }) => {
           Mana Regen
         </div>
         <div className="col-1">
-          {stats.manaRegen}
+          {stats.manaRegen.toFixed(1)}
         </div>
       </div>
 

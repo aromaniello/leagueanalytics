@@ -1,14 +1,14 @@
 module Api
   class BuildsController < ApiController
     def sim
-      puts params
       name = params[:build][:champion]
       level = params[:build][:level].to_i
+      items = params[:items]
 
-      champion = Champion.new(name, level)
+      champion_build = ChampionBuild.new(name, level, items)
 
       results = {
-        stats: champion.stats,
+        stats: champion_build.stats,
         abilities: [{
           name: 'Illumination',
           short_name: 'P',

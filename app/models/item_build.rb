@@ -1,7 +1,7 @@
 class ItemBuild
   attr_accessor :items, :data
 
-  stats = %i[attack_damage attack_speed crit_chance life_steal ability_power health health_regen mana mana_regen armor mr move_speed]
+  stats = %i[attack_damage attack_speed crit_chance life_steal ability_power ability_haste health health_regen mana mana_regen armor mr move_speed]
 
   def initialize(items)
     self.items = items
