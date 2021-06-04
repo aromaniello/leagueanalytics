@@ -1,0 +1,899 @@
+---
+Boots:
+  code: 1001
+  cost: 300
+  move_speed: 25
+Faerie Charm:
+  code: 1004
+  cost: 250
+Rejuvenation Bead:
+  code: 1006
+  cost: 150
+Giant's Belt:
+  code: 1011
+  cost: 900
+  health: 350
+Cloak of Agility:
+  code: 1018
+  cost: 600
+  crit_chance: 0.15
+Blasting Wand:
+  code: 1026
+  cost: 850
+  ability_power: 40
+Sapphire Crystal:
+  code: 1027
+  cost: 350
+  mana: 250
+Ruby Crystal:
+  code: 1028
+  cost: 400
+  health: 150
+Cloth Armor:
+  code: 1029
+  cost: 300
+  armor: 15
+Chain Vest:
+  code: 1031
+  cost: 800
+  armor: 40
+Null-Magic Mantle:
+  code: 1033
+  cost: 450
+  mr: 25
+Emberknife:
+  code: 1035
+  cost: 350
+Long Sword:
+  code: 1036
+  cost: 350
+  attack_damage: 10
+Pickaxe:
+  code: 1037
+  cost: 875
+  attack_damage: 25
+B. F. Sword:
+  code: 1038
+  cost: 1300
+  attack_damage: 40
+Hailblade:
+  code: 1039
+  cost: 350
+Dagger:
+  code: 1042
+  cost: 300
+  attack_speed: 0.12
+Recurve Bow:
+  code: 1043
+  cost: 1000
+  attack_speed: 0.25
+Amplifying Tome:
+  code: 1052
+  cost: 435
+  ability_power: 20
+Vampiric Scepter:
+  code: 1053
+  cost: 900
+  attack_damage: 15
+  life_steal: 0.1
+Doran's Shield:
+  code: 1054
+  cost: 450
+  health: 80
+  health_regen: 1.2
+Doran's Blade:
+  code: 1055
+  cost: 450
+  attack_damage: 8
+  health: 80
+Doran's Ring:
+  code: 1056
+  cost: 400
+  ability_power: 15
+  health: 70
+Negatron Cloak:
+  code: 1057
+  cost: 900
+  mr: 50
+Needlessly Large Rod:
+  code: 1058
+  cost: 1250
+  ability_power: 60
+Dark Seal:
+  code: 1082
+  cost: 350
+  ability_power: 15
+  health: 40
+Cull:
+  code: 1083
+  cost: 450
+  attack_damage: 7
+Health Potion:
+  code: 2003
+  cost: 50
+Kircheis Shard:
+  code: 2015
+  cost: 700
+  attack_speed: 0.15
+Refillable Potion:
+  code: 2031
+  cost: 150
+Corrupting Potion:
+  code: 2033
+  cost: 500
+Control Ward:
+  code: 2055
+  cost: 75
+Shurelya's Battlesong:
+  code: 2065
+  cost: 2500
+  ability_power: 40
+  health: 200
+Elixir of Iron:
+  code: 2138
+  cost: 500
+Elixir of Sorcery:
+  code: 2139
+  cost: 500
+Elixir of Wrath:
+  code: 2140
+  cost: 500
+Stopwatch:
+  code: 2420
+  cost: 650
+Broken Stopwatch:
+  code: 2421
+  cost: 650
+Abyssal Mask:
+  code: 3001
+  cost: 2700
+  health: 400
+  mr: 60
+Archangel's Staff:
+  code: 3003
+  cost: 3000
+  ability_power: 65
+  mana: 500
+Manamune:
+  code: 3004
+  cost: 2900
+  attack_damage: 35
+  mana: 500
+Berserker's Greaves:
+  code: 3006
+  cost: 1100
+  attack_speed: 0.35
+  move_speed: 45
+Boots of Swiftness:
+  code: 3009
+  cost: 900
+  move_speed: 60
+Chemtech Putrifier:
+  code: 3011
+  cost: 2300
+  ability_power: 55
+Sorcerer's Shoes:
+  code: 3020
+  cost: 1100
+  move_speed: 45
+Glacial Buckler:
+  code: 3024
+  cost: 900
+  mana: 250
+  armor: 20
+Guardian Angel:
+  code: 3026
+  cost: 2800
+  attack_damage: 40
+  armor: 40
+Infinity Edge:
+  code: 3031
+  cost: 3400
+  attack_damage: 70
+  crit_chance: 0.2
+Mortal Reminder:
+  code: 3033
+  cost: 2500
+  attack_damage: 25
+  attack_speed: 0.25
+  crit_chance: 0.2
+Last Whisper:
+  code: 3035
+  cost: 1450
+  attack_damage: 20
+Lord Dominik's Regards:
+  code: 3036
+  cost: 3000
+  attack_damage: 30
+  crit_chance: 0.2
+Mejai's Soulstealer:
+  code: 3041
+  cost: 1600
+  ability_power: 20
+  health: 100
+Phage:
+  code: 3044
+  cost: 1100
+  attack_damage: 15
+  health: 200
+Phantom Dancer:
+  code: 3046
+  cost: 2600
+  attack_damage: 20
+  attack_speed: 0.25
+  crit_chance: 0.2
+Plated Steelcaps:
+  code: 3047
+  cost: 1100
+  armor: 20
+  move_speed: 45
+Zeke's Convergence:
+  code: 3050
+  cost: 2400
+  health: 250
+  mana: 250
+  armor: 25
+Hearthbound Axe:
+  code: 3051
+  cost: 1100
+  attack_damage: 15
+  attack_speed: 0.15
+Sterak's Gage:
+  code: 3053
+  cost: 3100
+  attack_damage: 50
+  health: 400
+Sheen:
+  code: 3057
+  cost: 700
+Spirit Visage:
+  code: 3065
+  cost: 2900
+  health: 450
+  mr: 40
+Winged Moonplate:
+  code: 3066
+  cost: 800
+  health: 150
+Kindlegem:
+  code: 3067
+  cost: 800
+  health: 200
+Sunfire Aegis:
+  code: 3068
+  cost: 3200
+  health: 350
+  armor: 30
+  mr: 30
+Tear of the Goddess:
+  code: 3070
+  cost: 400
+  mana: 240
+Black Cleaver:
+  code: 3071
+  cost: 3100
+  attack_damage: 40
+  health: 400
+Bloodthirster:
+  code: 3072
+  cost: 3400
+  attack_damage: 55
+  crit_chance: 0.2
+  life_steal: 0.2
+Ravenous Hydra:
+  code: 3074
+  cost: 3300
+  attack_damage: 65
+Thornmail:
+  code: 3075
+  cost: 2700
+  health: 350
+  armor: 60
+Bramble Vest:
+  code: 3076
+  cost: 800
+  armor: 30
+Tiamat:
+  code: 3077
+  cost: 1200
+  attack_damage: 25
+Trinity Force:
+  code: 3078
+  cost: 3333
+  attack_damage: 30
+  attack_speed: 0.3
+  health: 200
+Warden's Mail:
+  code: 3082
+  cost: 1000
+  armor: 40
+Warmog's Armor:
+  code: 3083
+  cost: 3000
+  health: 800
+Runaan's Hurricane:
+  code: 3085
+  cost: 2600
+  attack_speed: 0.45
+  crit_chance: 0.2
+Zeal:
+  code: 3086
+  cost: 1050
+  attack_speed: 0.18
+  crit_chance: 0.15
+Rabadon's Deathcap:
+  code: 3089
+  cost: 3600
+  ability_power: 120
+Wit's End:
+  code: 3091
+  cost: 3100
+  attack_damage: 40
+  attack_speed: 0.4
+  mr: 50
+Rapid Firecannon:
+  code: 3094
+  cost: 2500
+  attack_speed: 0.35
+  crit_chance: 0.2
+Stormrazor:
+  code: 3095
+  cost: 2700
+  attack_damage: 40
+  attack_speed: 0.15
+  crit_chance: 0.2
+Lich Bane:
+  code: 3100
+  cost: 3000
+  ability_power: 70
+Banshee's Veil:
+  code: 3102
+  cost: 2600
+  ability_power: 80
+  mr: 45
+Aegis of the Legion:
+  code: 3105
+  cost: 1500
+  armor: 30
+  mr: 30
+Redemption:
+  code: 3107
+  cost: 2300
+  health: 200
+Fiendish Codex:
+  code: 3108
+  cost: 900
+  ability_power: 35
+Knight's Vow:
+  code: 3109
+  cost: 2300
+  health: 400
+Frozen Heart:
+  code: 3110
+  cost: 2500
+  mana: 400
+  armor: 80
+Mercury's Treads:
+  code: 3111
+  cost: 1100
+  mr: 25
+  move_speed: 45
+Aether Wisp:
+  code: 3113
+  cost: 850
+  ability_power: 30
+Forbidden Idol:
+  code: 3114
+  cost: 800
+Nashor's Tooth:
+  code: 3115
+  cost: 3000
+  attack_speed: 0.5
+  ability_power: 100
+Rylai's Crystal Scepter:
+  code: 3116
+  cost: 3000
+  ability_power: 90
+  health: 350
+Mobility Boots:
+  code: 3117
+  cost: 1000
+  move_speed: 115
+Executioner's Calling:
+  code: 3123
+  cost: 800
+  attack_damage: 15
+Guinsoo's Rageblade:
+  code: 3124
+  cost: 2600
+  attack_speed: 0.45
+  crit_chance: 0.2
+Caulfield's Warhammer:
+  code: 3133
+  cost: 1100
+  attack_damage: 25
+Serrated Dirk:
+  code: 3134
+  cost: 1100
+  attack_damage: 30
+Void Staff:
+  code: 3135
+  cost: 2700
+  ability_power: 70
+Mercurial Scimitar:
+  code: 3139
+  cost: 3000
+  attack_damage: 40
+  crit_chance: 0.2
+  mr: 30
+Quicksilver Sash:
+  code: 3140
+  cost: 1300
+  mr: 30
+Youmuu's Ghostblade:
+  code: 3142
+  cost: 3000
+  attack_damage: 60
+Randuin's Omen:
+  code: 3143
+  cost: 2700
+  health: 250
+  armor: 80
+Hextech Alternator:
+  code: 3145
+  cost: 1050
+  ability_power: 40
+Hextech Rocketbelt:
+  code: 3152
+  cost: 3200
+  ability_power: 90
+  health: 250
+Blade of The Ruined King:
+  code: 3153
+  cost: 3200
+  attack_damage: 40
+  attack_speed: 0.25
+  life_steal: 0.1
+Hexdrinker:
+  code: 3155
+  cost: 1300
+  attack_damage: 20
+  mr: 35
+Maw of Malmortius:
+  code: 3156
+  cost: 2800
+  attack_damage: 50
+  mr: 50
+Zhonya's Hourglass:
+  code: 3157
+  cost: 2600
+  ability_power: 65
+  armor: 45
+Ionian Boots of Lucidity:
+  code: 3158
+  cost: 950
+  move_speed: 45
+Morellonomicon:
+  code: 3165
+  cost: 2500
+  ability_power: 80
+  health: 250
+Umbral Glaive:
+  code: 3179
+  cost: 2600
+  attack_damage: 50
+Sanguine Blade:
+  code: 3181
+  cost: 3000
+  attack_damage: 50
+Locket of the Iron Solari:
+  code: 3190
+  cost: 2500
+  health: 200
+  armor: 30
+  mr: 30
+Seeker's Armguard:
+  code: 3191
+  cost: 1000
+  ability_power: 20
+  armor: 15
+Gargoyle Stoneplate:
+  code: 3193
+  cost: 3300
+  armor: 60
+  mr: 60
+Spectre's Cowl:
+  code: 3211
+  cost: 1250
+  health: 250
+  mr: 25
+Mikael's Blessing:
+  code: 3222
+  cost: 2300
+  mr: 50
+Scarecrow Effigy:
+  code: 3330
+  cost: 0
+Stealth Ward:
+  code: 3340
+  cost: 0
+Farsight Alteration:
+  code: 3363
+  cost: 0
+Oracle Lens:
+  code: 3364
+  cost: 0
+Ardent Censer:
+  code: 3504
+  cost: 2300
+  ability_power: 60
+Essence Reaver:
+  code: 3508
+  cost: 2800
+  attack_damage: 45
+  crit_chance: 0.2
+Kalista's Black Spear:
+  code: 3600
+  cost: 0
+Dead Man's Plate:
+  code: 3742
+  cost: 2900
+  health: 300
+  armor: 40
+Titanic Hydra:
+  code: 3748
+  cost: 3300
+  attack_damage: 30
+  health: 500
+Crystalline Bracer:
+  code: 3801
+  cost: 650
+  health: 200
+Lost Chapter:
+  code: 3802
+  cost: 1300
+  ability_power: 40
+  mana: 300
+Edge of Night:
+  code: 3814
+  cost: 2900
+  attack_damage: 50
+  health: 325
+Spellthief's Edge:
+  code: 3850
+  cost: 400
+  ability_power: 8
+  health: 10
+Steel Shoulderguards:
+  code: 3854
+  cost: 400
+  attack_damage: 3
+  health: 30
+Relic Shield:
+  code: 3858
+  cost: 400
+  ability_power: 5
+  health: 30
+Spectral Sickle:
+  code: 3862
+  cost: 400
+  attack_damage: 5
+  health: 10
+Oblivion Orb:
+  code: 3916
+  cost: 800
+  ability_power: 30
+Imperial Mandate:
+  code: 4005
+  cost: 2500
+  ability_power: 40
+  health: 200
+Force of Nature:
+  code: 4401
+  cost: 2900
+  health: 350
+  mr: 60
+Horizon Focus:
+  code: 4628
+  cost: 3000
+  ability_power: 115
+Cosmic Drive:
+  code: 4629
+  cost: 3000
+  ability_power: 75
+  health: 200
+Blighting Jewel:
+  code: 4630
+  cost: 1250
+  ability_power: 25
+Verdant Barrier:
+  code: 4632
+  cost: 1000
+  ability_power: 20
+  mr: 25
+Riftmaker:
+  code: 4633
+  cost: 3200
+  ability_power: 80
+  health: 300
+Leeching Leer:
+  code: 4635
+  cost: 1300
+  ability_power: 20
+  health: 250
+Night Harvester:
+  code: 4636
+  cost: 3200
+  ability_power: 90
+  health: 300
+Demonic Embrace:
+  code: 4637
+  cost: 3000
+  ability_power: 70
+  health: 350
+Watchful Wardstone:
+  code: 4638
+  cost: 1100
+  health: 150
+Bandleglass Mirror:
+  code: 4642
+  cost: 950
+  ability_power: 20
+Ironspike Whip:
+  code: 6029
+  cost: 1100
+  attack_damage: 30
+Silvermere Dawn:
+  code: 6035
+  cost: 3000
+  attack_damage: 40
+  health: 300
+  mr: 35
+Death's Dance:
+  code: 6333
+  cost: 3100
+  attack_damage: 55
+  armor: 45
+Chempunk Chainsword:
+  code: 6609
+  cost: 2600
+  attack_damage: 45
+  health: 250
+Staff of Flowing Water:
+  code: 6616
+  cost: 2300
+  ability_power: 50
+Moonstone Renewer:
+  code: 6617
+  cost: 2500
+  ability_power: 40
+  health: 200
+Goredrinker:
+  code: 6630
+  cost: 3300
+  attack_damage: 45
+  health: 400
+Stridebreaker:
+  code: 6631
+  cost: 3300
+  attack_damage: 45
+  attack_speed: 0.2
+  health: 200
+Divine Sunderer:
+  code: 6632
+  cost: 3300
+  attack_damage: 40
+  health: 400
+Liandry's Anguish:
+  code: 6653
+  cost: 3400
+  ability_power: 80
+  mana: 600
+Luden's Tempest:
+  code: 6655
+  cost: 3400
+  ability_power: 80
+  mana: 600
+Everfrost:
+  code: 6656
+  cost: 3400
+  ability_power: 80
+  health: 250
+  mana: 600
+Bami's Cinder:
+  code: 6660
+  cost: 1100
+  health: 300
+Frostfire Gauntlet:
+  code: 6662
+  cost: 2800
+  health: 350
+  armor: 25
+  mr: 25
+Turbo Chemtank:
+  code: 6664
+  cost: 2800
+  health: 350
+  armor: 25
+  mr: 25
+Noonquiver:
+  code: 6670
+  cost: 1300
+  attack_damage: 30
+  attack_speed: 0.15
+Galeforce:
+  code: 6671
+  cost: 3400
+  attack_damage: 60
+  attack_speed: 0.2
+  crit_chance: 0.2
+Kraken Slayer:
+  code: 6672
+  cost: 3400
+  attack_damage: 65
+  attack_speed: 0.25
+  crit_chance: 0.2
+Immortal Shieldbow:
+  code: 6673
+  cost: 3400
+  attack_damage: 55
+  attack_speed: 0.2
+  crit_chance: 0.2
+  life_steal: 0.1
+Navori Quickblades:
+  code: 6675
+  cost: 3400
+  attack_damage: 60
+  crit_chance: 0.2
+The Collector:
+  code: 6676
+  cost: 3000
+  attack_damage: 55
+  crit_chance: 0.2
+Rageknife:
+  code: 6677
+  cost: 800
+  attack_speed: 0.25
+Duskblade of Draktharr:
+  code: 6691
+  cost: 3200
+  attack_damage: 60
+Eclipse:
+  code: 6692
+  cost: 3200
+  attack_damage: 55
+Prowler's Claw:
+  code: 6693
+  cost: 3200
+  attack_damage: 60
+Serylda's Grudge:
+  code: 6694
+  cost: 3200
+  attack_damage: 45
+Serpent's Fang:
+  code: 6695
+  cost: 2600
+  attack_damage: 55
+Sandshrike's Claw:
+  code: 7000
+  cost: 3200
+  attack_damage: 75
+Syzygy:
+  code: 7001
+  cost: 3200
+  attack_damage: 75
+Draktharr's Shadowcarver:
+  code: 7002
+  cost: 3200
+  attack_damage: 75
+Turbocharged Hexperiment:
+  code: 7003
+  cost: 2800
+  health: 500
+  armor: 40
+  mr: 40
+Forgefire Crest:
+  code: 7004
+  cost: 3200
+  health: 500
+  armor: 45
+  mr: 45
+Rimeforged Grasp:
+  code: 7005
+  cost: 2800
+  health: 500
+  armor: 40
+  mr: 40
+Typhoon:
+  code: 7006
+  cost: 3400
+  attack_damage: 80
+  attack_speed: 0.35
+  crit_chance: 0.2
+Wyrmfallen Sacrifice:
+  code: 7007
+  cost: 3400
+  attack_damage: 85
+  attack_speed: 0.4
+  crit_chance: 0.2
+Bloodward:
+  code: 7008
+  cost: 3400
+  attack_damage: 70
+  attack_speed: 0.3
+  crit_chance: 0.2
+  life_steal: 0.12
+Icathia's Curse:
+  code: 7009
+  cost: 3200
+  ability_power: 100
+  health: 450
+Vespertide:
+  code: 7010
+  cost: 3200
+  ability_power: 120
+  health: 400
+Upgraded Aeropack:
+  code: 7011
+  cost: 3200
+  ability_power: 120
+  health: 350
+Liandry's Lament:
+  code: 7012
+  cost: 3400
+  ability_power: 110
+  mana: 800
+Eye of Luden:
+  code: 7013
+  cost: 3400
+  ability_power: 100
+  mana: 800
+Eternal Winter:
+  code: 7014
+  cost: 3400
+  ability_power: 100
+  health: 350
+  mana: 800
+Ceaseless Hunger:
+  code: 7015
+  cost: 3300
+  attack_damage: 60
+  health: 550
+Dreamshatter:
+  code: 7016
+  cost: 3300
+  attack_damage: 55
+  attack_speed: 0.3
+  health: 300
+Deicide:
+  code: 7017
+  cost: 3300
+  attack_damage: 55
+  health: 550
+Infinity Force:
+  code: 7018
+  cost: 3333
+  attack_damage: 40
+  attack_speed: 0.4
+  health: 300
+Reliquary of the Golden Dawn:
+  code: 7019
+  cost: 2500
+  health: 400
+  armor: 40
+  mr: 40
+Shurelya's Requiem:
+  code: 7020
+  cost: 2500
+  ability_power: 70
+  health: 300
+Starcaster:
+  code: 7021
+  cost: 2500
+  ability_power: 70
+  health: 300
+Seat of Command:
+  code: 7022
+  cost: 2500
+  ability_power: 70
+  health: 300

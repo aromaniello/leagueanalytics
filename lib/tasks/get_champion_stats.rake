@@ -3,43 +3,44 @@ require 'json'
 require 'yaml'
 
 namespace :league_data do
-  desc "get champion stats from ddragon api"
+  desc "get champion stats from data dragon api"
   task :get_champion_stats => :environment do
-    Data.champions.keys.each do |champion_name|
-      puts "Fetching data for #{champion_name}..."
-      response = HTTParty.get("http://ddragon.leagueoflegends.com/cdn/11.8.1/data/en_US/champion/#{champion_name}.json")
+    response = HTTParty.get("http://ddragon.leagueoflegends.com/cdn/11.11.1/data/en_US/champion.json")
 
-      data = JSON.parse(response.body)
+    champion_stats = {}
 
-      champion_data = YAML.load_file("app/data/champions.yml")
+    JSON.parse(response.body)["data"].each do |name, data|
 
-      champion_data[champion_name] = {} if champion_data[champion_name].nil?
-      champion_data[champion_name]["base"] = {} if champion_data[champion_name]["base"].nil?
-      champion_data[champion_name]["growth"] = {} if champion_data[champion_name]["growth"].nil?
+      stats = data["stats"]
 
-      champion_data[champion_name]["base"]["health"] = data["data"][champion_name]["stats"]["hp"]
-      champion_data[champion_name]["base"]["health_regen"] = data["data"][champion_name]["stats"]["hpregen"]
-      champion_data[champion_name]["base"]["mana"] = data["data"][champion_name]["stats"]["mp"]
-      champion_data[champion_name]["base"]["mana_regen"] = data["data"][champion_name]["stats"]["mpregen"]
-      champion_data[champion_name]["base"]["armor"] = data["data"][champion_name]["stats"]["armor"]
-      champion_data[champion_name]["base"]["mr"] = data["data"][champion_name]["stats"]["spellblock"]
-      champion_data[champion_name]["base"]["attack_damage"] = data["data"][champion_name]["stats"]["attackdamage"]
-      champion_data[champion_name]["base"]["attack_speed"] = data["data"][champion_name]["stats"]["attackspeed"]
-      champion_data[champion_name]["base"]["crit"] = data["data"][champion_name]["stats"]["crit"]
-      champion_data[champion_name]["base"]["attack_range"] = data["data"][champion_name]["stats"]["attackrange"]
-      champion_data[champion_name]["base"]["move_speed"] = data["data"][champion_name]["stats"]["movespeed"]
-
-      champion_data[champion_name]["growth"]["health"] = data["data"][champion_name]["stats"]["hpperlevel"]
-      champion_data[champion_name]["growth"]["health_regen"] = data["data"][champion_name]["stats"]["hpregenperlevel"]
-      champion_data[champion_name]["growth"]["mana"] = data["data"][champion_name]["stats"]["mpperlevel"]
-      champion_data[champion_name]["growth"]["mana_regen"] = data["data"][champion_name]["stats"]["mpregenperlevel"]
-      champion_data[champion_name]["growth"]["armor"] = data["data"][champion_name]["stats"]["armorperlevel"]
-      champion_data[champion_name]["growth"]["mr"] = data["data"][champion_name]["stats"]["spellblockperlevel"]
-      champion_data[champion_name]["growth"]["attack_damage"] = data["data"][champion_name]["stats"]["attackdamageperlevel"]
-      champion_data[champion_name]["growth"]["attack_speed"] = data["data"][champion_name]["stats"]["attackspeedperlevel"]
-      champion_data[champion_name]["growth"]["crit"] = data["data"][champion_name]["stats"]["critperlevel"]
-
-      File.open("app/data/champions.yml", 'w') { |f| YAML.dump(champion_data, f) }
+      champion_stats[name] = {
+        "base" => {
+          "health" => stats["hp"],
+          "health_regen" => stats["hpregen"],
+          "mana" => stats["mp"],
+          "mana_regen" => stats["mpregen"],
+          "armor" => stats["armor"],
+          "mr" => stats["spellblock"],
+          "attack_damage" => stats["attackdamage"],
+          "attack_speed" => stats["attackspeed"],
+          "crit_chance" => stats["crit"],
+          "attack_range" => stats["attackrange"],
+          "move_speed" => stats["movespeed"]
+        },
+        "growth" => {
+          "health" => stats["hpperlevel"],
+          "health_regen" => stats["hpregenperlevel"],
+          "mana" => stats["mpperlevel"],
+          "mana_regen" => stats["mpregenperlevel"],
+          "armor" => stats["armorperlevel"],
+          "mr" => stats["spellblockperlevel"],
+          "attack_damage" => stats["attackdamageperlevel"],
+          "attack_speed" => stats["attackspeedperlevel"],
+          "crit_chance" => stats["critperlevel"],
+        }
+      }
     end
+
+    File.open("app/data/champion_stats.yml", 'w') { |f| YAML.dump(champion_stats, f) }
   end
 end

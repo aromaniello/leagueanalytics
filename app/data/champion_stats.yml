@@ -1,0 +1,3566 @@
+---
+Aatrox:
+  base:
+    health: 580
+    health_regen: 3
+    mana: 0
+    mana_regen: 0
+    armor: 38
+    mr: 32
+    attack_damage: 60
+    attack_speed: 0.651
+    crit_chance: 0
+    attack_range: 175
+    move_speed: 345
+  growth:
+    health: 90
+    health_regen: 1
+    mana: 0
+    mana_regen: 0
+    armor: 3.25
+    mr: 1.25
+    attack_damage: 5
+    attack_speed: 2.5
+    crit_chance: 0
+Ahri:
+  base:
+    health: 526
+    health_regen: 5.5
+    mana: 418
+    mana_regen: 8
+    armor: 21
+    mr: 30
+    attack_damage: 53
+    attack_speed: 0.668
+    crit_chance: 0
+    attack_range: 550
+    move_speed: 330
+  growth:
+    health: 92
+    health_regen: 0.6
+    mana: 25
+    mana_regen: 0.8
+    armor: 3.5
+    mr: 0.5
+    attack_damage: 3
+    attack_speed: 2
+    crit_chance: 0
+Akali:
+  base:
+    health: 500
+    health_regen: 8
+    mana: 200
+    mana_regen: 50
+    armor: 23
+    mr: 37
+    attack_damage: 62
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 345
+  growth:
+    health: 105
+    health_regen: 0.5
+    mana: 0
+    mana_regen: 0
+    armor: 3.5
+    mr: 1.25
+    attack_damage: 3.3
+    attack_speed: 3.2
+    crit_chance: 0
+Alistar:
+  base:
+    health: 600
+    health_regen: 8.5
+    mana: 350
+    mana_regen: 8.5
+    armor: 44
+    mr: 32
+    attack_damage: 62
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 330
+  growth:
+    health: 106
+    health_regen: 0.85
+    mana: 40
+    mana_regen: 0.8
+    armor: 3.5
+    mr: 1.25
+    attack_damage: 3.75
+    attack_speed: 2.125
+    crit_chance: 0
+Amumu:
+  base:
+    health: 615
+    health_regen: 9
+    mana: 285
+    mana_regen: 7.38
+    armor: 30
+    mr: 32
+    attack_damage: 53
+    attack_speed: 0.736
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 335
+  growth:
+    health: 80
+    health_regen: 0.85
+    mana: 40
+    mana_regen: 0.53
+    armor: 3.8
+    mr: 1.25
+    attack_damage: 3.8
+    attack_speed: 2.18
+    crit_chance: 0
+Anivia:
+  base:
+    health: 480
+    health_regen: 5.5
+    mana: 495
+    mana_regen: 8
+    armor: 21
+    mr: 30
+    attack_damage: 51
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 600
+    move_speed: 325
+  growth:
+    health: 82
+    health_regen: 0.55
+    mana: 45
+    mana_regen: 0.8
+    armor: 4
+    mr: 0.5
+    attack_damage: 3.2
+    attack_speed: 1.68
+    crit_chance: 0
+Annie:
+  base:
+    health: 524
+    health_regen: 5.5
+    mana: 418
+    mana_regen: 8
+    armor: 19
+    mr: 30
+    attack_damage: 50
+    attack_speed: 0.579
+    crit_chance: 0
+    attack_range: 625
+    move_speed: 335
+  growth:
+    health: 88
+    health_regen: 0.55
+    mana: 25
+    mana_regen: 0.8
+    armor: 4
+    mr: 0.5
+    attack_damage: 2.63
+    attack_speed: 1.36
+    crit_chance: 0
+Aphelios:
+  base:
+    health: 530
+    health_regen: 3.25
+    mana: 348
+    mana_regen: 6.5
+    armor: 28
+    mr: 26
+    attack_damage: 57
+    attack_speed: 0.64
+    crit_chance: 0
+    attack_range: 550
+    move_speed: 325
+  growth:
+    health: 88
+    health_regen: 0.55
+    mana: 42
+    mana_regen: 0.4
+    armor: 3
+    mr: 0.5
+    attack_damage: 2.4
+    attack_speed: 2.1
+    crit_chance: 0
+Ashe:
+  base:
+    health: 570
+    health_regen: 3.5
+    mana: 280
+    mana_regen: 6.97
+    armor: 26
+    mr: 30
+    attack_damage: 59
+    attack_speed: 0.658
+    crit_chance: 0
+    attack_range: 600
+    move_speed: 325
+  growth:
+    health: 87
+    health_regen: 0.55
+    mana: 32
+    mana_regen: 0.4
+    armor: 3.4
+    mr: 0.5
+    attack_damage: 2.96
+    attack_speed: 3.33
+    crit_chance: 0
+AurelionSol:
+  base:
+    health: 575
+    health_regen: 7
+    mana: 350
+    mana_regen: 6
+    armor: 19
+    mr: 30
+    attack_damage: 57
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 550
+    move_speed: 325
+  growth:
+    health: 92
+    health_regen: 0.6
+    mana: 50
+    mana_regen: 0.8
+    armor: 3.6
+    mr: 0.5
+    attack_damage: 3.2
+    attack_speed: 1.36
+    crit_chance: 0
+Azir:
+  base:
+    health: 552
+    health_regen: 7
+    mana: 480
+    mana_regen: 8
+    armor: 19
+    mr: 30
+    attack_damage: 52
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 525
+    move_speed: 335
+  growth:
+    health: 92
+    health_regen: 0.75
+    mana: 21
+    mana_regen: 0.8
+    armor: 3
+    mr: 0.5
+    attack_damage: 2.8
+    attack_speed: 3
+    crit_chance: 0
+Bard:
+  base:
+    health: 560
+    health_regen: 5.5
+    mana: 350
+    mana_regen: 6
+    armor: 34
+    mr: 30
+    attack_damage: 52
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 500
+    move_speed: 330
+  growth:
+    health: 89
+    health_regen: 0.55
+    mana: 50
+    mana_regen: 0.45
+    armor: 4
+    mr: 0.5
+    attack_damage: 3
+    attack_speed: 2
+    crit_chance: 0
+Blitzcrank:
+  base:
+    health: 583
+    health_regen: 8.5
+    mana: 267
+    mana_regen: 8.5
+    armor: 37
+    mr: 32
+    attack_damage: 62
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 325
+  growth:
+    health: 95
+    health_regen: 0.75
+    mana: 40
+    mana_regen: 0.8
+    armor: 3.5
+    mr: 1.25
+    attack_damage: 3.5
+    attack_speed: 1.13
+    crit_chance: 0
+Brand:
+  base:
+    health: 520
+    health_regen: 5.5
+    mana: 469
+    mana_regen: 10.67
+    armor: 22
+    mr: 30
+    attack_damage: 57
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 550
+    move_speed: 340
+  growth:
+    health: 88
+    health_regen: 0.55
+    mana: 21
+    mana_regen: 0.6
+    armor: 3.5
+    mr: 0.5
+    attack_damage: 3
+    attack_speed: 1.36
+    crit_chance: 0
+Braum:
+  base:
+    health: 540
+    health_regen: 8.5
+    mana: 311
+    mana_regen: 6
+    armor: 47
+    mr: 32
+    attack_damage: 55
+    attack_speed: 0.644
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 335
+  growth:
+    health: 98
+    health_regen: 1
+    mana: 45
+    mana_regen: 0.8
+    armor: 4
+    mr: 1.25
+    attack_damage: 3.2
+    attack_speed: 3.5
+    crit_chance: 0
+Caitlyn:
+  base:
+    health: 510
+    health_regen: 3.5
+    mana: 315
+    mana_regen: 7.4
+    armor: 28
+    mr: 30
+    attack_damage: 62
+    attack_speed: 0.681
+    crit_chance: 0
+    attack_range: 650
+    move_speed: 325
+  growth:
+    health: 93
+    health_regen: 0.55
+    mana: 35
+    mana_regen: 0.55
+    armor: 3.5
+    mr: 0.5
+    attack_damage: 3.8
+    attack_speed: 4
+    crit_chance: 0
+Camille:
+  base:
+    health: 576
+    health_regen: 8.5
+    mana: 339
+    mana_regen: 8.15
+    armor: 35
+    mr: 32.1
+    attack_damage: 68
+    attack_speed: 0.644
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 340
+  growth:
+    health: 85
+    health_regen: 0.8
+    mana: 52
+    mana_regen: 0.75
+    armor: 3.8
+    mr: 1.25
+    attack_damage: 3.5
+    attack_speed: 2.5
+    crit_chance: 0
+Cassiopeia:
+  base:
+    health: 560
+    health_regen: 5.5
+    mana: 350
+    mana_regen: 8
+    armor: 18
+    mr: 32
+    attack_damage: 53
+    attack_speed: 0.647
+    crit_chance: 0
+    attack_range: 550
+    move_speed: 328
+  growth:
+    health: 90
+    health_regen: 0.5
+    mana: 60
+    mana_regen: 0.8
+    armor: 3.5
+    mr: 0.5
+    attack_damage: 3
+    attack_speed: 1.5
+    crit_chance: 0
+Chogath:
+  base:
+    health: 574
+    health_regen: 9
+    mana: 270
+    mana_regen: 7.2
+    armor: 38
+    mr: 32
+    attack_damage: 69
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 345
+  growth:
+    health: 80
+    health_regen: 0.85
+    mana: 60
+    mana_regen: 0.45
+    armor: 3.5
+    mr: 1.25
+    attack_damage: 4.2
+    attack_speed: 1.44
+    crit_chance: 0
+Corki:
+  base:
+    health: 518
+    health_regen: 5.5
+    mana: 350
+    mana_regen: 7.42
+    armor: 28
+    mr: 30
+    attack_damage: 55
+    attack_speed: 0.638
+    crit_chance: 0
+    attack_range: 550
+    move_speed: 325
+  growth:
+    health: 87
+    health_regen: 0.55
+    mana: 54
+    mana_regen: 0.55
+    armor: 3.5
+    mr: 0.5
+    attack_damage: 2.5
+    attack_speed: 2.3
+    crit_chance: 0
+Darius:
+  base:
+    health: 582
+    health_regen: 10
+    mana: 263
+    mana_regen: 6.6
+    armor: 39
+    mr: 32
+    attack_damage: 64
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 175
+    move_speed: 340
+  growth:
+    health: 100
+    health_regen: 0.95
+    mana: 57.5
+    mana_regen: 0.35
+    armor: 4
+    mr: 1.25
+    attack_damage: 5
+    attack_speed: 1
+    crit_chance: 0
+Diana:
+  base:
+    health: 570
+    health_regen: 6.5
+    mana: 375
+    mana_regen: 8
+    armor: 31
+    mr: 32
+    attack_damage: 57
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 150
+    move_speed: 345
+  growth:
+    health: 95
+    health_regen: 0.85
+    mana: 25
+    mana_regen: 0.8
+    armor: 3.1
+    mr: 1.25
+    attack_damage: 3
+    attack_speed: 2.25
+    crit_chance: 0
+Draven:
+  base:
+    health: 605
+    health_regen: 3.75
+    mana: 360.56
+    mana_regen: 8.04
+    armor: 29
+    mr: 30
+    attack_damage: 60
+    attack_speed: 0.679
+    crit_chance: 0
+    attack_range: 550
+    move_speed: 330
+  growth:
+    health: 90
+    health_regen: 0.7
+    mana: 39
+    mana_regen: 0.65
+    armor: 3.3
+    mr: 0.5
+    attack_damage: 3.61
+    attack_speed: 2.7
+    crit_chance: 0
+DrMundo:
+  base:
+    health: 583
+    health_regen: 8
+    mana: 0
+    mana_regen: 0
+    armor: 36
+    mr: 32
+    attack_damage: 61
+    attack_speed: 0.721
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 345
+  growth:
+    health: 89
+    health_regen: 0.75
+    mana: 0
+    mana_regen: 0
+    armor: 3
+    mr: 1.25
+    attack_damage: 3
+    attack_speed: 2.8
+    crit_chance: 0
+Ekko:
+  base:
+    health: 585
+    health_regen: 9
+    mana: 280
+    mana_regen: 7
+    armor: 32
+    mr: 32
+    attack_damage: 58
+    attack_speed: 0.688
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 340
+  growth:
+    health: 85
+    health_regen: 0.9
+    mana: 70
+    mana_regen: 0.8
+    armor: 3
+    mr: 1.25
+    attack_damage: 3
+    attack_speed: 3.3
+    crit_chance: 0
+Elise:
+  base:
+    health: 534
+    health_regen: 5.5
+    mana: 324
+    mana_regen: 6
+    armor: 27
+    mr: 30
+    attack_damage: 55
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 550
+    move_speed: 330
+  growth:
+    health: 93
+    health_regen: 0.6
+    mana: 50
+    mana_regen: 0.8
+    armor: 3.35
+    mr: 0.5
+    attack_damage: 3
+    attack_speed: 1.75
+    crit_chance: 0
+Evelynn:
+  base:
+    health: 572
+    health_regen: 8.5
+    mana: 315
+    mana_regen: 8.11
+    armor: 37
+    mr: 32.1
+    attack_damage: 61
+    attack_speed: 0.667
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 335
+  growth:
+    health: 84
+    health_regen: 0.75
+    mana: 42
+    mana_regen: 0.6
+    armor: 3.5
+    mr: 1.25
+    attack_damage: 3
+    attack_speed: 2.1
+    crit_chance: 0
+Ezreal:
+  base:
+    health: 530
+    health_regen: 4
+    mana: 375
+    mana_regen: 8.5
+    armor: 24
+    mr: 30
+    attack_damage: 60
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 550
+    move_speed: 325
+  growth:
+    health: 88
+    health_regen: 0.65
+    mana: 70
+    mana_regen: 0.65
+    armor: 3.5
+    mr: 0.5
+    attack_damage: 2.5
+    attack_speed: 2.5
+    crit_chance: 0
+Fiddlesticks:
+  base:
+    health: 580.4
+    health_regen: 5.5
+    mana: 500
+    mana_regen: 8
+    armor: 34
+    mr: 30
+    attack_damage: 55.36
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 480
+    move_speed: 335
+  growth:
+    health: 92
+    health_regen: 0.6
+    mana: 28
+    mana_regen: 0.8
+    armor: 3.5
+    mr: 0.5
+    attack_damage: 2.63
+    attack_speed: 2.11
+    crit_chance: 0
+Fiora:
+  base:
+    health: 550
+    health_regen: 8.5
+    mana: 300
+    mana_regen: 8
+    armor: 33
+    mr: 32
+    attack_damage: 68
+    attack_speed: 0.69
+    crit_chance: 0
+    attack_range: 150
+    move_speed: 345
+  growth:
+    health: 85
+    health_regen: 0.55
+    mana: 60
+    mana_regen: 0.7
+    armor: 3.5
+    mr: 1.25
+    attack_damage: 3.3
+    attack_speed: 3.2
+    crit_chance: 0
+Fizz:
+  base:
+    health: 570
+    health_regen: 8
+    mana: 317
+    mana_regen: 6
+    armor: 22
+    mr: 32
+    attack_damage: 58
+    attack_speed: 0.658
+    crit_chance: 0
+    attack_range: 175
+    move_speed: 335
+  growth:
+    health: 98
+    health_regen: 0.7
+    mana: 37
+    mana_regen: 0.8
+    armor: 3.4
+    mr: 1.25
+    attack_damage: 3
+    attack_speed: 3.1
+    crit_chance: 0
+Galio:
+  base:
+    health: 562
+    health_regen: 8
+    mana: 500
+    mana_regen: 9.5
+    armor: 24
+    mr: 32
+    attack_damage: 59
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 150
+    move_speed: 335
+  growth:
+    health: 112
+    health_regen: 0.8
+    mana: 40
+    mana_regen: 0.7
+    armor: 3.5
+    mr: 1.25
+    attack_damage: 3.5
+    attack_speed: 1.5
+    crit_chance: 0
+Gangplank:
+  base:
+    health: 540
+    health_regen: 6
+    mana: 280
+    mana_regen: 7.5
+    armor: 35
+    mr: 32
+    attack_damage: 64
+    attack_speed: 0.658
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 345
+  growth:
+    health: 82
+    health_regen: 0.6
+    mana: 60
+    mana_regen: 0.7
+    armor: 3
+    mr: 1.25
+    attack_damage: 4
+    attack_speed: 3.2
+    crit_chance: 0
+Garen:
+  base:
+    health: 620
+    health_regen: 8
+    mana: 0
+    mana_regen: 0
+    armor: 36
+    mr: 32
+    attack_damage: 66
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 175
+    move_speed: 340
+  growth:
+    health: 84
+    health_regen: 0.5
+    mana: 0
+    mana_regen: 0
+    armor: 3
+    mr: 0.75
+    attack_damage: 4.5
+    attack_speed: 3.65
+    crit_chance: 0
+Gnar:
+  base:
+    health: 510
+    health_regen: 4.5
+    mana: 100
+    mana_regen: 0
+    armor: 32
+    mr: 30
+    attack_damage: 59
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 175
+    move_speed: 335
+  growth:
+    health: 65
+    health_regen: 1.75
+    mana: 0
+    mana_regen: 0
+    armor: 2.5
+    mr: 0.5
+    attack_damage: 3
+    attack_speed: 6
+    crit_chance: 0
+Gragas:
+  base:
+    health: 600
+    health_regen: 5.5
+    mana: 400
+    mana_regen: 6
+    armor: 38
+    mr: 32
+    attack_damage: 64
+    attack_speed: 0.675
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 330
+  growth:
+    health: 95
+    health_regen: 0.5
+    mana: 47
+    mana_regen: 0.8
+    armor: 3.6
+    mr: 1.25
+    attack_damage: 3.5
+    attack_speed: 2.05
+    crit_chance: 0
+Graves:
+  base:
+    health: 555
+    health_regen: 8
+    mana: 325
+    mana_regen: 8
+    armor: 33
+    mr: 32
+    attack_damage: 66
+    attack_speed: 0.475
+    crit_chance: 0
+    attack_range: 425
+    move_speed: 340
+  growth:
+    health: 92
+    health_regen: 0.7
+    mana: 40
+    mana_regen: 0.7
+    armor: 3.4
+    mr: 1.25
+    attack_damage: 4
+    attack_speed: 2.6
+    crit_chance: 0
+Gwen:
+  base:
+    health: 550
+    health_regen: 7
+    mana: 330
+    mana_regen: 7.5
+    armor: 39
+    mr: 32
+    attack_damage: 63
+    attack_speed: 0.69
+    crit_chance: 0
+    attack_range: 150
+    move_speed: 340
+  growth:
+    health: 90
+    health_regen: 0.55
+    mana: 40
+    mana_regen: 0.7
+    armor: 4
+    mr: 1.25
+    attack_damage: 3
+    attack_speed: 2.25
+    crit_chance: 0
+Hecarim:
+  base:
+    health: 580
+    health_regen: 7
+    mana: 277
+    mana_regen: 6.5
+    armor: 32
+    mr: 32
+    attack_damage: 66
+    attack_speed: 0.67
+    crit_chance: 0
+    attack_range: 175
+    move_speed: 345
+  growth:
+    health: 90
+    health_regen: 0.75
+    mana: 60
+    mana_regen: 0.6
+    armor: 4.25
+    mr: 1.25
+    attack_damage: 3.2
+    attack_speed: 2.5
+    crit_chance: 0
+Heimerdinger:
+  base:
+    health: 488
+    health_regen: 7
+    mana: 385
+    mana_regen: 8
+    armor: 19
+    mr: 30
+    attack_damage: 56
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 550
+    move_speed: 340
+  growth:
+    health: 87
+    health_regen: 0.55
+    mana: 20
+    mana_regen: 0.8
+    armor: 3
+    mr: 0.5
+    attack_damage: 2.7
+    attack_speed: 1.36
+    crit_chance: 0
+Illaoi:
+  base:
+    health: 586
+    health_regen: 9.5
+    mana: 300
+    mana_regen: 7.5
+    armor: 35
+    mr: 32
+    attack_damage: 68
+    attack_speed: 0.571
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 340
+  growth:
+    health: 95
+    health_regen: 0.8
+    mana: 40
+    mana_regen: 0.75
+    armor: 3.8
+    mr: 1.25
+    attack_damage: 5
+    attack_speed: 2.5
+    crit_chance: 0
+Irelia:
+  base:
+    health: 580
+    health_regen: 8.5
+    mana: 350
+    mana_regen: 8
+    armor: 36
+    mr: 32
+    attack_damage: 65
+    attack_speed: 0.656
+    crit_chance: 0
+    attack_range: 200
+    move_speed: 335
+  growth:
+    health: 95
+    health_regen: 0.85
+    mana: 50
+    mana_regen: 0.8
+    armor: 3
+    mr: 1.25
+    attack_damage: 4
+    attack_speed: 2.5
+    crit_chance: 0
+Ivern:
+  base:
+    health: 585
+    health_regen: 7
+    mana: 450
+    mana_regen: 6
+    armor: 27
+    mr: 32
+    attack_damage: 50
+    attack_speed: 0.644
+    crit_chance: 0
+    attack_range: 475
+    move_speed: 330
+  growth:
+    health: 85
+    health_regen: 0.85
+    mana: 60
+    mana_regen: 0.75
+    armor: 3.5
+    mr: 1.25
+    attack_damage: 3
+    attack_speed: 3.4
+    crit_chance: 0
+Janna:
+  base:
+    health: 500
+    health_regen: 5.5
+    mana: 350
+    mana_regen: 11.5
+    armor: 28
+    mr: 30
+    attack_damage: 46
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 550
+    move_speed: 315
+  growth:
+    health: 70
+    health_regen: 0.55
+    mana: 64
+    mana_regen: 0.4
+    armor: 3.8
+    mr: 0.5
+    attack_damage: 1.5
+    attack_speed: 2.95
+    crit_chance: 0
+JarvanIV:
+  base:
+    health: 570
+    health_regen: 8
+    mana: 300
+    mana_regen: 6.5
+    armor: 34
+    mr: 32
+    attack_damage: 64
+    attack_speed: 0.658
+    crit_chance: 0
+    attack_range: 175
+    move_speed: 340
+  growth:
+    health: 90
+    health_regen: 0.7
+    mana: 40
+    mana_regen: 0.45
+    armor: 3.6
+    mr: 1.25
+    attack_damage: 3.4
+    attack_speed: 2.5
+    crit_chance: 0
+Jax:
+  base:
+    health: 593
+    health_regen: 8.5
+    mana: 339
+    mana_regen: 7.58
+    armor: 36
+    mr: 32
+    attack_damage: 68
+    attack_speed: 0.638
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 350
+  growth:
+    health: 85
+    health_regen: 0.55
+    mana: 52
+    mana_regen: 0.7
+    armor: 3
+    mr: 1.25
+    attack_damage: 4.25
+    attack_speed: 3.4
+    crit_chance: 0
+Jayce:
+  base:
+    health: 560
+    health_regen: 6
+    mana: 375
+    mana_regen: 6
+    armor: 27
+    mr: 30
+    attack_damage: 54
+    attack_speed: 0.658
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 335
+  growth:
+    health: 90
+    health_regen: 0.6
+    mana: 45
+    mana_regen: 0.8
+    armor: 3.5
+    mr: 0.5
+    attack_damage: 4.25
+    attack_speed: 3
+    crit_chance: 0
+Jhin:
+  base:
+    health: 585
+    health_regen: 3.75
+    mana: 300
+    mana_regen: 6
+    armor: 24
+    mr: 30
+    attack_damage: 59
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 550
+    move_speed: 330
+  growth:
+    health: 93
+    health_regen: 0.55
+    mana: 50
+    mana_regen: 0.8
+    armor: 3.5
+    mr: 0.5
+    attack_damage: 4.7
+    attack_speed: 0
+    crit_chance: 0
+Jinx:
+  base:
+    health: 610
+    health_regen: 3.75
+    mana: 245
+    mana_regen: 6.7
+    armor: 26
+    mr: 30
+    attack_damage: 57
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 525
+    move_speed: 325
+  growth:
+    health: 86
+    health_regen: 0.5
+    mana: 45
+    mana_regen: 1
+    armor: 3.5
+    mr: 0.5
+    attack_damage: 3.4
+    attack_speed: 1
+    crit_chance: 0
+Kaisa:
+  base:
+    health: 600
+    health_regen: 3.5
+    mana: 344.88
+    mana_regen: 8.2
+    armor: 28
+    mr: 30
+    attack_damage: 59
+    attack_speed: 0.644
+    crit_chance: 0
+    attack_range: 525
+    move_speed: 335
+  growth:
+    health: 88
+    health_regen: 0.55
+    mana: 38
+    mana_regen: 0.45
+    armor: 3
+    mr: 0.5
+    attack_damage: 2
+    attack_speed: 1.8
+    crit_chance: 0
+Kalista:
+  base:
+    health: 534
+    health_regen: 3.75
+    mana: 250
+    mana_regen: 6.3
+    armor: 21
+    mr: 30
+    attack_damage: 69
+    attack_speed: 0.694
+    crit_chance: 0
+    attack_range: 525
+    move_speed: 325
+  growth:
+    health: 100
+    health_regen: 0.55
+    mana: 45
+    mana_regen: 0.4
+    armor: 4
+    mr: 0.5
+    attack_damage: 3.5
+    attack_speed: 4
+    crit_chance: 0
+Karma:
+  base:
+    health: 534
+    health_regen: 5.5
+    mana: 374
+    mana_regen: 13
+    armor: 26
+    mr: 30
+    attack_damage: 54
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 525
+    move_speed: 335
+  growth:
+    health: 95
+    health_regen: 0.55
+    mana: 50
+    mana_regen: 0.5
+    armor: 3.8
+    mr: 0.5
+    attack_damage: 3.3
+    attack_speed: 2.3
+    crit_chance: 0
+Karthus:
+  base:
+    health: 550
+    health_regen: 6.5
+    mana: 467
+    mana_regen: 8
+    armor: 18
+    mr: 30
+    attack_damage: 46
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 450
+    move_speed: 335
+  growth:
+    health: 87
+    health_regen: 0.55
+    mana: 30.5
+    mana_regen: 0.8
+    armor: 3.5
+    mr: 0.5
+    attack_damage: 3.25
+    attack_speed: 2.11
+    crit_chance: 0
+Kassadin:
+  base:
+    health: 576
+    health_regen: 6
+    mana: 400
+    mana_regen: 6
+    armor: 19
+    mr: 30
+    attack_damage: 59
+    attack_speed: 0.64
+    crit_chance: 0
+    attack_range: 150
+    move_speed: 335
+  growth:
+    health: 105
+    health_regen: 0.5
+    mana: 87
+    mana_regen: 0.8
+    armor: 2.8
+    mr: 0.5
+    attack_damage: 3.9
+    attack_speed: 3.7
+    crit_chance: 0
+Katarina:
+  base:
+    health: 602
+    health_regen: 7.5
+    mana: 0
+    mana_regen: 0
+    armor: 28
+    mr: 32
+    attack_damage: 58
+    attack_speed: 0.658
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 335
+  growth:
+    health: 94
+    health_regen: 0.7
+    mana: 0
+    mana_regen: 0
+    armor: 3.5
+    mr: 1.25
+    attack_damage: 3.2
+    attack_speed: 2.74
+    crit_chance: 0
+Kayle:
+  base:
+    health: 600
+    health_regen: 5
+    mana: 330
+    mana_regen: 8
+    armor: 26
+    mr: 30
+    attack_damage: 50
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 175
+    move_speed: 335
+  growth:
+    health: 85
+    health_regen: 0.5
+    mana: 50
+    mana_regen: 0.8
+    armor: 3
+    mr: 0.5
+    attack_damage: 2.5
+    attack_speed: 1.5
+    crit_chance: 0
+Kayn:
+  base:
+    health: 585
+    health_regen: 8
+    mana: 410
+    mana_regen: 11.5
+    armor: 38
+    mr: 32
+    attack_damage: 68
+    attack_speed: 0.669
+    crit_chance: 0
+    attack_range: 175
+    move_speed: 340
+  growth:
+    health: 85
+    health_regen: 0.75
+    mana: 50
+    mana_regen: 0.95
+    armor: 3.3
+    mr: 1.25
+    attack_damage: 3.3
+    attack_speed: 2.7
+    crit_chance: 0
+Kennen:
+  base:
+    health: 541
+    health_regen: 5.5
+    mana: 200
+    mana_regen: 50
+    armor: 29
+    mr: 30
+    attack_damage: 48
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 550
+    move_speed: 335
+  growth:
+    health: 84
+    health_regen: 0.65
+    mana: 0
+    mana_regen: 0
+    armor: 3.75
+    mr: 0.5
+    attack_damage: 3.75
+    attack_speed: 3.4
+    crit_chance: 0
+Khazix:
+  base:
+    health: 573
+    health_regen: 7.5
+    mana: 327
+    mana_regen: 7.59
+    armor: 36
+    mr: 32
+    attack_damage: 63
+    attack_speed: 0.668
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 350
+  growth:
+    health: 85
+    health_regen: 0.75
+    mana: 40
+    mana_regen: 0.5
+    armor: 3
+    mr: 1.25
+    attack_damage: 3.1
+    attack_speed: 2.7
+    crit_chance: 0
+Kindred:
+  base:
+    health: 540
+    health_regen: 7
+    mana: 300
+    mana_regen: 7
+    armor: 29
+    mr: 30
+    attack_damage: 65
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 500
+    move_speed: 325
+  growth:
+    health: 85
+    health_regen: 0.55
+    mana: 35
+    mana_regen: 0.4
+    armor: 3.5
+    mr: 0.5
+    attack_damage: 2.5
+    attack_speed: 3.5
+    crit_chance: 0
+Kled:
+  base:
+    health: 340
+    health_regen: 6
+    mana: 100
+    mana_regen: 0
+    armor: 35
+    mr: 28
+    attack_damage: 65
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 345
+  growth:
+    health: 70
+    health_regen: 0.75
+    mana: 0
+    mana_regen: 0
+    armor: 4
+    mr: 1.25
+    attack_damage: 3.5
+    attack_speed: 3.5
+    crit_chance: 0
+KogMaw:
+  base:
+    health: 565
+    health_regen: 3.75
+    mana: 325
+    mana_regen: 8.75
+    armor: 24
+    mr: 30
+    attack_damage: 61
+    attack_speed: 0.665
+    crit_chance: 0
+    attack_range: 500
+    move_speed: 330
+  growth:
+    health: 85
+    health_regen: 0.55
+    mana: 40
+    mana_regen: 0.7
+    armor: 3.25
+    mr: 0.5
+    attack_damage: 3.11
+    attack_speed: 2.65
+    crit_chance: 0
+Leblanc:
+  base:
+    health: 528
+    health_regen: 7.5
+    mana: 334
+    mana_regen: 6
+    armor: 22
+    mr: 30
+    attack_damage: 55
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 525
+    move_speed: 340
+  growth:
+    health: 97
+    health_regen: 0.55
+    mana: 50
+    mana_regen: 0.8
+    armor: 3.5
+    mr: 0.5
+    attack_damage: 3.5
+    attack_speed: 1.4
+    crit_chance: 0
+LeeSin:
+  base:
+    health: 575
+    health_regen: 7.5
+    mana: 200
+    mana_regen: 50
+    armor: 36
+    mr: 32
+    attack_damage: 70
+    attack_speed: 0.651
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 345
+  growth:
+    health: 85
+    health_regen: 0.7
+    mana: 0
+    mana_regen: 0
+    armor: 3.7
+    mr: 1.25
+    attack_damage: 3.7
+    attack_speed: 3
+    crit_chance: 0
+Leona:
+  base:
+    health: 576
+    health_regen: 8.5
+    mana: 302
+    mana_regen: 6
+    armor: 47
+    mr: 32
+    attack_damage: 60
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 335
+  growth:
+    health: 87
+    health_regen: 0.85
+    mana: 40
+    mana_regen: 0.8
+    armor: 3.6
+    mr: 1.25
+    attack_damage: 3
+    attack_speed: 2.9
+    crit_chance: 0
+Lillia:
+  base:
+    health: 580
+    health_regen: 9
+    mana: 410
+    mana_regen: 11.5
+    armor: 20
+    mr: 32
+    attack_damage: 61
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 325
+    move_speed: 330
+  growth:
+    health: 90
+    health_regen: 0.75
+    mana: 50
+    mana_regen: 0.95
+    armor: 4
+    mr: 0.75
+    attack_damage: 3.1
+    attack_speed: 2.7
+    crit_chance: 0
+Lissandra:
+  base:
+    health: 550
+    health_regen: 7
+    mana: 475
+    mana_regen: 8
+    armor: 22
+    mr: 30
+    attack_damage: 53
+    attack_speed: 0.656
+    crit_chance: 0
+    attack_range: 550
+    move_speed: 325
+  growth:
+    health: 90
+    health_regen: 0.55
+    mana: 30
+    mana_regen: 0.4
+    armor: 3.7
+    mr: 0.5
+    attack_damage: 2.7
+    attack_speed: 1.36
+    crit_chance: 0
+Lucian:
+  base:
+    health: 571
+    health_regen: 3.75
+    mana: 348.88
+    mana_regen: 8.18
+    armor: 28
+    mr: 30
+    attack_damage: 64
+    attack_speed: 0.638
+    crit_chance: 0
+    attack_range: 500
+    move_speed: 335
+  growth:
+    health: 86
+    health_regen: 0.65
+    mana: 38
+    mana_regen: 0.7
+    armor: 3
+    mr: 0.5
+    attack_damage: 2.3
+    attack_speed: 3.3
+    crit_chance: 0
+Lulu:
+  base:
+    health: 525
+    health_regen: 6
+    mana: 350
+    mana_regen: 11
+    armor: 29
+    mr: 30
+    attack_damage: 47
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 550
+    move_speed: 330
+  growth:
+    health: 74
+    health_regen: 0.6
+    mana: 55
+    mana_regen: 0.6
+    armor: 3.7
+    mr: 0.5
+    attack_damage: 2.6
+    attack_speed: 2.25
+    crit_chance: 0
+Lux:
+  base:
+    health: 490
+    health_regen: 5.5
+    mana: 480
+    mana_regen: 8
+    armor: 19
+    mr: 30
+    attack_damage: 54
+    attack_speed: 0.669
+    crit_chance: 0
+    attack_range: 550
+    move_speed: 330
+  growth:
+    health: 85
+    health_regen: 0.55
+    mana: 23.5
+    mana_regen: 0.8
+    armor: 4
+    mr: 0.5
+    attack_damage: 3.3
+    attack_speed: 1
+    crit_chance: 0
+Malphite:
+  base:
+    health: 574
+    health_regen: 7
+    mana: 280
+    mana_regen: 7.32
+    armor: 37
+    mr: 28
+    attack_damage: 62
+    attack_speed: 0.736
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 335
+  growth:
+    health: 90
+    health_regen: 0.55
+    mana: 60
+    mana_regen: 0.55
+    armor: 3.75
+    mr: 1.25
+    attack_damage: 4
+    attack_speed: 3.4
+    crit_chance: 0
+Malzahar:
+  base:
+    health: 537
+    health_regen: 6
+    mana: 375
+    mana_regen: 8
+    armor: 18
+    mr: 30
+    attack_damage: 55
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 500
+    move_speed: 335
+  growth:
+    health: 87
+    health_regen: 0.6
+    mana: 27.5
+    mana_regen: 0.8
+    armor: 3.5
+    mr: 0.5
+    attack_damage: 3
+    attack_speed: 1.5
+    crit_chance: 0
+Maokai:
+  base:
+    health: 565
+    health_regen: 5
+    mana: 375
+    mana_regen: 7.2
+    armor: 39
+    mr: 32
+    attack_damage: 64
+    attack_speed: 0.8
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 335
+  growth:
+    health: 95
+    health_regen: 0.75
+    mana: 43
+    mana_regen: 0.6
+    armor: 4
+    mr: 1.25
+    attack_damage: 3.3
+    attack_speed: 2.125
+    crit_chance: 0
+MasterYi:
+  base:
+    health: 599
+    health_regen: 7.5
+    mana: 251
+    mana_regen: 7.26
+    armor: 33
+    mr: 32
+    attack_damage: 66
+    attack_speed: 0.679
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 355
+  growth:
+    health: 92
+    health_regen: 0.65
+    mana: 42
+    mana_regen: 0.45
+    armor: 3
+    mr: 1.25
+    attack_damage: 3
+    attack_speed: 2
+    crit_chance: 0
+MissFortune:
+  base:
+    health: 570
+    health_regen: 3.75
+    mana: 325.84
+    mana_regen: 8.04
+    armor: 28
+    mr: 30
+    attack_damage: 52
+    attack_speed: 0.656
+    crit_chance: 0
+    attack_range: 550
+    move_speed: 325
+  growth:
+    health: 93
+    health_regen: 0.65
+    mana: 35
+    mana_regen: 0.65
+    armor: 3
+    mr: 0.5
+    attack_damage: 2.7
+    attack_speed: 3
+    crit_chance: 0
+MonkeyKing:
+  base:
+    health: 540
+    health_regen: 4
+    mana: 300
+    mana_regen: 8
+    armor: 31
+    mr: 28
+    attack_damage: 68
+    attack_speed: 0.711
+    crit_chance: 0
+    attack_range: 175
+    move_speed: 345
+  growth:
+    health: 85
+    health_regen: 0.65
+    mana: 65
+    mana_regen: 0.65
+    armor: 3.5
+    mr: 1.25
+    attack_damage: 4
+    attack_speed: 3
+    crit_chance: 0
+Mordekaiser:
+  base:
+    health: 575
+    health_regen: 5
+    mana: 100
+    mana_regen: 0
+    armor: 37
+    mr: 32
+    attack_damage: 61
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 175
+    move_speed: 335
+  growth:
+    health: 90
+    health_regen: 0.75
+    mana: 0
+    mana_regen: 0
+    armor: 3
+    mr: 1.25
+    attack_damage: 4
+    attack_speed: 1
+    crit_chance: 0
+Morgana:
+  base:
+    health: 560
+    health_regen: 5.5
+    mana: 340
+    mana_regen: 11
+    armor: 25
+    mr: 30
+    attack_damage: 56
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 450
+    move_speed: 335
+  growth:
+    health: 90
+    health_regen: 0.4
+    mana: 60
+    mana_regen: 0.4
+    armor: 3.8
+    mr: 0.5
+    attack_damage: 3.5
+    attack_speed: 1.53
+    crit_chance: 0
+Nami:
+  base:
+    health: 475
+    health_regen: 5.5
+    mana: 365
+    mana_regen: 11.5
+    armor: 29
+    mr: 30
+    attack_damage: 51
+    attack_speed: 0.644
+    crit_chance: 0
+    attack_range: 550
+    move_speed: 335
+  growth:
+    health: 74
+    health_regen: 0.55
+    mana: 43
+    mana_regen: 0.4
+    armor: 4
+    mr: 0.5
+    attack_damage: 3.1
+    attack_speed: 2.61
+    crit_chance: 0
+Nasus:
+  base:
+    health: 561
+    health_regen: 9
+    mana: 326
+    mana_regen: 7.44
+    armor: 34
+    mr: 32
+    attack_damage: 67
+    attack_speed: 0.638
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 350
+  growth:
+    health: 90
+    health_regen: 0.9
+    mana: 62
+    mana_regen: 0.5
+    armor: 3.5
+    mr: 1.25
+    attack_damage: 3.5
+    attack_speed: 3.48
+    crit_chance: 0
+Nautilus:
+  base:
+    health: 576
+    health_regen: 8.5
+    mana: 400
+    mana_regen: 8.63
+    armor: 39
+    mr: 32
+    attack_damage: 61
+    attack_speed: 0.706
+    crit_chance: 0
+    attack_range: 175
+    move_speed: 325
+  growth:
+    health: 86
+    health_regen: 0.55
+    mana: 47
+    mana_regen: 0.5
+    armor: 3.75
+    mr: 1.25
+    attack_damage: 3.3
+    attack_speed: 1
+    crit_chance: 0
+Neeko:
+  base:
+    health: 540
+    health_regen: 7.5
+    mana: 450
+    mana_regen: 7
+    armor: 21
+    mr: 30
+    attack_damage: 48
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 550
+    move_speed: 340
+  growth:
+    health: 90
+    health_regen: 0.75
+    mana: 30
+    mana_regen: 0.7
+    armor: 4
+    mr: 0.5
+    attack_damage: 2.5
+    attack_speed: 3.5
+    crit_chance: 0
+Nidalee:
+  base:
+    health: 545
+    health_regen: 6
+    mana: 295
+    mana_regen: 6
+    armor: 28
+    mr: 30
+    attack_damage: 58
+    attack_speed: 0.638
+    crit_chance: 0
+    attack_range: 525
+    move_speed: 335
+  growth:
+    health: 85
+    health_regen: 0.6
+    mana: 45
+    mana_regen: 0.8
+    armor: 3.5
+    mr: 0.5
+    attack_damage: 3.5
+    attack_speed: 3.22
+    crit_chance: 0
+Nocturne:
+  base:
+    health: 585
+    health_regen: 7
+    mana: 275
+    mana_regen: 7
+    armor: 38
+    mr: 32
+    attack_damage: 62
+    attack_speed: 0.721
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 345
+  growth:
+    health: 85
+    health_regen: 0.75
+    mana: 35
+    mana_regen: 0.45
+    armor: 3.5
+    mr: 0.75
+    attack_damage: 3.1
+    attack_speed: 2.7
+    crit_chance: 0
+Nunu:
+  base:
+    health: 540
+    health_regen: 5
+    mana: 280
+    mana_regen: 7
+    armor: 29
+    mr: 32
+    attack_damage: 61
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 340
+  growth:
+    health: 82
+    health_regen: 0.8
+    mana: 42
+    mana_regen: 0.5
+    armor: 3
+    mr: 1.25
+    attack_damage: 3
+    attack_speed: 2.25
+    crit_chance: 0
+Olaf:
+  base:
+    health: 575
+    health_regen: 8.5
+    mana: 316
+    mana_regen: 7.47
+    armor: 35
+    mr: 32
+    attack_damage: 68
+    attack_speed: 0.694
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 350
+  growth:
+    health: 93
+    health_regen: 0.9
+    mana: 42
+    mana_regen: 0.58
+    armor: 3
+    mr: 1.25
+    attack_damage: 3.5
+    attack_speed: 2.7
+    crit_chance: 0
+Orianna:
+  base:
+    health: 530
+    health_regen: 7
+    mana: 418
+    mana_regen: 8
+    armor: 17
+    mr: 26
+    attack_damage: 40
+    attack_speed: 0.658
+    crit_chance: 0
+    attack_range: 525
+    move_speed: 325
+  growth:
+    health: 91
+    health_regen: 0.55
+    mana: 25
+    mana_regen: 0.8
+    armor: 3
+    mr: 0.5
+    attack_damage: 2.6
+    attack_speed: 3.5
+    crit_chance: 0
+Ornn:
+  base:
+    health: 590
+    health_regen: 9
+    mana: 340.6
+    mana_regen: 8.01
+    armor: 33
+    mr: 32
+    attack_damage: 69
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 175
+    move_speed: 335
+  growth:
+    health: 95
+    health_regen: 0.9
+    mana: 65
+    mana_regen: 0.6
+    armor: 4
+    mr: 1.25
+    attack_damage: 3.5
+    attack_speed: 2
+    crit_chance: 0
+Pantheon:
+  base:
+    health: 580
+    health_regen: 9
+    mana: 317.12
+    mana_regen: 7.36
+    armor: 40
+    mr: 28
+    attack_damage: 64
+    attack_speed: 0.644
+    crit_chance: 0
+    attack_range: 175
+    move_speed: 345
+  growth:
+    health: 95
+    health_regen: 0.65
+    mana: 31
+    mana_regen: 0.45
+    armor: 3.75
+    mr: 1.25
+    attack_damage: 3.3
+    attack_speed: 2.95
+    crit_chance: 0
+Poppy:
+  base:
+    health: 540
+    health_regen: 8
+    mana: 280
+    mana_regen: 7
+    armor: 38
+    mr: 32
+    attack_damage: 64
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 345
+  growth:
+    health: 90
+    health_regen: 0.8
+    mana: 40
+    mana_regen: 0.7
+    armor: 3.5
+    mr: 1.25
+    attack_damage: 4
+    attack_speed: 2.5
+    crit_chance: 0
+Pyke:
+  base:
+    health: 600
+    health_regen: 7
+    mana: 415
+    mana_regen: 8
+    armor: 45
+    mr: 32
+    attack_damage: 62
+    attack_speed: 0.667
+    crit_chance: 0
+    attack_range: 150
+    move_speed: 330
+  growth:
+    health: 90
+    health_regen: 0.5
+    mana: 50
+    mana_regen: 1
+    armor: 3.5
+    mr: 1.25
+    attack_damage: 2
+    attack_speed: 2.5
+    crit_chance: 0
+Qiyana:
+  base:
+    health: 590
+    health_regen: 9
+    mana: 320
+    mana_regen: 8
+    armor: 28
+    mr: 32
+    attack_damage: 66
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 150
+    move_speed: 335
+  growth:
+    health: 90
+    health_regen: 0.9
+    mana: 50
+    mana_regen: 0.7
+    armor: 3.5
+    mr: 1.25
+    attack_damage: 3.1
+    attack_speed: 2.1
+    crit_chance: 0
+Quinn:
+  base:
+    health: 533
+    health_regen: 5.5
+    mana: 269
+    mana_regen: 6.97
+    armor: 28
+    mr: 30
+    attack_damage: 59
+    attack_speed: 0.668
+    crit_chance: 0
+    attack_range: 525
+    move_speed: 335
+  growth:
+    health: 85
+    health_regen: 0.55
+    mana: 35
+    mana_regen: 0.4
+    armor: 3.5
+    mr: 0.5
+    attack_damage: 2.4
+    attack_speed: 3.1
+    crit_chance: 0
+Rakan:
+  base:
+    health: 540
+    health_regen: 5
+    mana: 315
+    mana_regen: 8.75
+    armor: 32
+    mr: 32
+    attack_damage: 62
+    attack_speed: 0.635
+    crit_chance: 0
+    attack_range: 300
+    move_speed: 335
+  growth:
+    health: 85
+    health_regen: 0.5
+    mana: 50
+    mana_regen: 0.5
+    armor: 3.9
+    mr: 1.25
+    attack_damage: 3.5
+    attack_speed: 3
+    crit_chance: 0
+Rammus:
+  base:
+    health: 564
+    health_regen: 8
+    mana: 310
+    mana_regen: 7.84
+    armor: 36
+    mr: 32
+    attack_damage: 56
+    attack_speed: 0.656
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 335
+  growth:
+    health: 80
+    health_regen: 0.55
+    mana: 33
+    mana_regen: 0.5
+    armor: 4.3
+    mr: 1.25
+    attack_damage: 3.5
+    attack_speed: 2.215
+    crit_chance: 0
+RekSai:
+  base:
+    health: 570
+    health_regen: 7.5
+    mana: 100
+    mana_regen: 0
+    armor: 36
+    mr: 32
+    attack_damage: 64
+    attack_speed: 0.667
+    crit_chance: 0
+    attack_range: 175
+    move_speed: 335
+  growth:
+    health: 85
+    health_regen: 0.65
+    mana: 0
+    mana_regen: 0
+    armor: 3.75
+    mr: 1.25
+    attack_damage: 3
+    attack_speed: 2
+    crit_chance: 0
+Rell:
+  base:
+    health: 540
+    health_regen: 7
+    mana: 350
+    mana_regen: 6
+    armor: 32
+    mr: 32.1
+    attack_damage: 55
+    attack_speed: 0.55
+    crit_chance: 0
+    attack_range: 175
+    move_speed: 335
+  growth:
+    health: 90
+    health_regen: 0.55
+    mana: 45
+    mana_regen: 0.35
+    armor: 3
+    mr: 1.25
+    attack_damage: 3
+    attack_speed: 2
+    crit_chance: 0
+Renekton:
+  base:
+    health: 575
+    health_regen: 8
+    mana: 100
+    mana_regen: 0
+    armor: 35
+    mr: 32
+    attack_damage: 69
+    attack_speed: 0.665
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 345
+  growth:
+    health: 87
+    health_regen: 0.75
+    mana: 0
+    mana_regen: 0
+    armor: 4
+    mr: 1.25
+    attack_damage: 3.75
+    attack_speed: 2.75
+    crit_chance: 0
+Rengar:
+  base:
+    health: 585
+    health_regen: 7
+    mana: 4
+    mana_regen: 0
+    armor: 34
+    mr: 32
+    attack_damage: 68
+    attack_speed: 0.667
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 345
+  growth:
+    health: 90
+    health_regen: 0.5
+    mana: 0
+    mana_regen: 0
+    armor: 3
+    mr: 1.25
+    attack_damage: 3
+    attack_speed: 3
+    crit_chance: 0
+Riven:
+  base:
+    health: 560
+    health_regen: 8.5
+    mana: 0
+    mana_regen: 0
+    armor: 33
+    mr: 32
+    attack_damage: 64
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 340
+  growth:
+    health: 86
+    health_regen: 0.5
+    mana: 0
+    mana_regen: 0
+    armor: 3.2
+    mr: 1.25
+    attack_damage: 3
+    attack_speed: 3.5
+    crit_chance: 0
+Rumble:
+  base:
+    health: 589
+    health_regen: 8
+    mana: 100
+    mana_regen: 0
+    armor: 31
+    mr: 28
+    attack_damage: 61
+    attack_speed: 0.644
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 345
+  growth:
+    health: 85
+    health_regen: 0.6
+    mana: 0
+    mana_regen: 0
+    armor: 3.5
+    mr: 0.75
+    attack_damage: 3.2
+    attack_speed: 1.85
+    crit_chance: 0
+Ryze:
+  base:
+    health: 575
+    health_regen: 8
+    mana: 300
+    mana_regen: 8
+    armor: 22
+    mr: 36
+    attack_damage: 58
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 550
+    move_speed: 340
+  growth:
+    health: 110
+    health_regen: 0.8
+    mana: 70
+    mana_regen: 1
+    armor: 3
+    mr: 0.5
+    attack_damage: 3
+    attack_speed: 2.112
+    crit_chance: 0
+Samira:
+  base:
+    health: 530
+    health_regen: 3.25
+    mana: 348.88
+    mana_regen: 8.18
+    armor: 26
+    mr: 30
+    attack_damage: 57
+    attack_speed: 0.658
+    crit_chance: 0
+    attack_range: 500
+    move_speed: 335
+  growth:
+    health: 88
+    health_regen: 0.55
+    mana: 38
+    mana_regen: 0.7
+    armor: 3
+    mr: 0.5
+    attack_damage: 3
+    attack_speed: 3.3
+    crit_chance: 0
+Sejuani:
+  base:
+    health: 560
+    health_regen: 8.5
+    mana: 400
+    mana_regen: 7
+    armor: 34
+    mr: 32
+    attack_damage: 66
+    attack_speed: 0.688
+    crit_chance: 0
+    attack_range: 150
+    move_speed: 340
+  growth:
+    health: 100
+    health_regen: 1
+    mana: 40
+    mana_regen: 0.7
+    armor: 4.25
+    mr: 1.25
+    attack_damage: 4
+    attack_speed: 3.5
+    crit_chance: 0
+Senna:
+  base:
+    health: 520
+    health_regen: 3.5
+    mana: 350
+    mana_regen: 11.5
+    armor: 28
+    mr: 30
+    attack_damage: 50
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 600
+    move_speed: 330
+  growth:
+    health: 75
+    health_regen: 0.55
+    mana: 45
+    mana_regen: 0.4
+    armor: 3.5
+    mr: 0.5
+    attack_damage: 0
+    attack_speed: 4
+    crit_chance: 0
+Seraphine:
+  base:
+    health: 500
+    health_regen: 6.5
+    mana: 440
+    mana_regen: 8
+    armor: 19
+    mr: 30
+    attack_damage: 55
+    attack_speed: 0.669
+    crit_chance: 0
+    attack_range: 525
+    move_speed: 325
+  growth:
+    health: 90
+    health_regen: 0.6
+    mana: 40
+    mana_regen: 1
+    armor: 3
+    mr: 0.5
+    attack_damage: 3
+    attack_speed: 1
+    crit_chance: 0
+Sett:
+  base:
+    health: 600
+    health_regen: 7
+    mana: 0
+    mana_regen: 0
+    armor: 33
+    mr: 32
+    attack_damage: 60
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 340
+  growth:
+    health: 93
+    health_regen: 0.5
+    mana: 0
+    mana_regen: 0
+    armor: 4
+    mr: 1.25
+    attack_damage: 4
+    attack_speed: 1.75
+    crit_chance: 0
+Shaco:
+  base:
+    health: 587
+    health_regen: 8.5
+    mana: 297
+    mana_regen: 7.16
+    armor: 30
+    mr: 32
+    attack_damage: 63
+    attack_speed: 0.694
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 350
+  growth:
+    health: 89
+    health_regen: 0.55
+    mana: 40
+    mana_regen: 0.45
+    armor: 3.5
+    mr: 1.25
+    attack_damage: 3
+    attack_speed: 3
+    crit_chance: 0
+Shen:
+  base:
+    health: 540
+    health_regen: 8.5
+    mana: 400
+    mana_regen: 50
+    armor: 34
+    mr: 32
+    attack_damage: 60
+    attack_speed: 0.751
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 340
+  growth:
+    health: 85
+    health_regen: 0.75
+    mana: 0
+    mana_regen: 0
+    armor: 3
+    mr: 1.25
+    attack_damage: 3
+    attack_speed: 3
+    crit_chance: 0
+Shyvana:
+  base:
+    health: 595
+    health_regen: 8.5
+    mana: 100
+    mana_regen: 0
+    armor: 38
+    mr: 32
+    attack_damage: 66
+    attack_speed: 0.658
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 350
+  growth:
+    health: 95
+    health_regen: 0.8
+    mana: 0
+    mana_regen: 0
+    armor: 3.35
+    mr: 1.25
+    attack_damage: 3.4
+    attack_speed: 2.5
+    crit_chance: 0
+Singed:
+  base:
+    health: 580
+    health_regen: 9.5
+    mana: 330
+    mana_regen: 7.5
+    armor: 34
+    mr: 32
+    attack_damage: 63
+    attack_speed: 0.613
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 345
+  growth:
+    health: 85
+    health_regen: 0.55
+    mana: 45
+    mana_regen: 0.55
+    armor: 3.5
+    mr: 1.25
+    attack_damage: 3.38
+    attack_speed: 1.9
+    crit_chance: 0
+Sion:
+  base:
+    health: 545
+    health_regen: 7.5
+    mana: 330
+    mana_regen: 8
+    armor: 32
+    mr: 32
+    attack_damage: 68
+    attack_speed: 0.679
+    crit_chance: 0
+    attack_range: 175
+    move_speed: 345
+  growth:
+    health: 73
+    health_regen: 0.8
+    mana: 42
+    mana_regen: 0.6
+    armor: 3
+    mr: 1.25
+    attack_damage: 4
+    attack_speed: 1.3
+    crit_chance: 0
+Sivir:
+  base:
+    health: 562
+    health_regen: 3.25
+    mana: 325
+    mana_regen: 8
+    armor: 26
+    mr: 30
+    attack_damage: 63
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 500
+    move_speed: 335
+  growth:
+    health: 90
+    health_regen: 0.55
+    mana: 50
+    mana_regen: 0.9
+    armor: 3.25
+    mr: 0.5
+    attack_damage: 3
+    attack_speed: 1.6
+    crit_chance: 0
+Skarner:
+  base:
+    health: 580
+    health_regen: 9
+    mana: 320
+    mana_regen: 7.2
+    armor: 38
+    mr: 32
+    attack_damage: 65
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 335
+  growth:
+    health: 85
+    health_regen: 0.85
+    mana: 60
+    mana_regen: 0.45
+    armor: 3.8
+    mr: 1.25
+    attack_damage: 4.5
+    attack_speed: 2.1
+    crit_chance: 0
+Sona:
+  base:
+    health: 480
+    health_regen: 5.5
+    mana: 340
+    mana_regen: 11.5
+    armor: 28
+    mr: 30
+    attack_damage: 49
+    attack_speed: 0.644
+    crit_chance: 0
+    attack_range: 550
+    move_speed: 325
+  growth:
+    health: 77
+    health_regen: 0.55
+    mana: 45
+    mana_regen: 0.4
+    armor: 3.3
+    mr: 0.5
+    attack_damage: 3
+    attack_speed: 2.3
+    crit_chance: 0
+Soraka:
+  base:
+    health: 535
+    health_regen: 2.5
+    mana: 425
+    mana_regen: 11.5
+    armor: 32
+    mr: 30
+    attack_damage: 50
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 550
+    move_speed: 325
+  growth:
+    health: 74
+    health_regen: 0.5
+    mana: 40
+    mana_regen: 0.4
+    armor: 3.8
+    mr: 0.5
+    attack_damage: 3
+    attack_speed: 2.14
+    crit_chance: 0
+Swain:
+  base:
+    health: 525
+    health_regen: 7
+    mana: 468
+    mana_regen: 8
+    armor: 23
+    mr: 30
+    attack_damage: 58
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 525
+    move_speed: 325
+  growth:
+    health: 85
+    health_regen: 0.65
+    mana: 28.5
+    mana_regen: 0.8
+    armor: 4
+    mr: 0.5
+    attack_damage: 2.7
+    attack_speed: 2.11
+    crit_chance: 0
+Sylas:
+  base:
+    health: 525
+    health_regen: 9
+    mana: 280
+    mana_regen: 7
+    armor: 27
+    mr: 32
+    attack_damage: 61
+    attack_speed: 0.645
+    crit_chance: 0
+    attack_range: 175
+    move_speed: 340
+  growth:
+    health: 115
+    health_regen: 0.9
+    mana: 70
+    mana_regen: 0.8
+    armor: 4
+    mr: 1.75
+    attack_damage: 3
+    attack_speed: 3.5
+    crit_chance: 0
+Syndra:
+  base:
+    health: 523
+    health_regen: 6.5
+    mana: 480
+    mana_regen: 8
+    armor: 25
+    mr: 30
+    attack_damage: 54
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 550
+    move_speed: 330
+  growth:
+    health: 90
+    health_regen: 0.6
+    mana: 40
+    mana_regen: 0.8
+    armor: 3.4
+    mr: 0.5
+    attack_damage: 2.9
+    attack_speed: 2
+    crit_chance: 0
+TahmKench:
+  base:
+    health: 600
+    health_regen: 6.5
+    mana: 325
+    mana_regen: 8
+    armor: 47
+    mr: 32
+    attack_damage: 56
+    attack_speed: 0.658
+    crit_chance: 0
+    attack_range: 175
+    move_speed: 335
+  growth:
+    health: 100
+    health_regen: 0.55
+    mana: 40
+    mana_regen: 1
+    armor: 3.5
+    mr: 1.25
+    attack_damage: 3.2
+    attack_speed: 2.5
+    crit_chance: 0
+Taliyah:
+  base:
+    health: 532
+    health_regen: 7
+    mana: 425
+    mana_regen: 9.34
+    armor: 20
+    mr: 30
+    attack_damage: 58
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 525
+    move_speed: 335
+  growth:
+    health: 90
+    health_regen: 0.7
+    mana: 30
+    mana_regen: 0.85
+    armor: 3.5
+    mr: 0.5
+    attack_damage: 3.3
+    attack_speed: 1.36
+    crit_chance: 0
+Talon:
+  base:
+    health: 588
+    health_regen: 8.5
+    mana: 377.2
+    mana_regen: 7.6
+    armor: 30
+    mr: 39
+    attack_damage: 68
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 335
+  growth:
+    health: 95
+    health_regen: 0.75
+    mana: 37
+    mana_regen: 0.8
+    armor: 3.5
+    mr: 1.25
+    attack_damage: 3.1
+    attack_speed: 2.9
+    crit_chance: 0
+Taric:
+  base:
+    health: 575
+    health_regen: 6
+    mana: 300
+    mana_regen: 8.5
+    armor: 40
+    mr: 32
+    attack_damage: 55
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 150
+    move_speed: 340
+  growth:
+    health: 85
+    health_regen: 0.5
+    mana: 60
+    mana_regen: 0.8
+    armor: 3.4
+    mr: 1.25
+    attack_damage: 3.5
+    attack_speed: 2
+    crit_chance: 0
+Teemo:
+  base:
+    health: 528
+    health_regen: 5.5
+    mana: 334
+    mana_regen: 9.6
+    armor: 24
+    mr: 30
+    attack_damage: 54
+    attack_speed: 0.69
+    crit_chance: 0
+    attack_range: 500
+    move_speed: 330
+  growth:
+    health: 90
+    health_regen: 0.65
+    mana: 20
+    mana_regen: 0.45
+    armor: 3.75
+    mr: 0.5
+    attack_damage: 3
+    attack_speed: 3.38
+    crit_chance: 0
+Thresh:
+  base:
+    health: 530
+    health_regen: 7
+    mana: 274
+    mana_regen: 6
+    armor: 28
+    mr: 30
+    attack_damage: 56
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 450
+    move_speed: 335
+  growth:
+    health: 95
+    health_regen: 0.55
+    mana: 44
+    mana_regen: 0.8
+    armor: 0
+    mr: 0.5
+    attack_damage: 2.2
+    attack_speed: 3.5
+    crit_chance: 0
+Tristana:
+  base:
+    health: 559
+    health_regen: 3.75
+    mana: 250
+    mana_regen: 7.2
+    armor: 26
+    mr: 30
+    attack_damage: 59
+    attack_speed: 0.656
+    crit_chance: 0
+    attack_range: 525
+    move_speed: 325
+  growth:
+    health: 88
+    health_regen: 0.65
+    mana: 32
+    mana_regen: 0.45
+    armor: 3
+    mr: 0.5
+    attack_damage: 3.3
+    attack_speed: 1.5
+    crit_chance: 0
+Trundle:
+  base:
+    health: 616
+    health_regen: 6
+    mana: 281
+    mana_regen: 7.5
+    armor: 37
+    mr: 32
+    attack_damage: 68
+    attack_speed: 0.67
+    crit_chance: 0
+    attack_range: 175
+    move_speed: 350
+  growth:
+    health: 96
+    health_regen: 0.75
+    mana: 45
+    mana_regen: 0.6
+    armor: 2.7
+    mr: 1.25
+    attack_damage: 3
+    attack_speed: 2.9
+    crit_chance: 0
+Tryndamere:
+  base:
+    health: 626
+    health_regen: 8.5
+    mana: 100
+    mana_regen: 0
+    armor: 33
+    mr: 32
+    attack_damage: 72
+    attack_speed: 0.67
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 345
+  growth:
+    health: 98
+    health_regen: 0.9
+    mana: 0
+    mana_regen: 0
+    armor: 3.1
+    mr: 1.25
+    attack_damage: 3.7
+    attack_speed: 2.9
+    crit_chance: 0
+TwistedFate:
+  base:
+    health: 534
+    health_regen: 5.5
+    mana: 333
+    mana_regen: 8
+    armor: 21
+    mr: 30
+    attack_damage: 52
+    attack_speed: 0.651
+    crit_chance: 0
+    attack_range: 525
+    move_speed: 330
+  growth:
+    health: 94
+    health_regen: 0.6
+    mana: 39
+    mana_regen: 0.8
+    armor: 3.15
+    mr: 0.5
+    attack_damage: 3.3
+    attack_speed: 3.22
+    crit_chance: 0
+Twitch:
+  base:
+    health: 612
+    health_regen: 3.75
+    mana: 287.2
+    mana_regen: 7.26
+    armor: 27
+    mr: 30
+    attack_damage: 59
+    attack_speed: 0.679
+    crit_chance: 0
+    attack_range: 550
+    move_speed: 330
+  growth:
+    health: 86
+    health_regen: 0.6
+    mana: 40
+    mana_regen: 0.45
+    armor: 3
+    mr: 0.5
+    attack_damage: 3.11
+    attack_speed: 3.38
+    crit_chance: 0
+Udyr:
+  base:
+    health: 594
+    health_regen: 6
+    mana: 271
+    mana_regen: 7.5
+    armor: 34
+    mr: 32
+    attack_damage: 64
+    attack_speed: 0.658
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 350
+  growth:
+    health: 92
+    health_regen: 0.75
+    mana: 50
+    mana_regen: 0.45
+    armor: 4
+    mr: 1.25
+    attack_damage: 5
+    attack_speed: 2.67
+    crit_chance: 0
+Urgot:
+  base:
+    health: 585
+    health_regen: 7.5
+    mana: 340
+    mana_regen: 7.25
+    armor: 36
+    mr: 32
+    attack_damage: 63
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 350
+    move_speed: 330
+  growth:
+    health: 88
+    health_regen: 0.7
+    mana: 45
+    mana_regen: 0.8
+    armor: 4.25
+    mr: 1.25
+    attack_damage: 4
+    attack_speed: 3.75
+    crit_chance: 0
+Varus:
+  base:
+    health: 530
+    health_regen: 3.5
+    mana: 360
+    mana_regen: 8
+    armor: 27
+    mr: 30
+    attack_damage: 61
+    attack_speed: 0.658
+    crit_chance: 0
+    attack_range: 575
+    move_speed: 330
+  growth:
+    health: 91
+    health_regen: 0.55
+    mana: 40
+    mana_regen: 0.8
+    armor: 3.4
+    mr: 0.5
+    attack_damage: 3.4
+    attack_speed: 4
+    crit_chance: 0
+Vayne:
+  base:
+    health: 515
+    health_regen: 3.5
+    mana: 231.8
+    mana_regen: 6.97
+    armor: 23
+    mr: 30
+    attack_damage: 60
+    attack_speed: 0.658
+    crit_chance: 0
+    attack_range: 550
+    move_speed: 330
+  growth:
+    health: 89
+    health_regen: 0.55
+    mana: 35
+    mana_regen: 0.4
+    armor: 3.4
+    mr: 0.5
+    attack_damage: 2.36
+    attack_speed: 3.3
+    crit_chance: 0
+Veigar:
+  base:
+    health: 505
+    health_regen: 6.5
+    mana: 490
+    mana_regen: 8
+    armor: 23
+    mr: 32
+    attack_damage: 52
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 550
+    move_speed: 340
+  growth:
+    health: 94
+    health_regen: 0.6
+    mana: 26
+    mana_regen: 0.8
+    armor: 3.75
+    mr: 0.5
+    attack_damage: 2.7
+    attack_speed: 2.24
+    crit_chance: 0
+Velkoz:
+  base:
+    health: 520
+    health_regen: 5.5
+    mana: 469
+    mana_regen: 8
+    armor: 22
+    mr: 30
+    attack_damage: 55
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 525
+    move_speed: 340
+  growth:
+    health: 88
+    health_regen: 0.55
+    mana: 21
+    mana_regen: 0.8
+    armor: 3.5
+    mr: 0.5
+    attack_damage: 3.1416
+    attack_speed: 1.36
+    crit_chance: 0
+Vi:
+  base:
+    health: 585
+    health_regen: 10
+    mana: 295
+    mana_regen: 8
+    armor: 30
+    mr: 32
+    attack_damage: 63
+    attack_speed: 0.644
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 340
+  growth:
+    health: 85
+    health_regen: 1
+    mana: 65
+    mana_regen: 0.65
+    armor: 4
+    mr: 1.25
+    attack_damage: 3.5
+    attack_speed: 2
+    crit_chance: 0
+Viego:
+  base:
+    health: 560
+    health_regen: 7
+    mana: 10000
+    mana_regen: 0
+    armor: 34
+    mr: 32
+    attack_damage: 57
+    attack_speed: 0.658
+    crit_chance: 0
+    attack_range: 225
+    move_speed: 345
+  growth:
+    health: 95
+    health_regen: 0.7
+    mana: 0
+    mana_regen: 0
+    armor: 4
+    mr: 1.25
+    attack_damage: 3.5
+    attack_speed: 2.5
+    crit_chance: 0
+Viktor:
+  base:
+    health: 530
+    health_regen: 8
+    mana: 405
+    mana_regen: 8
+    armor: 23
+    mr: 30
+    attack_damage: 53
+    attack_speed: 0.658
+    crit_chance: 0
+    attack_range: 525
+    move_speed: 335
+  growth:
+    health: 90
+    health_regen: 0.65
+    mana: 45
+    mana_regen: 0.8
+    armor: 4
+    mr: 0.5
+    attack_damage: 3
+    attack_speed: 2.11
+    crit_chance: 0
+Vladimir:
+  base:
+    health: 537
+    health_regen: 7
+    mana: 2
+    mana_regen: 0
+    armor: 23
+    mr: 30
+    attack_damage: 55
+    attack_speed: 0.658
+    crit_chance: 0
+    attack_range: 450
+    move_speed: 330
+  growth:
+    health: 96
+    health_regen: 0.6
+    mana: 0
+    mana_regen: 0
+    armor: 3.3
+    mr: 0.5
+    attack_damage: 3
+    attack_speed: 2
+    crit_chance: 0
+Volibear:
+  base:
+    health: 580
+    health_regen: 9
+    mana: 350
+    mana_regen: 6.25
+    armor: 31
+    mr: 32
+    attack_damage: 60
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 150
+    move_speed: 340
+  growth:
+    health: 90
+    health_regen: 0.75
+    mana: 70
+    mana_regen: 0.5
+    armor: 4
+    mr: 1.25
+    attack_damage: 3
+    attack_speed: 2
+    crit_chance: 0
+Warwick:
+  base:
+    health: 550
+    health_regen: 4
+    mana: 280
+    mana_regen: 7.47
+    armor: 33
+    mr: 32
+    attack_damage: 65
+    attack_speed: 0.638
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 335
+  growth:
+    health: 85
+    health_regen: 0.75
+    mana: 35
+    mana_regen: 0.58
+    armor: 3.2
+    mr: 1.25
+    attack_damage: 3
+    attack_speed: 2.3
+    crit_chance: 0
+Xayah:
+  base:
+    health: 590
+    health_regen: 3.25
+    mana: 340
+    mana_regen: 8.25
+    armor: 25
+    mr: 30
+    attack_damage: 60
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 525
+    move_speed: 325
+  growth:
+    health: 88
+    health_regen: 0.75
+    mana: 40
+    mana_regen: 0.75
+    armor: 3
+    mr: 0.5
+    attack_damage: 3.5
+    attack_speed: 3.9
+    crit_chance: 0
+Xerath:
+  base:
+    health: 526
+    health_regen: 5.5
+    mana: 459
+    mana_regen: 8
+    armor: 22
+    mr: 30
+    attack_damage: 55
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 525
+    move_speed: 340
+  growth:
+    health: 92
+    health_regen: 0.55
+    mana: 22
+    mana_regen: 0.8
+    armor: 3.5
+    mr: 0.5
+    attack_damage: 3
+    attack_speed: 1.36
+    crit_chance: 0
+XinZhao:
+  base:
+    health: 570
+    health_regen: 8
+    mana: 274
+    mana_regen: 7.26
+    armor: 35
+    mr: 32
+    attack_damage: 66
+    attack_speed: 0.645
+    crit_chance: 0
+    attack_range: 175
+    move_speed: 345
+  growth:
+    health: 92
+    health_regen: 0.7
+    mana: 55
+    mana_regen: 0.45
+    armor: 3.5
+    mr: 1.25
+    attack_damage: 3
+    attack_speed: 3.5
+    crit_chance: 0
+Yasuo:
+  base:
+    health: 490
+    health_regen: 6.5
+    mana: 100
+    mana_regen: 0
+    armor: 30
+    mr: 32
+    attack_damage: 60
+    attack_speed: 0.697
+    crit_chance: 0
+    attack_range: 175
+    move_speed: 345
+  growth:
+    health: 87
+    health_regen: 0.9
+    mana: 0
+    mana_regen: 0
+    armor: 3.4
+    mr: 1.25
+    attack_damage: 3
+    attack_speed: 3.5
+    crit_chance: 0
+Yone:
+  base:
+    health: 550
+    health_regen: 7.5
+    mana: 500
+    mana_regen: 0
+    armor: 28
+    mr: 32
+    attack_damage: 60
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 175
+    move_speed: 345
+  growth:
+    health: 85
+    health_regen: 0.75
+    mana: 0
+    mana_regen: 0
+    armor: 3.4
+    mr: 1.25
+    attack_damage: 2
+    attack_speed: 3.5
+    crit_chance: 0
+Yorick:
+  base:
+    health: 580
+    health_regen: 8
+    mana: 300
+    mana_regen: 7.5
+    armor: 39
+    mr: 32
+    attack_damage: 62
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 175
+    move_speed: 340
+  growth:
+    health: 100
+    health_regen: 0.8
+    mana: 60
+    mana_regen: 0.75
+    armor: 4
+    mr: 1.25
+    attack_damage: 5
+    attack_speed: 2
+    crit_chance: 0
+Yuumi:
+  base:
+    health: 480
+    health_regen: 7
+    mana: 400
+    mana_regen: 10
+    armor: 25
+    mr: 25
+    attack_damage: 55
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 500
+    move_speed: 330
+  growth:
+    health: 70
+    health_regen: 0.55
+    mana: 45
+    mana_regen: 0.4
+    armor: 3
+    mr: 0.3
+    attack_damage: 3.1
+    attack_speed: 1
+    crit_chance: 0
+Zac:
+  base:
+    health: 615
+    health_regen: 8
+    mana: 0
+    mana_regen: 0
+    armor: 33
+    mr: 32
+    attack_damage: 60
+    attack_speed: 0.736
+    crit_chance: 0
+    attack_range: 175
+    move_speed: 340
+  growth:
+    health: 95
+    health_regen: 0.5
+    mana: 0
+    mana_regen: 0
+    armor: 3.5
+    mr: 1.25
+    attack_damage: 3.4
+    attack_speed: 1.6
+    crit_chance: 0
+Zed:
+  base:
+    health: 584
+    health_regen: 7
+    mana: 200
+    mana_regen: 50
+    armor: 32
+    mr: 32
+    attack_damage: 63
+    attack_speed: 0.651
+    crit_chance: 0
+    attack_range: 125
+    move_speed: 345
+  growth:
+    health: 85
+    health_regen: 0.65
+    mana: 0
+    mana_regen: 0
+    armor: 3.5
+    mr: 1.25
+    attack_damage: 3.4
+    attack_speed: 3.3
+    crit_chance: 0
+Ziggs:
+  base:
+    health: 536
+    health_regen: 6.5
+    mana: 480
+    mana_regen: 8
+    armor: 22
+    mr: 30
+    attack_damage: 54
+    attack_speed: 0.656
+    crit_chance: 0
+    attack_range: 550
+    move_speed: 325
+  growth:
+    health: 92
+    health_regen: 0.6
+    mana: 23.5
+    mana_regen: 0.8
+    armor: 3.3
+    mr: 0.5
+    attack_damage: 3.1
+    attack_speed: 2
+    crit_chance: 0
+Zilean:
+  base:
+    health: 504
+    health_regen: 5.5
+    mana: 452
+    mana_regen: 11.34
+    armor: 24
+    mr: 30
+    attack_damage: 52
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 550
+    move_speed: 335
+  growth:
+    health: 82
+    health_regen: 0.5
+    mana: 50
+    mana_regen: 0.8
+    armor: 3.8
+    mr: 0.5
+    attack_damage: 3
+    attack_speed: 2.13
+    crit_chance: 0
+Zoe:
+  base:
+    health: 560
+    health_regen: 6.5
+    mana: 425
+    mana_regen: 8
+    armor: 21
+    mr: 30
+    attack_damage: 58
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 550
+    move_speed: 340
+  growth:
+    health: 92
+    health_regen: 0.6
+    mana: 25
+    mana_regen: 0.65
+    armor: 3.5
+    mr: 0.5
+    attack_damage: 3.3
+    attack_speed: 2.5
+    crit_chance: 0
+Zyra:
+  base:
+    health: 504
+    health_regen: 5.5
+    mana: 418
+    mana_regen: 13
+    armor: 29
+    mr: 30
+    attack_damage: 53
+    attack_speed: 0.625
+    crit_chance: 0
+    attack_range: 575
+    move_speed: 340
+  growth:
+    health: 79
+    health_regen: 0.5
+    mana: 25
+    mana_regen: 0.4
+    armor: 3
+    mr: 0.5
+    attack_damage: 3.2
+    attack_speed: 2.11
+    crit_chance: 0

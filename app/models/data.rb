@@ -1,10 +1,10 @@
 class Data
   def self.champions
-    @@champions ||= YAML.load_file('app/data/champions.yml')
+    @@champions ||= YAML.load_file('app/data/champion_stats.yml')
   end
 
   def self.items
-    @@items ||= YAML.load_file('app/data/items.yml')
+    @@items ||= YAML.load_file('app/data/item_stats.yml')
   end
 
   def self.rune_data
