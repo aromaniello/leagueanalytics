@@ -1,22 +1,148 @@
+---
 Aatrox:
-  health: 580
-  health_regen: 3
-  armor: 38
-  mr: 32
-  move_speed: 345
-  as: 0.651
-  ad: 60
-  crit_dmg: 1.75
-  attack_range: 175
-
+  base:
+    health: 580
+    health_regen: 3
+    armor: 38
+    mr: 32
+    move_speed: 345
+    mana: 0
+    mana_regen: 0
+  growth:
+    health: 90
+    health_regen: 1
+    mana: 0
+    mana_regen: 0
+    armor: 3.25
+    mr: 1.25
 Ahri:
-
+  base:
+    health: 526
+    health_regen: 5.5
+    armor: 21
+    mr: 30
+    move_speed: 330
+    mana: 418
+    mana_regen: 8
+  growth:
+    health: 92
+    health_regen: 0.6
+    mana: 25
+    mana_regen: 0.8
+    armor: 3.5
+    mr: 0.5
 Akali:
-
+  base:
+    health: 500
+    health_regen: 8
+    armor: 23
+    mr: 37
+    move_speed: 345
+    mana: 200
+    mana_regen: 50
+  growth:
+    health: 105
+    health_regen: 0.5
+    mana: 0
+    mana_regen: 0
+    armor: 3.5
+    mr: 1.25
 Alistar:
-
+  base:
+    health: 600
+    health_regen: 8.5
+    armor: 44
+    mr: 32
+    move_speed: 330
+    mana: 350
+    mana_regen: 8.5
+  growth:
+    health: 106
+    health_regen: 0.85
+    mana: 40
+    mana_regen: 0.8
+    armor: 3.5
+    mr: 1.25
 Amumu:
-
+  base:
+    health: 615
+    health_regen: 9
+    armor: 30
+    mr: 32
+    move_speed: 335
+    mana: 285
+    mana_regen: 7.38
+  growth:
+    health: 80
+    health_regen: 0.85
+    mana: 40
+    mana_regen: 0.53
+    armor: 3.8
+    mr: 1.25
+Anivia:
+  base:
+    health: 480
+    health_regen: 5.5
+    armor: 21
+    mr: 30
+    move_speed: 325
+    mana: 495
+    mana_regen: 8
+  growth:
+    health: 82
+    health_regen: 0.55
+    mana: 45
+    mana_regen: 0.8
+    armor: 4
+    mr: 0.5
+Annie:
+  base:
+    health: 524
+    health_regen: 5.5
+    armor: 19
+    mr: 30
+    move_speed: 335
+    mana: 418
+    mana_regen: 8
+  growth:
+    health: 88
+    health_regen: 0.55
+    mana: 25
+    mana_regen: 0.8
+    armor: 4
+    mr: 0.5
+Aphelios:
+  base:
+    health: 530
+    health_regen: 3.25
+    armor: 28
+    mr: 26
+    move_speed: 325
+    mana: 348
+    mana_regen: 6.5
+  growth:
+    health: 88
+    health_regen: 0.55
+    mana: 42
+    mana_regen: 0.4
+    armor: 3
+    mr: 0.5
+Ashe:
+  base:
+    health: 570
+    health_regen: 3.5
+    armor: 26
+    mr: 30
+    move_speed: 325
+    mana: 280
+    mana_regen: 6.97
+  growth:
+    health: 87
+    health_regen: 0.55
+    mana: 32
+    mana_regen: 0.4
+    armor: 3.4
+    mr: 0.5
 Lux:
   base:
     health: 490
