@@ -1,6 +1,16 @@
 class Data
-  def self.champions
-    @@champions ||= YAML.load_file('app/data/champion_stats.yml')
+  def self.champion_names
+    @@champion_stats ||= YAML.load_file('app/data/champion_stats.yml').keys
+  end
+
+  def self.champion_stats
+    @@champion_stats ||= YAML.load_file('app/data/champion_stats.yml')
+  end
+
+  def self.champion_abilities
+    @@champion_abilities ||= YAML.load_file('app/data/champion_abilities.yml').map do |champion, abilities|
+      [champion, abilities.map { |ability| ability.deep_symbolize_keys }]
+    end.to_h
   end
 
   def self.items

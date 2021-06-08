@@ -20,17 +20,67 @@ const AbilityPanel = ({ ability }) => {
   }
 
   const renderResourceCost = () => {
-    if (!('resourceCost' in ability)) return '';
+    if (!('cost' in ability)) return '';
 
     return (
       <div className="row">
         <div className="col-2">
-          Resource Cost
+          Cost
         </div>
         <div className="col-1">
-          {ability.resourceCost}
+          {ability.cost}
         </div>
       </div>
+    );
+  }
+
+  const renderDamageIfPresent = (damage_type) => {
+    if (ability.damage.breakdown[damage_type] === 0) return '';
+
+    return (
+      <div className="row">
+        <div className="col-2">
+          <div className="damage-breakdown-label">
+            {_.capitalize(damage_type)}
+          </div>
+        </div>
+        <div className="col-1">
+          {ability.damage.breakdown[damage_type]}
+        </div>
+      </div>
+    );
+  }
+
+  const renderDamage = () => {
+    if (!('damage' in ability)) return '';
+
+    return (
+      <React.Fragment>
+        <div className="row">
+          <div className="col-2">
+            Damage
+          </div>
+          <div className="col-1">
+            {ability.damage.total}
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-2">
+            Damage to Target
+          </div>
+          <div className="col-1">
+            {ability.damage.target}
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-2">
+            Damage Breakdown
+          </div>
+        </div>
+        {renderDamageIfPresent("physical")}
+        {renderDamageIfPresent("magic")}
+        {renderDamageIfPresent("true")}
+      </React.Fragment>
     );
   }
 
@@ -39,57 +89,7 @@ const AbilityPanel = ({ ability }) => {
       <div className="row">
         <strong>{ability.name} ({ability.short_name})</strong>
       </div>
-      <div className="row">
-        <div className="col-2">
-          Damage
-        </div>
-        <div className="col-1">
-          {ability.damage}
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-2">
-          Damage to Target
-        </div>
-        <div className="col-1">
-          {ability.damageToTarget}
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-2">
-          Damage Breakdown
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-2">
-          <div className="damage-breakdown-label">
-            Physical
-          </div>
-        </div>
-        <div className="col-1">
-          {ability.damageBreakdown.physical}
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-2">
-          <div className="damage-breakdown-label">
-            Magic
-          </div>
-        </div>
-        <div className="col-1">
-          {ability.damageBreakdown.magic}
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-2">
-          <div className="damage-breakdown-label">
-            True
-          </div>
-        </div>
-        <div className="col-1">
-          {ability.damageBreakdown.true}
-        </div>
-      </div>
+      {renderDamage()}
       {renderCooldown()}
       {renderResourceCost()}
     </React.Fragment>

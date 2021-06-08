@@ -1,0 +1,271 @@
+Katarina:
+  - name: Sinister Steel
+    short_name: P
+    applies_on_hit: true
+    damage:
+      category: direct
+      magic:
+        level_scaling: [68, 72, 77, 82, 89, 96, 103, 112, 121, 131, 142, 154, 166, 180, 194, 208, 224, 240]
+        bonus_ad_scaling: 0.75
+        level_ap_scaling: [0.55, 0.55, 0.55, 0.55, 0.55, 0.66, 0.66, 0.66, 0.66, 0.66, 0.77, 0.77, 0.77, 0.77, 0.77, 0.88, 0.88, 0.88]
+
+  - name: Bouncing Blade
+    short_name: Q
+    cooldown: [11, 10, 9, 8, 7]
+    damage:
+      magic:
+        base: [75, 105, 135, 165, 195]
+        ap_scaling: 0.3
+
+  - name: Preparation
+    short_name: W
+    cooldown: [15, 14, 13, 12, 11]
+    movement_speed:
+      base: [0.5, 0.6, 0.7, 0.8, 0.9]
+      duration: 1.25
+
+  - name: Shunpo
+    short_name: E
+    cooldown: [14, 12.5, 11, 9.5, 8]
+    applies_on_hit: true
+    damage:
+      category: direct
+      magic:
+        base: [15, 30, 45, 60, 75]
+        ad_scaling: 0.5
+        ap_scaling: 0.25
+
+  - name: Death Lotus
+    short_name: R
+    cooldown: [90, 60, 45]
+    damage:
+      category: variable
+      applies_on_hit: true
+      on_hit_effectiveness: [0.25, 30, 0.35]
+      physical:
+        bonus_ad_scaling: 0.16
+        attack_speed_scaling: 0.128
+      magic:
+        base: [25, 37.5, 50]
+        ap_scaling: 0.19
+      min: 1
+      max: 16
+
+Lux:
+  - name: Illumination
+    short_name: P
+    damage:
+      category: direct
+      magic:
+        ap_scaling: 0.2
+        level_scaling: [20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190]
+
+  - name: Light Binding
+    short_name: Q
+    cooldown: [11, 10.5, 10, 9.5, 9]
+    damage:
+      category: direct
+      magic:
+        ap_scaling: 0.6
+        base: [80, 125, 170, 215, 260]
+
+  - name: Prismatic Barrier
+    short_name: W
+    cooldown: [14, 13, 12, 11, 10]
+    cost: [60, 65, 60, 75, 80]
+    shield:
+
+  - name: Lucent Singularity
+    short_name: E
+    cooldown: [10, 9.5, 9, 8.5, 8]
+    cost: [70, 80, 90, 100, 110]
+    damage:
+      category: direct
+      magic:
+        ap_scaling: 0.65
+        base: [60, 110, 160, 210, 260]
+    slow:
+      base: [0.25, 0.3, 0.35, 0.4, 0.45]
+
+  - name: Final Spark
+    short_name: R
+    cooldown: [80, 60, 40]
+    cost: 100
+    damage:
+      category: direct
+      magic:
+        ap_scaling: 1
+        base: [300, 400, 500]
+
+Kha'Zix:
+  - name: Unseen Threat
+    short_name: P
+    damage:
+      category: direct
+      magic:
+        level_scaling: [14, 20, 26, 32, 38, 44, 50, 56, 62, 68, 74, 80, 86, 92, 98, 104, 110, 116]
+        bonus_ad_scaling: 0.4
+    slow:
+      base: 0.25
+      duration: 2
+
+  - name: Taste Their Fear (Unevolved - Non Isolated)
+    short_name: Q1
+    skill_from: Q
+    cooldown: 4
+    cost: 20
+    damage:
+      category: direct
+      physical:
+        base: [60, 85, 110, 135, 160]
+        bonus_ad_scaling: 1.3
+
+  - name: Taste Their Fear (Unevolved - Isolated)
+    short_name: Q2
+    skill_from: Q
+    cooldown: 4
+    cost: 20
+    damage:
+      category: direct
+      physical:
+        base: [126, 178.5, 231, 283.5, 336]
+        bonus_ad_scaling: 2.73
+
+  - name: Taste Their Fear (Evolved - Non Isolated)
+    short_name: Q1E
+    skill_from: Q
+    cooldown: 2.2
+    cost: 20
+    damage:
+      category: direct
+      physical:
+        base: [60, 85, 110, 135, 160]
+        bonus_ad_scaling: 1.3
+
+  - name: Taste Their Fear (Evolved - Isolated)
+    short_name: Q2E
+    skill_from: Q
+    cooldown: 2.2
+    cost: 20
+    damage:
+      category: direct
+      physical:
+        base: [126, 178.5, 231, 283.5, 336]
+        bonus_ad_scaling: 2.73
+
+  - name: Void Spike (Unevolved)
+    short_name: W
+    cooldown: 9
+    cost: [55, 60, 65, 70, 75]
+    damage:
+      category: direct
+      physical:
+        base: [85, 115, 145, 175, 205]
+        bonus_ad_scaling: 1
+    heal:
+      base: [60, 85, 110, 135, 160]
+      ap_scaling: 0.5
+
+  - name: Void Spike (Evolved - Not Isolated)
+    short_name: W
+    cooldown: 9
+    cost: [55, 60, 65, 70, 75]
+    damage:
+      category: direct
+      physical:
+        base: [85, 115, 145, 175, 205]
+        bonus_ad_scaling: 1
+    heal:
+      base: [60, 85, 110, 135, 160]
+      ap_scaling: 0.5
+    slow:
+      base: 0.6
+
+  - name: Void Spike (Evolved - Isolated)
+    short_name: W
+    cooldown: 9
+    cost: [55, 60, 65, 70, 75]
+    damage:
+      category: direct
+      physical:
+        base: [85, 115, 145, 175, 205]
+        bonus_ad_scaling: 1
+    heal:
+      base: [60, 85, 110, 135, 160]
+      ap_scaling: 0.5
+    slow:
+      base: 0.9
+
+  - name: Leap
+    short_name: E
+    cooldown: [20, 18, 16, 14, 12]
+    cost: 50
+    damage:
+      category: direct
+      physical:
+        base: [60, 100, 135, 170, 205]
+        bonus_ad_scaling: 0.2
+
+  - name: Void Assault
+    short_name: R
+    cooldown: [100, 85, 70]
+    cost: 100
+
+Syndra:
+  - name: Dark Sphere (vs Champions)
+    short_name: Q1
+    skill_from: Q
+    cooldown: 4
+    cost: [60, 65, 70, 75, 80]
+    damage:
+      category: direct
+      magic:
+        base: [70, 105, 140, 175, 262.5]
+        ap_scaling: [0.65, 0.65, 0.65, 0.65, 0.8125]
+
+  - name: Dark Sphere (vs Non-Champions)
+    short_name: Q2
+    skill_from: Q
+    cooldown: 4
+    cost: [60, 65, 70, 75, 80]
+    damage:
+      category: direct
+      base: [70, 105, 140, 175, 210]
+      ap_scaling: 0.65
+
+  - name: Force of Will
+    short_name: W
+    cooldown: [12, 11, 10, 9, 8]
+    cost: [60, 70, 80, 90, 100]
+    damage:
+      category: direct
+      magic:
+        base: [70, 110, 150, 190, 230]
+        ap_scaling: 0.7
+      true:
+        base: [0, 0, 0, 0, 46]
+        ap_scaling: [0, 0, 0, 0, 0.14]
+    slow:
+      base: [0.25, 0.3, 0.35, 0.4, 0.45]
+
+  - name: Scatter the Weak
+    short_name: E
+    cooldown: [18, 17, 16, 15, 14]
+    cost: 50
+    damage:
+      category: direct
+      magic:
+        base: [85, 130, 175, 220, 165]
+        ap_scaling: 0.6
+
+  - name: Unleashed Power
+    short_name: R
+    cooldown: [120, 110, 100]
+    cost: 100
+    damage:
+      category: variable
+      magic:
+        base: [90, 140, 190]
+        ap_scaling: 0.2
+      min: 3
+      max: 7

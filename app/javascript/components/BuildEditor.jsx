@@ -16,7 +16,7 @@ const BuildEditor = ({ data }) => {
   const store = useStore();
 
   const renderChampionOptions = () => {
-    return _.keys(data.champions).map((champion) => {
+    return data.champions.map((champion) => {
       return <option value={champion} key={`champion-option-${_.kebabCase(champion)}`}>{champion}</option>;
     })
   }

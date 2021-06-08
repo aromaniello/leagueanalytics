@@ -8,18 +8,20 @@ class ItemBuild
     self.data = Data.items
   end
 
+  # generate methods to aggregate each stat
+  stats.each do |stat|
+    define_method :"#{stat}" do
+      aggregate_stat(stat.to_s)
+    end
+  end
+
+  private
+
   def aggregate_stat(stat)
     items.reduce(0) { |sum, item| sum + stat_for_item(item, stat) }
   end
 
   def stat_for_item(item, stat)
     data[item][stat] || 0
-  end
-
-  # generate methods to aggregate each stat
-  stats.each do |stat|
-    define_method :"#{stat}" do
-      aggregate_stat(stat.to_s)
-    end
   end
 end
