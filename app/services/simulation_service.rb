@@ -54,17 +54,45 @@ class SimulationService
       result[:cost] = cost if cost.present?
 
       if ability[:damage].present?
-        damage = damage_for_ability(ability[:damage], skill_level)
+        if ability[:damage][:category] == "direct"
+          damage = damage_for_ability(ability[:damage], skill_level)
 
-        result[:damage] = {
-          total: total_damage(damage),
-          target: total_damage(damage), # TODO: change to after-mitigation damage
-          breakdown: {
-            physical: damage[:physical],
-            magic: damage[:magic],
-            true: damage[:true]
+          result[:damage] = {
+            category: "direct",
+            total: total_damage(damage),
+            target: total_damage(damage), # TODO: change to after-mitigation damage
+            breakdown: {
+              physical: damage[:physical],
+              magic: damage[:magic],
+              true: damage[:true]
+            }
           }
-        }
+        elsif ability[:damage][:category] == "variable"
+          damage = damage_for_ability(ability[:damage], skill_level)
+          damage_per_tick = total_damage(damage)
+          min = ability[:damage][:min]
+          max = ability[:damage][:max]
+
+          damage_instances = (min..max).map do |instances|
+            {
+              amount: instances,
+              damage: damage_per_tick * instances
+            }
+          end
+
+          result[:damage] = {
+            category: "variable",
+            per_tick: damage_per_tick,
+            target_per_tick: damage_per_tick, # TODO: change to after-mitigation damage
+            breakdown_per_tick: {
+              physical: damage[:physical],
+              magic: damage[:magic],
+              true: damage[:true]
+            },
+            instances: damage_instances,
+            instance_name: ability[:damage][:instance_name]
+          }
+        end
       end
 
       if ability[:shield].present?
@@ -76,6 +104,10 @@ class SimulationService
       end
 
       if ability[:heal].present?
+
+      end
+
+      if ability[:slow].present?
 
       end
 
@@ -135,9 +167,6 @@ class SimulationService
   end
 
   def add_scalings(ability_values, skill_level)
-    puts "add_scalings"
-    puts skill_level
-    puts ability_values
     value_for_scaling(ability_values, skill_level, :base) +
     value_for_scaling(ability_values, skill_level, :ap_scaling) +
     value_for_scaling(ability_values, skill_level, :ad_scaling) +

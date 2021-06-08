@@ -34,8 +34,9 @@ const AbilityPanel = ({ ability }) => {
     );
   }
 
-  const renderDamageIfPresent = (damage_type) => {
-    if (ability.damage.breakdown[damage_type] === 0) return '';
+  // TODO: refactor to just iterate over the three keys, without calling this three times
+  const renderDamageIfPresent = (breakdown, damage_type) => {
+    if (breakdown[damage_type] === 0) return '';
 
     return (
       <div className="row">
@@ -45,7 +46,7 @@ const AbilityPanel = ({ ability }) => {
           </div>
         </div>
         <div className="col-1">
-          {ability.damage.breakdown[damage_type]}
+          {breakdown[damage_type]}
         </div>
       </div>
     );
@@ -54,6 +55,15 @@ const AbilityPanel = ({ ability }) => {
   const renderDamage = () => {
     if (!('damage' in ability)) return '';
 
+    if (ability.damage.category === "direct") {
+      return renderDirectDamage();
+
+    } else if (ability.damage.category === "variable") {
+      return renderVariableDamage();
+    }
+  }
+
+  const renderDirectDamage = () => {
     return (
       <React.Fragment>
         <div className="row">
@@ -77,11 +87,65 @@ const AbilityPanel = ({ ability }) => {
             Damage Breakdown
           </div>
         </div>
-        {renderDamageIfPresent("physical")}
-        {renderDamageIfPresent("magic")}
-        {renderDamageIfPresent("true")}
+        {renderDamageIfPresent(ability.damage.breakdown, "physical")}
+        {renderDamageIfPresent(ability.damage.breakdown, "magic")}
+        {renderDamageIfPresent(ability.damage.breakdown, "true")}
       </React.Fragment>
     );
+  }
+
+  const renderVariableDamage = () => {
+    return (
+      <React.Fragment>
+        <div className="row">
+          <div className="col-2">
+            Damage per Tick
+          </div>
+          <div className="col-1">
+            {ability.damage.per_tick}
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-2">
+            Damage to Target
+          </div>
+          <div className="col-1">
+            {ability.damage.target_per_tick}
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-2">
+            Damage per Tick Breakdown
+          </div>
+        </div>
+        {renderDamageIfPresent(ability.damage.breakdown_per_tick, "physical")}
+        {renderDamageIfPresent(ability.damage.breakdown_per_tick, "magic")}
+        {renderDamageIfPresent(ability.damage.breakdown_per_tick, "true")}
+        <div className="row">
+          <div className="col-2">
+            Total Damage
+          </div>
+        </div>
+        {renderVariableDamageInstances(ability.damage.instances, ability.damage.instance_name )}
+      </React.Fragment>
+    );
+  }
+
+  const renderVariableDamageInstances = (instances, instance_name) => {
+    return instances.map((instance) => {
+      return (
+        <div className="row">
+          <div className="col-2">
+            <div className="damage-breakdown-label">
+              {`${instance.amount} ${_.capitalize(instance_name)}`}
+            </div>
+          </div>
+          <div className="col-1">
+            {instance.damage}
+          </div>
+        </div>
+      );
+    })
   }
 
   const renderShield = () => {

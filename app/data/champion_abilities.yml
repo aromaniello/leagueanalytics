@@ -50,6 +50,7 @@ Katarina:
         ap_scaling: 0.19
       min: 1
       max: 16
+      instance_name: "daggers"
 
 Lux:
   - name: Illumination
@@ -79,6 +80,7 @@ Lux:
       ap_scaling: 0.35
       min: 1
       max: 2
+      instance_name: "wand hits"
 
   - name: Lucent Singularity
     short_name: E
@@ -274,3 +276,4 @@ Syndra:
         ap_scaling: 0.2
       min: 3
       max: 7
+      instance_name: "spheres"
