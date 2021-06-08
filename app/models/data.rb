@@ -1,24 +1,25 @@
 class Data
+  # TODO: cache these to redis
   def self.champion_names
-    @@champion_stats ||= YAML.load_file('app/data/champion_stats.yml').keys
+    YAML.load_file('app/data/champion_stats.yml').keys
   end
 
   def self.champion_stats
-    @@champion_stats ||= YAML.load_file('app/data/champion_stats.yml')
+    YAML.load_file('app/data/champion_stats.yml').map { |k, v| [k, v.deep_symbolize_keys] }.to_h
   end
 
   def self.champion_abilities
-    @@champion_abilities ||= YAML.load_file('app/data/champion_abilities.yml').map do |champion, abilities|
+    YAML.load_file('app/data/champion_abilities.yml').map do |champion, abilities|
       [champion, abilities.map { |ability| ability.deep_symbolize_keys }]
     end.to_h
   end
 
   def self.items
-    @@items ||= YAML.load_file('app/data/item_stats.yml')
+    YAML.load_file('app/data/item_stats.yml')
   end
 
   def self.rune_data
-    @@rune_data ||= YAML.load_file('app/data/runes.yml')
+    YAML.load_file('app/data/runes.yml')
   end
 
   def self.rune_paths

@@ -19,6 +19,8 @@ module Leagueanalytics
   class Application < Rails::Application
     config.load_defaults 6.1
 
+    config.autoload_paths << Rails.root.join('app/services')
+
     config.react.server_renderer_extensions = ["jsx", "js", "tsx", "ts"]
 
     config.generators.system_tests = nil

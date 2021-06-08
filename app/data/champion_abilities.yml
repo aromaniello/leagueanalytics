@@ -20,7 +20,7 @@ Katarina:
   - name: Preparation
     short_name: W
     cooldown: [15, 14, 13, 12, 11]
-    movement_speed:
+    move_speed:
       base: [0.5, 0.6, 0.7, 0.8, 0.9]
       duration: 1.25
 
@@ -74,6 +74,11 @@ Lux:
     cooldown: [14, 13, 12, 11, 10]
     cost: [60, 65, 60, 75, 80]
     shield:
+      category: variable
+      base: [45, 65, 85, 105, 125]
+      ap_scaling: 0.35
+      min: 1
+      max: 2
 
   - name: Lucent Singularity
     short_name: E

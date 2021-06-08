@@ -84,14 +84,30 @@ const AbilityPanel = ({ ability }) => {
     );
   }
 
+  const renderShield = () => {
+    if (!('shield' in ability)) return '';
+
+    return (
+      <div className="row">
+        <div className="col-2">
+          Shield
+        </div>
+        <div className="col-1">
+          {ability.shield.value}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <React.Fragment>
       <div className="row">
         <strong>{ability.name} ({ability.short_name})</strong>
       </div>
-      {renderDamage()}
       {renderCooldown()}
       {renderResourceCost()}
+      {renderDamage()}
+      {renderShield()}
     </React.Fragment>
   );
 }

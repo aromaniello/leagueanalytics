@@ -11,9 +11,10 @@ module Api
       }
       items = params[:items]
 
-      champion_build = ChampionBuild.new(name, level, skill_levels, items)
-      champion_stats = champion_build.stats.transform_keys { |key| key.to_s.camelize(:lower) }
-      champion_abilities = champion_build.abilities
+      service = SimulationService.new(name, level, skill_levels, items)
+
+      champion_stats = service.stats.transform_keys { |key| key.to_s.camelize(:lower) }
+      champion_abilities = service.abilities
 
       render json: { stats: champion_stats, abilities: champion_abilities }, status: :ok
     end
