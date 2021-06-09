@@ -15,7 +15,9 @@ class Data
   end
 
   def self.items
-    YAML.load_file('app/data/item_stats.yml')
+    YAML.load_file('app/data/item_stats.yml').map do |name, stats|
+      [name, stats.deep_symbolize_keys]
+    end.to_h
   end
 
   def self.rune_data

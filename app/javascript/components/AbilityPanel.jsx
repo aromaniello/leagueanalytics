@@ -85,7 +85,7 @@ const AbilityPanel = ({ ability }) => {
             Damage to Target
           </div>
           <div className="col-1">
-            {ability.damage.target}
+            {ability.damage.target.toFixed(1)}
           </div>
         </div>
         <div className="row">

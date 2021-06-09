@@ -104,7 +104,7 @@ const StatsPanel = ({ stats }) => {
           Armor Pen (Flat)
         </div>
         <div className="col-1">
-          {stats.armorPenFlat}
+          {stats.armorPenetration}
         </div>
 
         <div className="col-2">
@@ -127,7 +127,7 @@ const StatsPanel = ({ stats }) => {
           Armor Pen (%)
         </div>
         <div className="col-1">
-          {numberToPercentage(stats.armorPenPerc)}
+          {numberToPercentage(stats.armorReduction)}
         </div>
 
         <div className="col-2">
@@ -141,7 +141,7 @@ const StatsPanel = ({ stats }) => {
           Magic Res
         </div>
         <div className="col-1">
-          {stats.magicRes}
+          {stats.magicRes.toFixed(2)}
         </div>
       </div>
 
@@ -166,7 +166,7 @@ const StatsPanel = ({ stats }) => {
           Magic Pen (Flat)
         </div>
         <div className="col-1">
-          {stats.magicPenFlat}
+          {stats.magicPenetration}
         </div>
 
         <div className="col-2">
@@ -182,7 +182,7 @@ const StatsPanel = ({ stats }) => {
           Magic Pen (%)
         </div>
         <div className="col-1">
-          {numberToPercentage(stats.magicPenPerc)}
+          {numberToPercentage(stats.magicReduction)}
         </div>
       </div>
     </React.Fragment>

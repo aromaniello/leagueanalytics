@@ -11,7 +11,9 @@ module Api
       }
       items = params[:items]
 
-      service = SimulationService.new(name, level, skill_levels, items)
+      champion = Champion.new(name, level, skill_levels, items)
+      target = Champion.new("Ashe", 6, { q: 3, w: 1, e: 1, r: 6 }, ["Long Sword"])
+      service = SimulationService.new(champion, target)
 
       champion_stats = service.stats.transform_keys { |key| key.to_s.camelize(:lower) }
       champion_abilities = service.abilities

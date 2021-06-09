@@ -1,40 +1,39 @@
 class SimulationService
-  attr_accessor :champion, :items
+  attr_accessor :champion, :target
 
-  natural_stats = %i[attack_damage attack_speed crit_chance life_steal ability_power health health_regen mana mana_regen armor mr move_speed]
-  item_stats = %i[ability_power ability_haste life_steal]
+  # natural_stats = %i[attack_damage attack_speed crit_chance life_steal ability_power health health_regen mana mana_regen armor mr move_speed]
+  # item_stats = %i[ability_power ability_haste life_steal]
 
-  def initialize(champion, level, skill_levels, items)
-    puts "SimulationService champion #{champion} (#{champion.class}), level #{level} (#{level.class}), skill levels #{skill_levels} (#{skill_levels[:q].class}), items #{items} (#{items.first.class})"
-    self.champion = Champion.new(champion, level, skill_levels)
-    self.items = ItemBuild.new(items)
+  def initialize(champion, target)
+    self.champion = champion
+    self.target = target
   end
 
   def stats
     {
-      attack_damage: attack_damage,
-      ability_power: ability_power,
-      health: health,
-      mana: mana,
-      armor: armor,
-      magic_res: mr,
-      health_regen: health_regen,
-      mana_regen: mana_regen,
-      physical_vamp: 0,
-      omnivamp: 0,
-      attack_speed: attack_speed,
-      crit_chance: crit_chance,
-      lethality: 0,
-      armor_pen_flat: 0,
-      armor_pen_perc: 0,
-      magic_pen_flat: 0,
-      magic_pen_perc: 0,
-      attack_range: 0,
-      tenacity: 0,
-      ability_haste: ability_haste,
-      life_steal: life_steal,
-      cooldown_reduction: cooldown_reduction,
-      move_speed: move_speed
+      attack_damage: champion.attack_damage,
+      ability_power: champion.ability_power,
+      health: champion.health,
+      mana: champion.mana,
+      armor: champion.armor,
+      magic_res: champion.mr,
+      health_regen: champion.health_regen,
+      mana_regen: champion.mana_regen,
+      physical_vamp: champion.physical_vamp,
+      omnivamp: champion.omnivamp,
+      attack_speed: champion.attack_speed,
+      crit_chance: champion.crit_chance,
+      lethality: champion.lethality,
+      armor_penetration: champion.armor_penetration,
+      armor_reduction: champion.armor_reduction,
+      magic_penetration: champion.magic_penetration,
+      magic_reduction: champion.mr_reduction,
+      attack_range: champion.attack_range,
+      tenacity: champion.tenacity,
+      ability_haste: champion.ability_haste,
+      life_steal: champion.life_steal,
+      cooldown_reduction: champion.cooldown_reduction,
+      move_speed: champion.move_speed
     }
   end
 
@@ -56,11 +55,12 @@ class SimulationService
       if ability[:damage].present?
         if ability[:damage][:category] == "direct"
           damage = damage_for_ability(ability[:damage], skill_level)
+          post_mitigation_damage = post_mitigation_damage(damage)
 
           result[:damage] = {
             category: "direct",
             total: total_damage(damage),
-            target: total_damage(damage), # TODO: change to after-mitigation damage
+            target: total_damage(post_mitigation_damage),
             breakdown: {
               physical: damage[:physical],
               magic: damage[:magic],
@@ -163,22 +163,6 @@ class SimulationService
 
   private
 
-  natural_stats.each do |stat|
-    define_method stat do
-      champion.send(stat) + items.send(stat)
-    end
-  end
-
-  item_stats.each do |stat|
-    define_method stat do
-      items.send(stat)
-    end
-  end
-
-  def bonus_attack_damage
-    items.attack_damage
-  end
-
   # if the ability is part of another such as Q1 or Q2,
   # it should have a skill_from field which determines which skill to take its level from
   # otherwise, just use the short_name to determine the skill's level
@@ -227,11 +211,11 @@ class SimulationService
     when :base
       array_or_number(ability_values[:base], skill_level)
     when :ap_scaling
-      array_or_number(ability_values[:ap_scaling], skill_level) * ability_power
+      array_or_number(ability_values[:ap_scaling], skill_level) * champion.ability_power
     when :ad_scaling
-      array_or_number(ability_values[:ad_scaling], skill_level) * attack_damage
+      array_or_number(ability_values[:ad_scaling], skill_level) * champion.attack_damage
     when :bonus_ad_scaling
-      array_or_number(ability_values[:bonus_ad_scaling], skill_level) * bonus_attack_damage
+      array_or_number(ability_values[:bonus_ad_scaling], skill_level) * champion.bonus_attack_damage
     when :level_scaling
       ability_values[:level_scaling][champion.level-1]
     else
@@ -244,7 +228,33 @@ class SimulationService
     value.is_a?(Array) && skill_level.present? ? value[skill_level-1] : value
   end
 
-  def cooldown_reduction
-    ability_haste / (ability_haste + 100)
+  def post_mitigation_damage(damage)
+    {
+      physical: post_mitigation_physical_damage(damage[:physical]),
+      magic: post_mitigation_magic_damage(damage[:magic]),
+      true: damage[:true]
+    }
+  end
+
+  def post_mitigation_physical_damage(damage)
+    return 0 if damage.zero?
+
+    reduced_damage(damage, target.armor, champion.armor_reduction, champion.armor_penetration)
+  end
+
+  def post_mitigation_magic_damage(damage)
+    return 0 if damage.zero?
+
+    reduced_damage(damage, target.mr, champion.mr_reduction, champion.magic_penetration)
+  end
+
+  def reduced_damage(damage, resistance, resistance_reduction, resistance_penetration)
+    effective_resistance = resistance * (1 - resistance_reduction) - resistance_penetration
+
+    if effective_resistance >= 0
+      damage * (100 / (100 + effective_resistance))
+    else
+      damage * (2 - 100 / (100 - effective_resistance))
+    end
   end
 end
