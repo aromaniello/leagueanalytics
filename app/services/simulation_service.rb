@@ -69,28 +69,70 @@ class SimulationService
           }
         elsif ability[:damage][:category] == "variable"
           damage = damage_for_ability(ability[:damage], skill_level)
-          damage_per_tick = total_damage(damage)
+          damage_per_instance = total_damage(damage)
           min = ability[:damage][:min]
           max = ability[:damage][:max]
 
           damage_instances = (min..max).map do |instances|
             {
               amount: instances,
-              damage: damage_per_tick * instances
+              damage: damage_per_instance * instances
             }
           end
 
           result[:damage] = {
             category: "variable",
-            per_tick: damage_per_tick,
-            target_per_tick: damage_per_tick, # TODO: change to after-mitigation damage
-            breakdown_per_tick: {
+            per_instance: damage_per_instance,
+            target_per_instance: damage_per_instance, # TODO: change to after-mitigation damage
+            breakdown: {
               physical: damage[:physical],
               magic: damage[:magic],
               true: damage[:true]
             },
             instances: damage_instances,
+            target_instances: damage_instances, # TODO: change to after-mitigation damage
             instance_name: ability[:damage][:instance_name]
+          }
+        elsif ability[:damage][:category] == "dot"
+          damage = damage_for_ability(ability[:damage], skill_level)
+          damage_per_tick = total_damage(damage)
+          max_ticks = ability[:damage][:max_time] / ability[:damage][:time_per_tick]
+
+          damage_ticks = (1..max_ticks).map do |ticks|
+            {
+              amount: ticks,
+              damage: damage_per_tick * ticks
+            }
+          end
+
+          result[:damage] = {
+            category: "dot",
+            per_tick: damage_per_tick,
+            target_per_tick: damage_per_tick, # TODO: change to after-mitigation damage
+            breakdown: {
+              physical: damage[:physical],
+              magic: damage[:magic],
+              true: damage[:true]
+            },
+            ticks: damage_ticks,
+            target_ticks: damage_ticks # TODO: change to after-mitigation damage
+          }
+        elsif ability[:damage][:category] == "empowered_aa"
+          damage = damage_for_ability(ability[:damage], skill_level)
+          extra_damage = total_damage(damage)
+          total_damage = attack_damage + extra_damage
+
+          result[:damage] = {
+            category: "empowered_aa",
+            extra: total_damage(damage),
+            target_extra: total_damage(damage), # TODO: change to after-mitigation damage
+            breakdown: {
+              physical: damage[:physical],
+              magic: damage[:magic],
+              true: damage[:true]
+            },
+            total: total_damage,
+            target_total: total_damage # TODO: change to after-mitigation damage
           }
         end
       end
@@ -189,7 +231,7 @@ class SimulationService
     when :ad_scaling
       array_or_number(ability_values[:ad_scaling], skill_level) * attack_damage
     when :bonus_ad_scaling
-      array_or_number(ability_values[:ad_scaling], skill_level) * bonus_attack_damage
+      array_or_number(ability_values[:bonus_ad_scaling], skill_level) * bonus_attack_damage
     when :level_scaling
       ability_values[:level_scaling][champion.level-1]
     else

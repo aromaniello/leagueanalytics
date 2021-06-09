@@ -9,7 +9,7 @@ const AbilityPanel = ({ ability }) => {
 
     return (
       <div className="row">
-        <div className="col-2">
+        <div className="col-3">
           Cooldown
         </div>
         <div className="col-1">
@@ -24,7 +24,7 @@ const AbilityPanel = ({ ability }) => {
 
     return (
       <div className="row">
-        <div className="col-2">
+        <div className="col-3">
           Cost
         </div>
         <div className="col-1">
@@ -40,7 +40,7 @@ const AbilityPanel = ({ ability }) => {
 
     return (
       <div className="row">
-        <div className="col-2">
+        <div className="col-3">
           <div className="damage-breakdown-label">
             {_.capitalize(damage_type)}
           </div>
@@ -60,6 +60,12 @@ const AbilityPanel = ({ ability }) => {
 
     } else if (ability.damage.category === "variable") {
       return renderVariableDamage();
+
+    } else if (ability.damage.category === "dot") {
+      return renderDotDamage();
+
+    } else if (ability.damage.category === "empowered_aa") {
+      return renderEmpoweredAaDamage();
     }
   }
 
@@ -67,7 +73,7 @@ const AbilityPanel = ({ ability }) => {
     return (
       <React.Fragment>
         <div className="row">
-          <div className="col-2">
+          <div className="col-3">
             Damage
           </div>
           <div className="col-1">
@@ -75,7 +81,7 @@ const AbilityPanel = ({ ability }) => {
           </div>
         </div>
         <div className="row">
-          <div className="col-2">
+          <div className="col-3">
             Damage to Target
           </div>
           <div className="col-1">
@@ -83,7 +89,7 @@ const AbilityPanel = ({ ability }) => {
           </div>
         </div>
         <div className="row">
-          <div className="col-2">
+          <div className="col-3">
             Damage Breakdown
           </div>
         </div>
@@ -98,35 +104,41 @@ const AbilityPanel = ({ ability }) => {
     return (
       <React.Fragment>
         <div className="row">
-          <div className="col-2">
-            Damage per Tick
+          <div className="col-3">
+            Damage per Instance
           </div>
           <div className="col-1">
-            {ability.damage.per_tick}
+            {ability.damage.per_instance}
           </div>
         </div>
         <div className="row">
-          <div className="col-2">
-            Damage to Target
+          <div className="col-3">
+            Damage per Instance to Target
           </div>
           <div className="col-1">
-            {ability.damage.target_per_tick}
+            {ability.damage.target_per_instance}
           </div>
         </div>
         <div className="row">
-          <div className="col-2">
-            Damage per Tick Breakdown
+          <div className="col-3">
+            Damage per Instance Breakdown
           </div>
         </div>
-        {renderDamageIfPresent(ability.damage.breakdown_per_tick, "physical")}
-        {renderDamageIfPresent(ability.damage.breakdown_per_tick, "magic")}
-        {renderDamageIfPresent(ability.damage.breakdown_per_tick, "true")}
+        {renderDamageIfPresent(ability.damage.breakdown, "physical")}
+        {renderDamageIfPresent(ability.damage.breakdown, "magic")}
+        {renderDamageIfPresent(ability.damage.breakdown, "true")}
         <div className="row">
-          <div className="col-2">
+          <div className="col-3">
             Total Damage
           </div>
         </div>
-        {renderVariableDamageInstances(ability.damage.instances, ability.damage.instance_name )}
+        {renderVariableDamageInstances(ability.damage.instances, _.capitalize(ability.damage.instance_name) )}
+        <div className="row">
+          <div className="col-3">
+            Total Damage to Target
+          </div>
+        </div>
+        {renderVariableDamageInstances(ability.damage.target_instances, _.capitalize(ability.damage.instance_name) )}
       </React.Fragment>
     );
   }
@@ -135,9 +147,9 @@ const AbilityPanel = ({ ability }) => {
     return instances.map((instance) => {
       return (
         <div className="row">
-          <div className="col-2">
+          <div className="col-3">
             <div className="damage-breakdown-label">
-              {`${instance.amount} ${_.capitalize(instance_name)}`}
+              {`${instance.amount} ${instance_name}`}
             </div>
           </div>
           <div className="col-1">
@@ -148,12 +160,102 @@ const AbilityPanel = ({ ability }) => {
     })
   }
 
+  const renderDotDamage = () => {
+    return (
+      <React.Fragment>
+        <div className="row">
+          <div className="col-3">
+            Damage per Tick
+          </div>
+          <div className="col-1">
+            {ability.damage.per_tick}
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-3">
+            Damage per Tick to Target
+          </div>
+          <div className="col-1">
+            {ability.damage.target_per_tick}
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-3">
+            Damage per Tick Breakdown
+          </div>
+        </div>
+        {renderDamageIfPresent(ability.damage.breakdown, "physical")}
+        {renderDamageIfPresent(ability.damage.breakdown, "magic")}
+        {renderDamageIfPresent(ability.damage.breakdown, "true")}
+        <div className="row">
+          <div className="col-3">
+            Total Damage
+          </div>
+        </div>
+        {renderVariableDamageInstances(ability.damage.ticks, "ticks")}
+        <div className="row">
+          <div className="col-3">
+            Total Damage to Target
+          </div>
+        </div>
+        {renderVariableDamageInstances(ability.damage.target_ticks, "ticks")}
+      </React.Fragment>
+    );
+  }
+
+  const renderEmpoweredAaDamage = () => {
+    return (
+      <React.Fragment>
+        <div className="row">
+          <div className="col-3">
+            Extra Damage
+          </div>
+          <div className="col-1">
+            {ability.damage.extra}
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-3">
+            Extra Damage to Target
+          </div>
+          <div className="col-1">
+            {ability.damage.target_extra}
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-3">
+            Extra Damage Breakdown
+          </div>
+        </div>
+        {renderDamageIfPresent(ability.damage.breakdown, "physical")}
+        {renderDamageIfPresent(ability.damage.breakdown, "magic")}
+        {renderDamageIfPresent(ability.damage.breakdown, "true")}
+        <div className="row">
+          <div className="col-3">
+            Total Damage (+ AA)
+          </div>
+          <div className="col-1">
+            {ability.damage.total}
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-3">
+            Total Damage to Target (+ AA)
+          </div>
+          <div className="col-1">
+            {ability.damage.target_total}
+          </div>
+        </div>
+      </React.Fragment>
+    );
+  }
+
   const renderShield = () => {
     if (!('shield' in ability)) return '';
 
     return (
       <div className="row">
-        <div className="col-2">
+        <div className="col-3">
           Shield
         </div>
         <div className="col-1">

@@ -1,3 +1,69 @@
+Cassiopeia:
+  - name: Noxious Blast
+    short_name: Q
+    cooldown: 3.5
+    cost: [50, 60, 70, 80, 90]
+    damage:
+      category: dot
+      magic:
+        base: [25, 36.67, 48.33, 60, 71.67]
+        ap_scaling: 0.3
+      time_per_tick: 1
+      max_time: 3
+
+  - name: Miasma
+    short_name: W
+    cooldown: [24, 22, 20, 18, 16]
+    cost: [70, 80, 90, 100, 110]
+    damage:
+      category: dot
+      base: [20, 25, 30, 35, 40]
+      ap_scaling: 0.15
+      time_per_tick: 1
+      max_time: 5
+    slow:
+      base: [0.4, 0.5, 0.6, 0.7, 0.8]
+
+  - name: Twin Fang (vs Non-Poisoned)
+    short_name: E1
+    skill_from: E
+    cooldown: 0.75
+    cost: [50, 48, 46, 44, 42]
+    damage:
+      category: direct
+      magic:
+        ap_scaling: 0.1
+        level_scaling: [52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96, 100, 104, 108, 112, 116, 120]
+
+  - name: Twin Fang (vs Poisoned)
+    short_name: E2
+    skill_from: E
+    cooldown: 0.75
+    cost: [50, 48, 46, 44, 42]
+    damage:
+      category: direct
+      magic:
+        base: [10, 30, 50, 70, 90]
+        ap_scaling: 0.7
+        level_scaling: [52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96, 100, 104, 108, 112, 116, 120]
+    heal:
+      ap_scaling: [0.12, 0.14, 0.16, 0.18, 0.2]
+
+  - name: Petrifying Gaze
+    short_name: R
+    cooldown: [120, 100, 80]
+    cost: 100
+    damage:
+      category: direct
+      magic:
+        base: [150, 250, 350]
+        ap_scaling: 0.5
+    stun:
+      duration: 2
+    slow:
+      base: 0.4
+      duration: 2
+
 Katarina:
   - name: Sinister Steel
     short_name: P
@@ -104,11 +170,11 @@ Lux:
         ap_scaling: 1
         base: [300, 400, 500]
 
-Kha'Zix:
+Khazix:
   - name: Unseen Threat
     short_name: P
     damage:
-      category: direct
+      category: empowered_aa
       magic:
         level_scaling: [14, 20, 26, 32, 38, 44, 50, 56, 62, 68, 74, 80, 86, 92, 98, 104, 110, 116]
         bonus_ad_scaling: 0.4

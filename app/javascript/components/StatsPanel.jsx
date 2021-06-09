@@ -118,7 +118,7 @@ const StatsPanel = ({ stats }) => {
           Armor
         </div>
         <div className="col-1">
-          {stats.armor}
+          {stats.armor.toFixed(2)}
         </div>
       </div>
 
