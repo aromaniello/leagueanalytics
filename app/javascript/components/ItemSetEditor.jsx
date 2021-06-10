@@ -4,11 +4,11 @@ import { useSelector, useDispatch } from 'react-redux'
 import { setItem } from '../actions/items'
 import _ from "lodash"
 
-const ItemSetEditor = ({ items }) => {
+const ItemSetEditor = ({ item_data }) => {
   const dispatch = useDispatch();
 
   const renderItemOptions = (selectName) => {
-    return _.keys(items).map((item) => {
+    return _.keys(item_data).map((item) => {
       return <option value={item} key={`${selectName}-${_.kebabCase(item)}`}>{item}</option>
     })
   }

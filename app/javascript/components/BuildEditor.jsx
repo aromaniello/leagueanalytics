@@ -2,16 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { AppBar, Tabs, Tab } from '@material-ui/core'
 import { withStyles } from '@material-ui/core/styles'
-import RuneEditor from './RuneEditor'
+import ChampionSelector from './ChampionSelector'
 import ItemSetEditor from './ItemSetEditor'
+import RuneEditor from './RuneEditor'
 import ResultsPanel from './ResultsPanel'
 import { useSelector, useDispatch, useStore } from 'react-redux'
-import configureStore from '../store/configureStore'
-import { initialState } from '../store/initialState'
 import { setChampion, setLevel, setAbility } from '../actions/build'
 import { getResults, setResults } from '../actions/results'
 import { setTab } from '../actions/tabs'
-import axios from 'axios'
 import _ from 'lodash'
 
 const BuildEditorTabs = withStyles({
@@ -90,7 +88,6 @@ const BuildEditor = ({ data }) => {
 
   return (
     <div className="build-editor">
-
       <AppBar position="static" elevation={0}>
         <BuildEditorTabs value={activeTab()} onChange={changeTab} indicatorColor="primary" textColor="primary" centered>
           <Tab label="Champion"/>
@@ -100,54 +97,11 @@ const BuildEditor = ({ data }) => {
         </BuildEditorTabs>
       </AppBar>
       <div role="tabpanel" className="build-editor-tabpanel" hidden={activeTab() !== 0}>
-        <div className="row">
-          <div className="col-1">
-            <label className="">Champion</label>
-          </div>
-          <div className="col-3 build-select-container">
-            {renderChampionSelect()}
-          </div>
-        </div>
-
-        <div className="row">
-          <div className="col-1">
-            <label className="">Level</label>
-          </div>
-          <div className="col-3 build-select-container">
-            {renderLevelSelect()}
-          </div>
-        </div>
-
-        <div className="row">
-          <div className="col-1">
-            <label className="">Abilities</label>
-          </div>
-          <div className="col-5 build-select-container">
-            <label>Q:</label>
-            <div className="ability-select-container">
-              {renderBasicAbilitySelect('q')}
-            </div>
-
-            <label>W:</label>
-            <div className="ability-select-container">
-              {renderBasicAbilitySelect('w')}
-            </div>
-
-            <label>E:</label>
-            <div className="ability-select-container">
-              {renderBasicAbilitySelect('e')}
-            </div>
-
-            <label>R:</label>
-            <div className="ability-select-container">
-              {renderUltimateAbilitySelect()}
-            </div>
-          </div>
-        </div>
+        <ChampionSelector champion_data={data.champions} subject="source" />
         <hr/>
-        <ItemSetEditor items={data.items} />
+        <ItemSetEditor item_data={data.items} subject="source" />
         <hr/>
-        <RuneEditor rune_data={data.runes} />
+        <RuneEditor rune_data={data.runes} subject="source" />
         <hr/>
         <div className="row">
           <div className="col-2 offset-10">
@@ -156,7 +110,17 @@ const BuildEditor = ({ data }) => {
         </div>
       </div>
       <div role="tabpanel" className="build-editor-tabpanel" hidden={activeTab() !== 1}>
-        Second tab panel
+        <ChampionSelector champion_data={data.champions} subject="target" />
+        <hr/>
+        <ItemSetEditor item_data={data.items} subject="target" />
+        <hr/>
+        <RuneEditor rune_data={data.runes} subject="target" />
+        <hr/>
+        <div className="row">
+          <div className="col-2 offset-10">
+            <button className="sim-button btn btn-primary" onClick={e => dispatch(getResults())}>Get Results</button>
+          </div>
+        </div>
       </div>
       <div role="tabpanel" className="build-editor-tabpanel" hidden={activeTab() !== 2}>
         Configs
