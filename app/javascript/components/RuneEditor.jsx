@@ -52,7 +52,7 @@ const RuneEditor = ({ rune_data }) => {
 
     if (rune_data['Paths'].includes(primaryPath)) {
       return rune_data['Keystones'][primaryPath].map((keystone) => {
-        return <option value={keystone}>{keystone}</option>;
+        return <option value={keystone} key={keystone}>{keystone}</option>;
       })
     }
   }
