@@ -16,8 +16,8 @@ const ChampionSelector = ({ champion_data, subject }) => {
   const renderChampionSelect = () => {
     return (
       <select className="build-select champion-select" name="champion-select" id="champion-select"
-              value={useSelector(state => state.build.champion)}
-              onChange={e => dispatch(setChampion(e.target.value))}>
+              value={useSelector(state => state[subject].build.champion)}
+              onChange={e => dispatch(setChampion(subject, e.target.value))}>
         <option value="" key="champion-option-empty"></option>
         {renderChampionOptions()}
       </select>
@@ -27,8 +27,8 @@ const ChampionSelector = ({ champion_data, subject }) => {
   const renderLevelSelect = () => {
     return (
       <select className="build-select level-select" name="level-select" id="level-select"
-              value={useSelector(state => state.build.level)}
-              onChange={e => dispatch(setLevel(e.target.value))}>
+              value={useSelector(state => state[subject].build.level)}
+              onChange={e => dispatch(setLevel(subject, e.target.value))}>
         {renderNumericOptions('level', 1, 19)}
       </select>
     );
@@ -37,8 +37,8 @@ const ChampionSelector = ({ champion_data, subject }) => {
   const renderBasicAbilitySelect = (ability) => {
     return (
       <select className="build-select ability-select" name={`${ability}-ability`} id={`${ability}-ability`}
-              value={useSelector(state => state.build[`${ability}_level`])}
-              onChange={e => dispatch(setAbility(ability, e.target.value))}>
+              value={useSelector(state => state[subject].build[`${ability}_level`])}
+              onChange={e => dispatch(setAbility(subject, ability, e.target.value))}>
         {renderNumericOptions(name, 0, 6)}
       </select>
     );
@@ -46,9 +46,9 @@ const ChampionSelector = ({ champion_data, subject }) => {
 
   const renderUltimateAbilitySelect = () => {
     return (
-      <select className="build-select ability-select" name={'r-ability'} id={'r-ability'}
-              value={useSelector(state => state.build.r_level)}
-              onChange={e => dispatch(setAbility('r', e.target.value))}>
+      <select className="build-select ability-select" name="r-ability" id="r-ability"
+              value={useSelector(state => state[subject].build.r_level)}
+              onChange={e => dispatch(setAbility(subject, 'r', e.target.value))}>
         {renderNumericOptions('r-ability', 0, 4)}
       </select>
     );

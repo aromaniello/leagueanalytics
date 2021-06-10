@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { setPath, setRune } from '../actions/runes'
 import _ from "lodash"
 
-const RuneEditor = ({ rune_data }) => {
+const RuneEditor = ({ subject, rune_data }) => {
   const dispatch = useDispatch();
 
   // TODO: convert strings to constants
@@ -22,8 +22,8 @@ const RuneEditor = ({ rune_data }) => {
   const renderPathSelect = (pathType, placeholder) => {
     return (
       <select className="build-select rune-select" name={`${pathType}-path-select`} id={`${pathType}-path-select`}
-              value={useSelector(state => state.runes[`${pathType}Path`]) || ''}
-              onChange={e => dispatch(setPath(e.target.value, pathType))}>
+              value={useSelector(state => state[subject].runes[`${pathType}Path`]) || ''}
+              onChange={e => dispatch(setPath(subject, e.target.value, pathType))}>
         <option value="">{placeholder}</option>
         {renderPathOptions(`${pathType}-path`)}
       </select>
@@ -39,8 +39,8 @@ const RuneEditor = ({ rune_data }) => {
   const renderKeystoneSelect = () => {
     return (
       <select className="build-select rune-select" name="keystone-select" id="keystone-select"
-              value={useSelector(state => state.runes.keystone) || ''}
-              onChange={e => dispatch(setRune('keystone', e.target.value))}>
+              value={useSelector(state => state[subject].runes.keystone) || ''}
+              onChange={e => dispatch(setRune(subject, 'keystone', e.target.value))}>
         <option value="">Keystone</option>
         {renderKeystoneOptions()}
       </select>
@@ -48,7 +48,7 @@ const RuneEditor = ({ rune_data }) => {
   }
 
   const renderKeystoneOptions = () => {
-    const primaryPath = useSelector(state => state.runes.primaryPath);
+    const primaryPath = useSelector(state => state[subject].runes.primaryPath);
 
     if (rune_data['Paths'].includes(primaryPath)) {
       return rune_data['Keystones'][primaryPath].map((keystone) => {
@@ -61,8 +61,8 @@ const RuneEditor = ({ rune_data }) => {
     const id = `${_.kebabCase(runeId)}-select`;
     return (
       <select className="build-select rune-select" name={id} id={id}
-              value={useSelector(state => state.runes[runeId]) || ''}
-              onChange={e => dispatch(setRune(runeId, e.target.value))}>
+              value={useSelector(state => state[subject].runes[runeId]) || ''}
+              onChange={e => dispatch(setRune(subject, runeId, e.target.value))}>
         <option value="">{placeholder}</option>
         {renderPrimaryRuneOptions(runeId)}
       </select>
@@ -70,7 +70,7 @@ const RuneEditor = ({ rune_data }) => {
   }
 
   const renderPrimaryRuneOptions = (runeId) => {
-    const path = useSelector(state => state.runes.primaryPath);
+    const path = useSelector(state => state[subject].runes.primaryPath);
 
     if (rune_data['Paths'].includes(path)) {
       const options = rune_data['Runes'][path][rowForRune(runeId)];
@@ -85,8 +85,8 @@ const RuneEditor = ({ rune_data }) => {
     const id = `${_.kebabCase(runeId)}-select`;
     return (
       <select className="build-select rune-select" name={id} id={id}
-              value={useSelector(state => state.runes[runeId]) || ''}
-              onChange={e => dispatch(setRune(runeId, e.target.value))}>
+              value={useSelector(state => state[subject].runes[runeId]) || ''}
+              onChange={e => dispatch(setRune(subject, runeId, e.target.value))}>
         <option value="">{placeholder}</option>
         {renderSecondaryRuneOptionGroups(runeId)}
       </select>
@@ -94,9 +94,9 @@ const RuneEditor = ({ rune_data }) => {
   }
 
   const renderSecondaryRuneOptionGroups = (runeId) => {
-    const path = useSelector(state => state.runes.secondaryPath);
+    const path = useSelector(state => state[subject].runes.secondaryPath);
     const otherRuneId = runeId === 'secondaryRune1' ? 'secondaryRune2' : 'secondaryRune1';
-    const otherRune = useSelector(state => state.runes[otherRuneId]);
+    const otherRune = useSelector(state => state[subject].runes[otherRuneId]);
 
     if (rune_data['Paths'].includes(path)) {
       const options = rune_data['Runes'][path];
@@ -129,8 +129,8 @@ const RuneEditor = ({ rune_data }) => {
     const id = `${_.kebabCase(statId)}-select`;
     return (
       <select className="build-select rune-select" name={id} id={id}
-              value={useSelector(state => state.runes[statId]) || ''}
-              onChange={e => dispatch(setRune(statId, e.target.value))}>
+              value={useSelector(state => state[subject].runes[statId]) || ''}
+              onChange={e => dispatch(setRune(subject, statId, e.target.value))}>
         <option value="">{placeholder}</option>
         {renderStatOptions(statId)}
       </select>

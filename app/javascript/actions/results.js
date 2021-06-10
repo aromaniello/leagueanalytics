@@ -5,14 +5,13 @@ import axios from 'axios';
 export const getResults = () => {
   return (dispatch, getState) => {
     // dispatch(getResultsStarted());
-    const results = {
-      build: getState().build,
-      items: getState().items,
-      runes: getState().runes
-    };
+    const request_data = {
+      source: getState().source,
+      target: getState().target
+    }
 
     axios
-      .post('/api/sim', results)
+      .post('/api/sim', request_data)
       .then((response) => {
         console.log(response);
         dispatch(setResults(response.data));

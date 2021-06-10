@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { setItem } from '../actions/items'
 import _ from "lodash"
 
-const ItemSetEditor = ({ item_data }) => {
+const ItemSetEditor = ({ subject, item_data }) => {
   const dispatch = useDispatch();
 
   const renderItemOptions = (selectName) => {
@@ -17,8 +17,8 @@ const ItemSetEditor = ({ item_data }) => {
     const id = `item-${index}-select`;
     return (
       <select className="build-select item-select" name={id} id={id} key={id}
-              value={useSelector(state => state.items[index]) || ''}
-              onChange={e => dispatch(setItem(index, e.target.value))}>
+              value={useSelector(state => state[subject].items[index]) || ''}
+              onChange={e => dispatch(setItem(subject, index, e.target.value))}>
         <option value="" key={`item-${index}-empty`}></option>
         {renderItemOptions(`item-${index}`)}
       </select>
