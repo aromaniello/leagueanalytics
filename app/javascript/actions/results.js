@@ -1,4 +1,5 @@
 import { GET_RESULTS, SET_RESULTS } from './types/results';
+import { setTab } from './tabs'
 import axios from 'axios';
 
 export const getResults = () => {
@@ -14,7 +15,8 @@ export const getResults = () => {
       .post('/api/sim', results)
       .then((response) => {
         console.log(response);
-        dispatch(setResults(response.data))
+        dispatch(setResults(response.data));
+        dispatch(setTab(3));
       })
       .catch((error) => {
         console.log(error);

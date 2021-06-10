@@ -1,9 +1,6 @@
 class SimulationService
   attr_accessor :champion, :target
 
-  # natural_stats = %i[attack_damage attack_speed crit_chance life_steal ability_power health health_regen mana mana_regen armor mr move_speed]
-  # item_stats = %i[ability_power ability_haste life_steal]
-
   def initialize(champion, target)
     self.champion = champion
     self.target = target

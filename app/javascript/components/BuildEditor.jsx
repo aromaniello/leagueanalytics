@@ -1,5 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { AppBar, Tabs, Tab } from '@material-ui/core'
+import { withStyles } from '@material-ui/core/styles'
 import RuneEditor from './RuneEditor'
 import ItemSetEditor from './ItemSetEditor'
 import ResultsPanel from './ResultsPanel'
@@ -8,12 +10,22 @@ import configureStore from '../store/configureStore'
 import { initialState } from '../store/initialState'
 import { setChampion, setLevel, setAbility } from '../actions/build'
 import { getResults, setResults } from '../actions/results'
+import { setTab } from '../actions/tabs'
 import axios from 'axios'
 import _ from 'lodash'
+
+const BuildEditorTabs = withStyles({
+  root: {
+    backgroundColor: 'white'
+  }
+})(Tabs);
 
 const BuildEditor = ({ data }) => {
   const dispatch = useDispatch();
   const store = useStore();
+
+  const activeTab = () => useSelector(state => state.activeTab);
+  const changeTab = (event, newActiveTab) => dispatch(setTab(newActiveTab));
 
   const renderChampionOptions = () => {
     return data.champions.map((champion) => {
@@ -78,65 +90,80 @@ const BuildEditor = ({ data }) => {
 
   return (
     <div className="build-editor">
-      <div className="row">
-        <div className="col-3">
-          <h3>Champion</h3>
-        </div>
-      </div>
 
-      <div className="row">
-        <div className="col-1">
-          <label className="">Champion</label>
-        </div>
-        <div className="col-3 build-select-container">
-          {renderChampionSelect()}
-        </div>
-      </div>
-
-      <div className="row">
-        <div className="col-1">
-          <label className="">Level</label>
-        </div>
-        <div className="col-3 build-select-container">
-          {renderLevelSelect()}
-        </div>
-      </div>
-
-      <div className="row">
-        <div className="col-1">
-          <label className="">Abilities</label>
-        </div>
-        <div className="col-5 build-select-container">
-          <label>Q:</label>
-          <div className="ability-select-container">
-            {renderBasicAbilitySelect('q')}
+      <AppBar position="static" elevation={0}>
+        <BuildEditorTabs value={activeTab()} onChange={changeTab} indicatorColor="primary" textColor="primary" centered>
+          <Tab label="Champion"/>
+          <Tab label="Target"/>
+          <Tab label="Config"/>
+          <Tab label="Results"/>
+        </BuildEditorTabs>
+      </AppBar>
+      <div role="tabpanel" className="build-editor-tabpanel" hidden={activeTab() !== 0}>
+        <div className="row">
+          <div className="col-1">
+            <label className="">Champion</label>
           </div>
-
-          <label>W:</label>
-          <div className="ability-select-container">
-            {renderBasicAbilitySelect('w')}
-          </div>
-
-          <label>E:</label>
-          <div className="ability-select-container">
-            {renderBasicAbilitySelect('e')}
-          </div>
-
-          <label>R:</label>
-          <div className="ability-select-container">
-            {renderUltimateAbilitySelect()}
+          <div className="col-3 build-select-container">
+            {renderChampionSelect()}
           </div>
         </div>
-        <div className="col-1 offset-5">
-          <button className="sim-button btn btn-primary" onClick={e => dispatch(getResults())}>Sim</button>
+
+        <div className="row">
+          <div className="col-1">
+            <label className="">Level</label>
+          </div>
+          <div className="col-3 build-select-container">
+            {renderLevelSelect()}
+          </div>
+        </div>
+
+        <div className="row">
+          <div className="col-1">
+            <label className="">Abilities</label>
+          </div>
+          <div className="col-5 build-select-container">
+            <label>Q:</label>
+            <div className="ability-select-container">
+              {renderBasicAbilitySelect('q')}
+            </div>
+
+            <label>W:</label>
+            <div className="ability-select-container">
+              {renderBasicAbilitySelect('w')}
+            </div>
+
+            <label>E:</label>
+            <div className="ability-select-container">
+              {renderBasicAbilitySelect('e')}
+            </div>
+
+            <label>R:</label>
+            <div className="ability-select-container">
+              {renderUltimateAbilitySelect()}
+            </div>
+          </div>
+        </div>
+        <hr/>
+        <ItemSetEditor items={data.items} />
+        <hr/>
+        <RuneEditor rune_data={data.runes} />
+        <hr/>
+        <div className="row">
+          <div className="col-2 offset-10">
+            <button className="sim-button btn btn-primary" onClick={e => dispatch(getResults())}>Get Results</button>
+          </div>
         </div>
       </div>
-      <hr/>
-      <ItemSetEditor items={data.items} />
-      <hr/>
-      <RuneEditor rune_data={data.runes} />
-      <hr/>
-      {renderResultsPanel()}
+      <div role="tabpanel" className="build-editor-tabpanel" hidden={activeTab() !== 1}>
+        Second tab panel
+      </div>
+      <div role="tabpanel" className="build-editor-tabpanel" hidden={activeTab() !== 2}>
+        Configs
+      </div>
+      <div role="tabpanel" className="build-editor-tabpanel" hidden={activeTab() !== 3}>
+        {renderResultsPanel()}
+      </div>
     </div>
   );
 }

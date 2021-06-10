@@ -19,10 +19,6 @@ const ResultsPanel = ({ results }) => {
   return (
     <React.Fragment>
       <div className="row">
-        <h3>Results</h3>
-      </div>
-
-      <div className="row">
         <h5>Stats</h5>
       </div>
 

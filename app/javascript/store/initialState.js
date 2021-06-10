@@ -1,29 +1,30 @@
 export const initialBuild = {
-  champion: 'Aatrox',
-  level: '1',
-  q_level: '0',
-  w_level: '0',
-  e_level: '0',
-  r_level: '0'
+  champion: 'Lux',
+  level: '6',
+  q_level: '1',
+  w_level: '1',
+  e_level: '3',
+  r_level: '1'
 };
-export const initialItems = [];
+export const initialItems = ["Blasting Wand"];
 export const initialRunes = {
-  primaryPath: '',
-  keystone: '',
-  primaryRune1: '',
-  primaryRune2: '',
-  primaryRune3: '',
-  secondaryPath: '',
-  secondaryRune1: '',
-  secondaryRune2: '',
-  stat1: '',
-  stat2: '',
-  stat3: ''
+  primaryPath: 'Sorcery',
+  keystone: 'Arcane Comet',
+  primaryRune1: 'Manaflow Band',
+  primaryRune2: 'Transcendence',
+  primaryRune3: 'Gathering Storm',
+  secondaryPath: 'Domination',
+  secondaryRune1: 'Cheap Shot',
+  secondaryRune2: 'Ultimate Hunter',
+  stat1: 'Adaptive Force',
+  stat2: 'Adaptive Force',
+  stat3: 'Armor'
 };
 
 export const initialState = {
   build: initialBuild,
   items: initialItems,
   runes: initialRunes,
-  results: {}
+  results: {},
+  activeTab: 0
 };
