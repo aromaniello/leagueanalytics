@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { AppBar, Tabs, Tab } from '@material-ui/core'
 import { withStyles } from '@material-ui/core/styles'
 import BuildEditor from './BuildEditor'
+import ConfigEditor from './ConfigEditor'
 import ResultsPanel from './ResultsPanel'
 import { useSelector, useDispatch } from 'react-redux'
 import { getResults, setResults } from '../actions/results'
+import { updateActiveConfigs } from '../actions/configs'
 import { setTab } from '../actions/tabs'
 import _ from 'lodash'
 
@@ -20,6 +22,10 @@ const App = () => {
 
   const activeTab = () => useSelector(state => state.activeTab);
   const changeTab = (event, newActiveTab) => dispatch(setTab(newActiveTab));
+
+  useEffect(() => {
+    dispatch(updateActiveConfigs());
+  });
 
   const renderResultsPanel = () => {
     const results = useSelector(store => store.results);
@@ -52,7 +58,7 @@ const App = () => {
         <BuildEditor subject="target" />
       </div>
       <div role="tabpanel" className="build-editor-tabpanel" hidden={activeTab() !== 2}>
-        Configs
+        <ConfigEditor />
       </div>
       <div role="tabpanel" className="build-editor-tabpanel" hidden={activeTab() !== 3}>
         {renderResultsPanel()}

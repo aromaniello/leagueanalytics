@@ -60,6 +60,7 @@ const ChampionSelector = ({ subject }) => {
       return <option value={i} key={`${selectName}-option-${i}`}>{i}</option>;
     });
   }
+  
   return (
     <React.Fragment>
       <div className="row">

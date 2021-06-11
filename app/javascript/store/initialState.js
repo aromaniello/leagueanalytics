@@ -55,6 +55,7 @@ export const initialState = {
     items: initialTargetItems,
     runes: initialTargetRunes
   },
+  configs: [],
   results: {},
   data: {},
   activeTab: 0

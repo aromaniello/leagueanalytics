@@ -39,4 +39,10 @@ class Data
   def self.rune_stats
     rune_data["Stats"]
   end
+
+  def self.rune_abilities
+    YAML.load_file('app/data/rune_abilities.yml').map do |rune, abilities|
+      [rune, abilities.deep_symbolize_keys ]
+    end.to_h
+  end
 end

@@ -1,0 +1,80 @@
+Cheap Shot:
+  cooldown: 4
+  ability:
+    damage:
+      true:
+        level_scaling: [10, 12.06, 14.12, 16.18, 18.24, 20.29, 22.35, 24.41, 26.47, 28.53, 30.59, 32.65, 34.71, 36.76, 38.82, 40.88, 42.94, 45]
+
+Taste of Blood:
+  ability:
+    cooldown: 20
+    heal:
+      level_scaling: [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
+      bonus_ad_scaling: 0.2
+      ap_scaling: 0.1
+
+Sudden Impact:
+  cooldown: 4
+  condition:
+    name: sudden_impact_active
+    question: Have you exited stealth, dashed or blinked in the last 4 seconds?
+  buff:
+    lethality: 7
+    magic_penetration: 6
+
+Eyeball Collection:
+  stacks:
+    name: eyeballs
+    question: How many Eyeballs have you collected?
+    min: 0
+    max: 10
+  buff:
+    adaptive_force:
+      stack_scaling:
+        attack_damage: 1.2
+        ability_power: 2
+
+Ghost Poro:
+  stacks:
+    name: ghost_poros
+    question: How many Ghost Poros have you spawned?
+    min: 0
+    max: 10
+  buff:
+    adaptive_force:
+      per_stack:
+        attack_damage: 1.2
+        ability_power: 2
+
+Zombie Wards:
+  stacks:
+    name: zombie_wards
+    question: How many Zombie Wards have you spawned?
+    min: 0
+    max: 10
+  buff:
+    adaptive_force:
+      stack_scaling:
+          attack_damage: 1.2
+          ability_power: 2
+
+Ravenous Hunter:
+  stacks:
+    name: bounty_hunter
+    question: How many Bounty Hunter stacks do you have?
+    min: 0
+    max: 5
+  buff:
+    omnivamp:
+      stack_scaling: 0.015
+
+"Legend: Alacrity":
+  stacks:
+    name: legend
+    question: How many Legend stacks do you have?
+    min: 0
+    max: 10
+    buff:
+      attack_speed:
+        base: 0.03
+        stack_scaling: 0.015

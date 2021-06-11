@@ -2,6 +2,7 @@ import { combineReducers } from 'redux';
 import createBuildReducer from './createBuildReducer';
 import createItemsReducer from './createItemsReducer';
 import createRunesReducer from './createRunesReducer';
+import configsReducer from './configsReducer';
 import resultsReducer from './resultsReducer';
 import dataReducer from './dataReducer';
 import tabReducer from './tabReducer';
@@ -17,6 +18,7 @@ const rootReducer = combineReducers({
     items: createItemsReducer('target'),
     runes: createRunesReducer('target'),
   }),
+  configs: configsReducer,
   results: resultsReducer,
   data: dataReducer,
   activeTab: tabReducer

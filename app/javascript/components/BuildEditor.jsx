@@ -4,14 +4,14 @@ import ChampionSelector from './ChampionSelector'
 import ItemSetEditor from './ItemSetEditor'
 import RuneEditor from './RuneEditor'
 
-const BuildEditor = ({ data, subject }) => {
+const BuildEditor = ({ subject }) => {
   return (
     <React.Fragment>
-      <ChampionSelector champion_data={data.champions} subject={subject} />
+      <ChampionSelector subject={subject} />
       <hr/>
-      <ItemSetEditor item_data={data.items} subject={subject} />
+      <ItemSetEditor subject={subject} />
       <hr/>
-      <RuneEditor rune_data={data.runes} subject={subject} />
+      <RuneEditor subject={subject} />
     </React.Fragment>
   );
 }
