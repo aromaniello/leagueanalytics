@@ -1,9 +1,10 @@
 class SimulationService
-  attr_accessor :champion, :target
+  attr_accessor :champion, :target, :configs
 
-  def initialize(champion, target)
+  def initialize(champion, target, configs)
     self.champion = champion
     self.target = target
+    self.configs = configs
   end
 
   def stats

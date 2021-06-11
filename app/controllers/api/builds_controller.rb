@@ -7,7 +7,7 @@ module Api
       source_champion = Champion.new(source[:name], source[:level], source[:skill_levels], source[:items])
       target_champion = Champion.new(target[:name], target[:level], target[:skill_levels], target[:items])
 
-      service = SimulationService.new(source_champion, target_champion)
+      service = SimulationService.new(source_champion, target_champion, configs)
 
       champion_stats = service.stats.transform_keys { |key| key.to_s.camelize(:lower) }
       champion_abilities = service.abilities
@@ -29,6 +29,10 @@ module Api
         },
         items: params[subject][:items]
       }
+    end
+
+    def configs
+      params.permit(configs: [:type, :valueId, :value])[:configs].map { |config| config.to_h }
     end
   end
 end

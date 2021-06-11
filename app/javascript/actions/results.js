@@ -7,7 +7,14 @@ export const getResults = () => {
     // dispatch(getResultsStarted());
     const request_data = {
       source: getState().source,
-      target: getState().target
+      target: getState().target,
+      configs: getState().configs.map((config) => {
+        return {
+          type: config.type,
+          valueId: config.valueId,
+          value: config.value
+        }
+      })
     }
 
     axios
