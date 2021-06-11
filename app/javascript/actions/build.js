@@ -1,10 +1,14 @@
 import { SET_CHAMPION, SET_LEVEL, SET_ABILITY } from './types/build';
+import { updateActiveConfigs } from './configs';
 
-export function setChampion(subject, champion) {
-  return {
-    type: SET_CHAMPION,
-    subject: subject,
-    payload: champion
+export const setChampion = (subject, champion) => {
+  return (dispatch, getState) => {
+    dispatch({
+      type: SET_CHAMPION,
+      subject: subject,
+      payload: champion
+    });
+    dispatch(updateActiveConfigs());
   }
 }
 

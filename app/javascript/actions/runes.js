@@ -1,17 +1,24 @@
 import { SET_PATH, SET_RUNE } from './types/runes';
+import { updateActiveConfigs } from './configs';
 
-export function setPath(subject, path, pathType) {
-  return {
-    type: SET_PATH,
-    subject: subject,
-    payload: { path, pathType }
+export const setPath = (subject, path, pathType) => {
+  return (dispatch, getState) => {
+    dispatch({
+      type: SET_PATH,
+      subject: subject,
+      payload: { path, pathType }
+    });
+    dispatch(updateActiveConfigs());
   }
 }
 
-export function setRune(subject, runeId, rune) {
-  return {
-    type: SET_RUNE,
-    subject: subject,
-    payload: { runeId, rune }
+export const setRune = (subject, runeId, rune) => {
+  return (dispatch, getState) => {
+    dispatch({
+      type: SET_RUNE,
+      subject: subject,
+      payload: { runeId, rune }
+    });
+    dispatch(updateActiveConfigs());
   }
 }
