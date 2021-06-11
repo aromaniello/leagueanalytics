@@ -37,7 +37,7 @@ class SimulationService
 
   def abilities
     return [] if champion.abilities.blank?
-    
+
     champion.abilities.map do |ability|
       skill_level = skill_level_for_ability(ability)
 
@@ -168,10 +168,12 @@ class SimulationService
   # otherwise, just use the short_name to determine the skill's level
   # TODO: add error checking to ensure the skill level is present in case of bad data
   def skill_level_for_ability(ability)
-    if ability[:skill_from].present?
+    if ability.key?(:skill_from)
       champion.skill_levels[ability[:skill_from].downcase.to_sym]
-    elsif ["q", "w", "e", "r"].include? ability[:short_name].downcase
+    elsif ability.key?(:short_name) && ["q", "w", "e", "r"].include?(ability[:short_name].downcase)
       champion.skill_levels[ability[:short_name].downcase.to_sym]
+    else
+      0
     end
   end
 

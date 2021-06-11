@@ -1,3 +1,13 @@
+Electrocute:
+  cooldown: [25, 24.71, 24.41, 24.12, 23.82, 23.53, 23.24, 22.94, 22.65, 22.35, 22.06, 21.76, 21.47, 21.18, 20.88, 20.59, 20.29, 20]
+  ability:
+    damage:
+      category: direct
+      adaptive:
+        level_scaling: [30, 38.82, 47.65, 56.47, 65.29, 74.12, 82.94, 91.76, 100.59, 109.41, 118.24, 127.06, 135.88, 144.71, 153.53, 162.35, 171.18, 180]
+        bonus_ad_scaling: 0.4
+        ap_scaling: 0.25
+
 Cheap Shot:
   cooldown: 4
   ability:
@@ -30,9 +40,7 @@ Eyeball Collection:
     max: 10
   buff:
     adaptive_force:
-      stack_scaling:
-        attack_damage: 1.2
-        ability_power: 2
+      stack_scaling: 2
 
 Ghost Poro:
   stacks:
@@ -42,9 +50,7 @@ Ghost Poro:
     max: 10
   buff:
     adaptive_force:
-      per_stack:
-        attack_damage: 1.2
-        ability_power: 2
+      stack_scaling: 2
 
 Zombie Wards:
   stacks:
@@ -54,9 +60,7 @@ Zombie Wards:
     max: 10
   buff:
     adaptive_force:
-      stack_scaling:
-          attack_damage: 1.2
-          ability_power: 2
+      stack_scaling: 2
 
 Ravenous Hunter:
   stacks:

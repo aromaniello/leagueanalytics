@@ -9,7 +9,7 @@ const ResultsPanel = ({ results }) => {
   const renderAbilities = () => {
     return results.abilities.map((ability) => {
       return (
-        <div className="ability-panel-container" key={`ability-${ability.short_name}`}>
+        <div className="col-4 ability-panel-container" key={`ability-${ability.name}`}>
           <AbilityPanel ability={ability} />
         </div>
       );
@@ -28,7 +28,9 @@ const ResultsPanel = ({ results }) => {
         <h5>Abilities</h5>
       </div>
 
-      {renderAbilities()}
+      <div className="row">
+        {renderAbilities()}
+      </div>
     </React.Fragment>
   );
 }
