@@ -4,8 +4,31 @@ import { useSelector, useDispatch } from 'react-redux'
 import { setPath, setRune } from '../actions/runes'
 import _ from "lodash"
 
+import { makeStyles } from '@material-ui/core/styles';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import ListSubheader from '@material-ui/core/ListSubheader';
+
+const useStyles = makeStyles((theme) => ({
+  itemSelect: {
+    margin: theme.spacing(1),
+    minWidth: 140
+  },
+  formControl: {
+    margin: theme.spacing(1),
+    width: 160
+  },
+  selectEmpty: {
+    marginTop: theme.spacing(2),
+  },
+}));
+
 const RuneEditor = ({ subject }) => {
   const dispatch = useDispatch();
+  const classes = useStyles();
   const rune_data = useSelector(state => state.data.runes);
 
   // TODO: convert strings to constants
@@ -22,29 +45,41 @@ const RuneEditor = ({ subject }) => {
 
   const renderPathSelect = (pathType, placeholder) => {
     return (
-      <select className="build-select rune-select" name={`${pathType}-path-select`} id={`${pathType}-path-select`}
-              value={useSelector(state => state[subject].runes[`${pathType}Path`]) || ''}
-              onChange={e => dispatch(setPath(subject, e.target.value, pathType))}>
-        <option value="">{placeholder}</option>
-        {renderPathOptions(`${pathType}-path`)}
-      </select>
+      <FormControl className={classes.formControl}>
+        <InputLabel id={`${pathType}-path-select-label`}>{`${_.capitalize(pathType)} Path`}</InputLabel>
+        <Select
+          labelId={`${pathType}-path-select-label`}
+          id={`${pathType}-path-select`}
+          value={useSelector(state => state[subject].runes[`${pathType}Path`]) || ''}
+          onChange={e => dispatch(setPath(subject, e.target.value, pathType))}
+        >
+          <MenuItem value=""></MenuItem>
+          {renderPathOptions(pathType)}
+        </Select>
+      </FormControl>
     );
   }
 
-  const renderPathOptions = (selectName) => {
+  const renderPathOptions = (pathType) => {
     return rune_data['Paths'].map((path) => {
-      return <option value={path} key={`${selectName}-option-${_.kebabCase(path)}`}>{path}</option>;
+      return <MenuItem value={path} key={`${pathType}-option-${path}`}>{path}</MenuItem>;
     })
   }
 
   const renderKeystoneSelect = () => {
     return (
-      <select className="build-select rune-select" name="keystone-select" id="keystone-select"
-              value={useSelector(state => state[subject].runes.keystone) || ''}
-              onChange={e => dispatch(setRune(subject, 'keystone', e.target.value))}>
-        <option value="">Keystone</option>
-        {renderKeystoneOptions()}
-      </select>
+      <FormControl className={classes.formControl}>
+        <InputLabel id="keystone-select-label">Keystone</InputLabel>
+        <Select
+          labelId="keystone-select-label"
+          id="keystone-select"
+          value={useSelector(state => state[subject].runes.keystone) || ''}
+          onChange={e => dispatch(setRune(subject, 'keystone', e.target.value))}
+        >
+          <MenuItem value=""></MenuItem>
+          {renderKeystoneOptions()}
+        </Select>
+      </FormControl>
     );
   }
 
@@ -53,20 +88,25 @@ const RuneEditor = ({ subject }) => {
 
     if (rune_data['Paths'].includes(primaryPath)) {
       return rune_data['Keystones'][primaryPath].map((keystone) => {
-        return <option value={keystone} key={keystone}>{keystone}</option>;
+        return <MenuItem value={keystone} key={`${keystone}-option`}>{keystone}</MenuItem>;
       })
     }
   }
 
-  const renderPrimaryRuneSelect = (runeId, placeholder) => {
-    const id = `${_.kebabCase(runeId)}-select`;
+  const renderPrimaryRuneSelect = (runeId, label) => {
     return (
-      <select className="build-select rune-select" name={id} id={id}
-              value={useSelector(state => state[subject].runes[runeId]) || ''}
-              onChange={e => dispatch(setRune(subject, runeId, e.target.value))}>
-        <option value="">{placeholder}</option>
-        {renderPrimaryRuneOptions(runeId)}
-      </select>
+      <FormControl className={classes.formControl}>
+        <InputLabel id={`${runeId}-select-label`}>{label}</InputLabel>
+        <Select
+          labelId={`${runeId}-select-label`}
+          id={`${runeId}-select`}
+          value={useSelector(state => state[subject].runes[runeId]) || ''}
+          onChange={e => dispatch(setRune(subject, runeId, e.target.value))}
+        >
+          <MenuItem value=""></MenuItem>
+          {renderPrimaryRuneOptions(runeId)}
+        </Select>
+      </FormControl>
     );
   }
 
@@ -77,20 +117,25 @@ const RuneEditor = ({ subject }) => {
       const options = rune_data['Runes'][path][rowForRune(runeId)];
 
       return options.map((option) => {
-        return <option value={option} key={`${runeId}-${option}`}>{option}</option>;
+        return <MenuItem value={option} key={`${runeId}-${option}`}>{option}</MenuItem>;
       });
     }
   }
 
-  const renderSecondaryRuneSelect = (runeId, placeholder) => {
-    const id = `${_.kebabCase(runeId)}-select`;
+  const renderSecondaryRuneSelect = (runeId, label) => {
     return (
-      <select className="build-select rune-select" name={id} id={id}
-              value={useSelector(state => state[subject].runes[runeId]) || ''}
-              onChange={e => dispatch(setRune(subject, runeId, e.target.value))}>
-        <option value="">{placeholder}</option>
-        {renderSecondaryRuneOptionGroups(runeId)}
-      </select>
+      <FormControl className={classes.formControl}>
+        <InputLabel id={`${runeId}-select-label`}>{label}</InputLabel>
+        <Select
+          labelId={`${runeId}-select-label`}
+          id={`${runeId}-select`}
+          value={useSelector(state => state[subject].runes[runeId]) || ''}
+          onChange={e => dispatch(setRune(subject, runeId, e.target.value))}
+        >
+          <MenuItem value=""></MenuItem>
+          {renderSecondaryRuneOptionGroups(runeId)}
+        </Select>
+      </FormControl>
     );
   }
 
@@ -108,10 +153,8 @@ const RuneEditor = ({ subject }) => {
         const label = row.replace('_', ' ').replace(/\b\w/g, l => l.toUpperCase());
         const key = `${_.kebabCase(runeId)}-optgroup-${_.kebabCase(row)}`;
         return (
-          <optgroup label={label} key={key}>
-            {renderSecondaryRuneOptions(runeId, options[row])}
-          </optgroup>
-        );
+          [<ListSubheader key={key}>{label}</ListSubheader>]
+        ).concat(renderSecondaryRuneOptions(runeId, options[row]));
       });
     }
   }
@@ -122,85 +165,57 @@ const RuneEditor = ({ subject }) => {
 
   const renderSecondaryRuneOptions = (runeId, runes) => {
     return runes.map((rune) => {
-      return <option value={rune} key={`${_.kebabCase(runeId)}-${_.kebabCase(rune)}`}>{rune}</option>;
+      return <MenuItem value={rune} key={`${runeId}-${rune}`}>{rune}</MenuItem>;
     })
   }
 
-  const renderStatSelect = (statId, placeholder) => {
-    const id = `${_.kebabCase(statId)}-select`;
+  const renderStatSelect = (statId, label) => {
     return (
-      <select className="build-select rune-select" name={id} id={id}
-              value={useSelector(state => state[subject].runes[statId]) || ''}
-              onChange={e => dispatch(setRune(subject, statId, e.target.value))}>
-        <option value="">{placeholder}</option>
-        {renderStatOptions(statId)}
-      </select>
+      <FormControl className={classes.formControl}>
+        <InputLabel id={`${statId}-select-label`}>{label}</InputLabel>
+        <Select
+          labelId={`${statId}-select-label`}
+          id={`${statId}-select`}
+          value={useSelector(state => state[subject].runes[statId]) || ''}
+          onChange={e => dispatch(setRune(subject, statId, e.target.value))}
+        >
+          <MenuItem value=""></MenuItem>
+          {renderStatOptions(statId)}
+        </Select>
+      </FormControl>
     );
   }
 
   const renderStatOptions = (statId) => {
     return rune_data['Stats'][rowForRune(statId)].map((stat) => {
-      return <option value={stat} key={`${_.kebabCase(statId)}-option-${_.kebabCase(stat)}`}>{stat}</option>;
+      return <MenuItem value={stat} key={`${statId}-${stat}`}>{stat}</MenuItem>;
     })
   }
 
   return (
     <div>
-      <div className="row">
-        <div className="col-3">
-          <h3>Runes</h3>
-        </div>
+      <div className="row build-editor-subtitle">
+        RUNES
       </div>
 
       <div className="row">
-        <div className="col-2">
-          {renderPathSelect('primary', 'Primary Path')}
-        </div>
-        <div className="col-2">
-          {renderPathSelect('secondary', 'Secondary Path')}
-        </div>
+        {renderPathSelect('primary', 'Primary Path')}
+        {renderKeystoneSelect()}
+        {renderPrimaryRuneSelect('primaryRune1', 'Rune #1')}
+        {renderPrimaryRuneSelect('primaryRune2', 'Rune #2')}
+        {renderPrimaryRuneSelect('primaryRune3', 'Rune #3')}
       </div>
 
       <div className="row">
-        <div className="col-2">
-          {renderKeystoneSelect()}
-        </div>
-        <div className="col-2">
-          {renderSecondaryRuneSelect('secondaryRune1', 'Rune #5')}
-        </div>
+        {renderPathSelect('secondary', 'Secondary Path')}
+        {renderSecondaryRuneSelect('secondaryRune1', 'Rune #5')}
+        {renderSecondaryRuneSelect('secondaryRune2', 'Rune #6')}
       </div>
 
       <div className="row">
-        <div className="col-2">
-          {renderPrimaryRuneSelect('primaryRune1', 'Rune #1')}
-        </div>
-        <div className="col-2">
-          {renderSecondaryRuneSelect('secondaryRune2', 'Rune #6')}
-        </div>
-      </div>
-
-      <div className="row">
-        <div className="col-2">
-          {renderPrimaryRuneSelect('primaryRune2', 'Rune #2')}
-        </div>
-        <div className="col-2">
-          {renderStatSelect('stat1', 'Stat #1')}
-        </div>
-      </div>
-
-      <div className="row">
-        <div className="col-2">
-          {renderPrimaryRuneSelect('primaryRune3', 'Rune #3')}
-        </div>
-        <div className="col-2">
-          {renderStatSelect('stat2', 'Stat #2')}
-        </div>
-      </div>
-
-      <div className="row">
-        <div className="col-2 offset-2">
-          {renderStatSelect('stat3', 'Stat #3')}
-        </div>
+        {renderStatSelect('stat1', 'Stat #1')}
+        {renderStatSelect('stat2', 'Stat #2')}
+        {renderStatSelect('stat3', 'Stat #3')}
       </div>
     </div>
   );

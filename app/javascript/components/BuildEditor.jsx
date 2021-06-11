@@ -1,17 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import ChampionSelector from './ChampionSelector'
-import ItemSetEditor from './ItemSetEditor'
+import ItemsEditor from './ItemsEditor'
 import RuneEditor from './RuneEditor'
 
 const BuildEditor = ({ subject }) => {
   return (
     <React.Fragment>
-      <ChampionSelector subject={subject} />
-      <hr/>
-      <ItemSetEditor subject={subject} />
-      <hr/>
-      <RuneEditor subject={subject} />
+      <div style={{marginTop:'1rem'}}>
+        <ChampionSelector subject={subject} />
+      </div>
+      <div style={{marginTop:'2rem'}}>
+        <ItemsEditor subject={subject} />
+      </div>
+      <div style={{marginTop:'2rem'}}>
+        <RuneEditor subject={subject} />
+      </div>
     </React.Fragment>
   );
 }

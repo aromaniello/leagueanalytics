@@ -36,6 +36,8 @@ class SimulationService
   end
 
   def abilities
+    return [] if champion.abilities.blank?
+    
     champion.abilities.map do |ability|
       skill_level = skill_level_for_ability(ability)
 
