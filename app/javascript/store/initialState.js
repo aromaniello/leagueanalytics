@@ -56,5 +56,6 @@ export const initialState = {
     runes: initialTargetRunes
   },
   results: {},
+  data: {},
   activeTab: 0
 };

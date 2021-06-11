@@ -15,7 +15,7 @@ const StyledTabs = withStyles({
   }
 })(Tabs);
 
-const App = ({ data }) => {
+const App = () => {
   const dispatch = useDispatch();
 
   const activeTab = () => useSelector(state => state.activeTab);
@@ -40,7 +40,7 @@ const App = ({ data }) => {
         </StyledTabs>
       </AppBar>
       <div role="tabpanel" className="build-editor-tabpanel" hidden={activeTab() !== 0}>
-        <BuildEditor data={data} subject="source" />
+        <BuildEditor subject="source" />
         <hr/>
         <div className="row">
           <div className="col-2 offset-10">
@@ -49,7 +49,7 @@ const App = ({ data }) => {
         </div>
       </div>
       <div role="tabpanel" className="build-editor-tabpanel" hidden={activeTab() !== 1}>
-        <BuildEditor data={data} subject="target" />
+        <BuildEditor subject="target" />
       </div>
       <div role="tabpanel" className="build-editor-tabpanel" hidden={activeTab() !== 2}>
         Configs

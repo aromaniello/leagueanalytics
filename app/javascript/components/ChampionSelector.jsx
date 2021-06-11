@@ -4,8 +4,9 @@ import { useSelector, useDispatch } from 'react-redux'
 import { setChampion, setLevel, setAbility } from '../actions/build'
 import _ from 'lodash'
 
-const ChampionSelector = ({ champion_data, subject }) => {
+const ChampionSelector = ({ subject }) => {
   const dispatch = useDispatch();
+  const champion_data = useSelector(state => state.data.champions)
 
   const renderChampionOptions = () => {
     return champion_data.map((champion) => {

@@ -4,8 +4,9 @@ import { useSelector, useDispatch } from 'react-redux'
 import { setItem } from '../actions/items'
 import _ from "lodash"
 
-const ItemSetEditor = ({ subject, item_data }) => {
+const ItemSetEditor = ({ subject }) => {
   const dispatch = useDispatch();
+  const item_data = useSelector(state => state.data.items);
 
   const renderItemOptions = (selectName) => {
     return _.keys(item_data).map((item) => {

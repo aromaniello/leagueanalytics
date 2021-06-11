@@ -4,8 +4,9 @@ import { useSelector, useDispatch } from 'react-redux'
 import { setPath, setRune } from '../actions/runes'
 import _ from "lodash"
 
-const RuneEditor = ({ subject, rune_data }) => {
+const RuneEditor = ({ subject }) => {
   const dispatch = useDispatch();
+  const rune_data = useSelector(state => state.data.runes);
 
   // TODO: convert strings to constants
   const rows = ['first_row', 'second_row', 'third_row'];

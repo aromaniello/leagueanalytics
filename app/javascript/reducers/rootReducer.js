@@ -3,6 +3,7 @@ import createBuildReducer from './createBuildReducer';
 import createItemsReducer from './createItemsReducer';
 import createRunesReducer from './createRunesReducer';
 import resultsReducer from './resultsReducer';
+import dataReducer from './dataReducer';
 import tabReducer from './tabReducer';
 
 const rootReducer = combineReducers({
@@ -17,6 +18,7 @@ const rootReducer = combineReducers({
     runes: createRunesReducer('target'),
   }),
   results: resultsReducer,
+  data: dataReducer,
   activeTab: tabReducer
 });
 
